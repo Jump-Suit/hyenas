@@ -5,7 +5,7 @@ The world's first homemade PlayStation®Network emulator for PS3® named **Hyena
 
 ### WOULD EMULATE
 - Authentication that would allow you to connect online to the Hyenas Network (PS3 only).
-- Get pass the Sign-In prompt when playing games online (AKA authentication tickets signed by Hyenas for homemade game servers — **but not** be valid for real game servers).
+- Get pass the Sign-In prompt when playing games online (AKA authentication tickets signed by Hyenas for homemade game servers — **but not actually** valid for real game servers, which only allows actual tickets officially signed).
 
 ### WILL **NOT** EMULATE
 - The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, or anything else that is not required for playing games online.
