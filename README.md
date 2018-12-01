@@ -1,5 +1,5 @@
 # hyenas
-The world's first homemade PlayStation®Network emulator for PS3® named **Hyenas** (as in the animal). Look at the `www` (public server directory) folder for documentation about the server and files. This project is made for the PHP7+ programming language running on Apache 2.4+.
+The world's first homemade PlayStation®Network emulator for PS3® named **Hyenas** (as in the animal). Look at the `www` (public server directory) folder for documentation about the server and files. This project is made for the Javascript programming language running on Node.js.
 
 ## 
 
