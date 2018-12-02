@@ -47,7 +47,7 @@ createServer(function (req, res) {
 
       break;
     
-    case "/loginformgen": // login form, if its not there it shouldn't panic, its just there to make things easier for me
+    case "/formgen": // login form, if its not there it shouldn't panic, its just there to make things easier for me
 
         try {
 
@@ -63,7 +63,7 @@ createServer(function (req, res) {
         }
       break;
 
-    case "/selfprofileform":
+    case "/selfprofile":
 
       try {
 
