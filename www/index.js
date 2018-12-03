@@ -15,17 +15,12 @@ createServer(function (req, res) {
       if (req.method == "POST") {
 
         res.writeHead(200, {
-          'Content-Type': 'application/x-i-5-ticket',
-          'X-I-5-Version': "1.0",
           "X-N": "S",
+          "Content-Type": "application/x-i-5-ticket",
           "X-I-5-Status": "OK",
+          "X-I-5-Version": 1.0,
         });
 
-        /*res.writeHead(200, {
-          'Content-Type': 'text/plain',
-          'X-I-5-Version': "1.0",
-          "X-N": "S"
-        });*/
         collectRequestData(req, result => {
 
           let ticket = ticketGen(result.loginid, result.password, result.serviceid);
@@ -36,13 +31,13 @@ createServer(function (req, res) {
       } else { // if not a post request
       
         res.writeHead(400, {
-          'Content-Type': 'application/x-i-5-ticket', 
-          'X-I-5-Version': "1.0", 
-          "X-N": "S", 
-          "X-I-5-Status": "NG", 
-          "reason": "400"}); // likely isn't what its looking for but whatever, its an http response code
+          "X-N": "S"
+          "Content-Type": "application/x-i-5-ticket",
+          "X-I-5-Status": "NG;reason=12"
+          "X-I-5-Version": 1.0,
+        });
       
-          res.end();
+        res.end();
       }
 
       break;
@@ -81,8 +76,7 @@ createServer(function (req, res) {
 
     case "/basic_view/sec/get_self_profile":
       res.writeHead(200); // default response for ease
-      res.end(` <profile result="00">
- </profile>`);
+      res.end(`<profile result="00"></profile>`);
     break;
 
     default: // if there's nothing made for the url
