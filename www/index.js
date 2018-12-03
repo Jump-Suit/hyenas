@@ -37,6 +37,7 @@ createServer(function (req, res) {
       
         res.writeHead(400, {
           'Content-Type': 'application/x-i-5-ticket', 
+          'Filename': 'ticket.dat',
           'X-I-5-Version': "1.0", 
           "X-N": "S", 
           "X-I-5-Status": "NG", 
@@ -47,11 +48,11 @@ createServer(function (req, res) {
 
       break;
     
-    case "/formgen": // login form, if its not there it shouldn't panic, its just there to make things easier for me
+    case "/loginform": // login form, if its not there it shouldn't panic, its just there to make things easier for me
 
         try {
 
-          var formgen = require('path').resolve(__dirname, 'testingtools', 'formgen.html');
+          var formgen = require('path').resolve(__dirname, 'testingtools', 'loginform.html');
 
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end(require('fs').readFileSync(formgen, 'utf8'));
@@ -63,11 +64,11 @@ createServer(function (req, res) {
         }
       break;
 
-    case "/selfprofile":
+    case "/profileform":
 
       try {
 
-        var formgen = require('path').resolve(__dirname, 'testingtools', 'selfprofile.html');
+        var formgen = require('path').resolve(__dirname, 'testingtools', 'profileform.html');
 
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(require('fs').readFileSync(formgen, 'utf8'));

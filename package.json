@@ -1,0 +1,9 @@
+{
+  "name": "hyenas",
+  "scripts": {
+    "start": "node www/index.js"
+  },
+  "dependencies": {
+    "random-seed": "^0.3.0"
+  }
+}
