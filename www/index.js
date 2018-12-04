@@ -18,7 +18,7 @@ createServer(function (req, res) {
           "X-N": "S",
           "Content-Type": "application/x-i-5-ticket",
           "X-I-5-Status": "OK",
-          "X-I-5-Version": 1.0,
+          "X-I-5-Version": 1.0
         });
 
         collectRequestData(req, result => {
@@ -31,10 +31,10 @@ createServer(function (req, res) {
       } else { // if not a post request
       
         res.writeHead(400, {
-          "X-N": "S"
+          "X-N": "S",
           "Content-Type": "application/x-i-5-ticket",
           "X-I-5-Status": "NG;reason=12"
-          "X-I-5-Version": 1.0,
+          "X-I-5-Version": 1.0
         });
       
         res.end();
