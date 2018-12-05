@@ -33,7 +33,7 @@ createServer(function (req, res) {
         res.writeHead(400, {
           "X-N": "S",
           "Content-Type": "application/x-i-5-ticket",
-          "X-I-5-Status": "NG;reason=12"
+          "X-I-5-Status": "NG;reason=12",
           "X-I-5-Version": 1.0
         });
       
