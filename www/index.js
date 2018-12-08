@@ -29,7 +29,7 @@ createServer(function (req, res) {
         collectRequestData(req, result => {
 
 
-          var ticket = ticketGen(result.loginid, result.password, result.serviceid);
+          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware);
 
           res.end(ticket);
         });
@@ -114,14 +114,14 @@ createServer(function (req, res) {
 
 }).listen(80);
 
-function ticketGen(loginID, password, serviceID) {
+function ticketGen(loginID, password, serviceID, firmware) {
 
   let verMajor = "3";
 
   let verMinor = "0";
 
 
-  let rand = gen.create(loginID + password); // i don't want to make a db so this is done to hopefully recreate the same result over and over
+  let rand = gen.create(loginID + password, firmware); // i don't want to make a db so this is done to hopefully recreate the same result over and over
 
   // field population
 
@@ -248,7 +248,7 @@ function genProfile(ticket64, env) {
       language1: "1",
       language2: "",
       language3: "",
-      aboutme: "",
+      aboutme: "Description About Me",
       avatarurl: {
         $: {
           id: "1000"
