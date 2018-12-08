@@ -4,6 +4,7 @@
     "start": "node www/index.js"
   },
   "dependencies": {
-    "random-seed": "^0.3.0"
+    "random-seed": "^0.3.0",
+    "xml2js": "^0.4.19"
   }
 }

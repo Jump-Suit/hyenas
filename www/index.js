@@ -1,15 +1,15 @@
 const { createServer } = require('http');
 const { parse } = require('querystring');
-
-var gen = require('random-seed');
+const { Builder, parseString } = require('xml2js');
+const gen = require('random-seed');
 
 //console.log("Server started!");
 
 createServer(function (req, res) {
-  
+
   //console.log(`New request to ${req.url} on ${new Date().toISOString().replace('T', ' ').substr(0, 19)}`)
 
-  switch(req.url) {
+  switch (req.url) {
     case "/nav/auth":
 
       if (req.method == "POST") {
@@ -28,40 +28,44 @@ createServer(function (req, res) {
         });*/
         collectRequestData(req, result => {
 
-          let ticket = ticketGen(result.loginid, result.password, result.serviceid);
+
+          var ticket = ticketGen(result.loginid, result.password, result.serviceid);
 
           res.end(ticket);
         });
 
       } else { // if not a post request
-      
+
         res.writeHead(400, {
-          'Content-Type': 'application/x-i-5-ticket', 
+          'Content-Type': 'application/x-i-5-ticket',
           'Filename': 'ticket.dat',
-          'X-I-5-Version': "1.0", 
-          "X-N": "S", 
-          "X-I-5-Status": "NG", 
-          "reason": "400"}); // likely isn't what its looking for but whatever, its an http response code
-      
-          res.end();
+          'X-I-5-Version': "1.0",
+          "X-N": "S",
+          "X-I-5-Status": "NG",
+          "reason": "400"
+        }); // likely isn't what its looking for but whatever, its an http response code
+
+        res.end();
       }
 
       break;
-    
+
     case "/loginform": // login form, if its not there it shouldn't panic, its just there to make things easier for me
 
-        try {
+      try {
 
-          var formgen = require('path').resolve(__dirname, 'testingtools', 'loginform.html');
+        var formgen = require('path').resolve(__dirname, 'testingtools', 'loginform.html');
 
-          res.writeHead(200, { 'Content-Type': 'text/html' });
-          res.end(require('fs').readFileSync(formgen, 'utf8'));
+        res.writeHead(200, {
+          'Content-Type': 'text/html'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
 
-        } catch(err) {
+      } catch (err) {
 
-          res.writeHead(410);
-          res.end();
-        }
+        res.writeHead(410);
+        res.end();
+      }
       break;
 
     case "/profileform":
@@ -70,7 +74,9 @@ createServer(function (req, res) {
 
         var formgen = require('path').resolve(__dirname, 'testingtools', 'profileform.html');
 
-        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.writeHead(200, {
+          'Content-Type': 'text/html'
+        });
         res.end(require('fs').readFileSync(formgen, 'utf8'));
 
       } catch (err) {
@@ -78,13 +84,26 @@ createServer(function (req, res) {
         res.writeHead(410);
         res.end();
       }
-    break;
+      break;
 
     case "/basic_view/sec/get_self_profile":
-      res.writeHead(200); // default response for ease
-      res.end(` <profile result="00">
- </profile>`);
-    break;
+
+      if (req.method == "POST") {
+
+
+        collectRequestData(req, result => {
+
+          var profile = genProfile(result.profile.ticket, result.profile.env);
+
+          res.writeHead(200);
+          res.end(profile);
+        });
+      } else {
+        res.writeHead(400); // likely isn't what its looking for but whatever, its an http response code
+
+        res.end();
+      }
+      break;
 
     default: // if there's nothing made for the url
       res.writeHead(404);
@@ -126,17 +145,17 @@ function ticketGen(loginID, password, serviceID) {
 
   let domain = "62330000" // b3
 
-  let yearOfBirth = toPaddedHexNum(rand.intBetween(1970, 2018), 2*2); // year
+  let yearOfBirth = toPaddedHexNum(rand.intBetween(1970, 2018), 2 * 2); // year
 
-  let monthOfBirth = toPaddedHexNum(rand.intBetween(1,12), 1*2); // month
+  let monthOfBirth = toPaddedHexNum(rand.intBetween(1, 12), 1 * 2); // month
 
-  let dayOfBirth = toPaddedHexNum(rand.intBetween(1, 31), 1*2); // betcha can't guess (who cares if you were born on feburary 31st i don't)
+  let dayOfBirth = toPaddedHexNum(rand.intBetween(1, 31), 1 * 2); // betcha can't guess (who cares if you were born on feburary 31st i don't)
 
   // padding stuff
 
   //("000 0000 0000 0000" + i.toString(16)).substr(-16);
   let serviceIDPadded = toPaddedHexString(serviceID, 24 * 2);
-  
+
   let usernamePadded = toPaddedHexString(username, 32 * 2);
 
   let ticketBody = `00080014${serialId}`;
@@ -178,19 +197,87 @@ function ticketGen(loginID, password, serviceID) {
 
   let footer = `3002004400080004${randBytes(rand, 4)}00080038${randBytes(rand, 56)}`; // a a a a sure
 
-  let ticketButNotHeader = bodyHeader + ticketBody + footer; 
+  let ticketButNotHeader = bodyHeader + ticketBody + footer;
 
   let ticketHeader = `${verMajor}1${verMinor}00000000000${((ticketButNotHeader.length)/2).toString(16)}`;
 
   let ticket = ticketHeader + ticketButNotHeader
-/*
-  console.log(`Header: ${ticketHeader}
-  Body: ${bodyHeader + ticketBody} (${(ticketBody.length)/2})
-  Footer: ${footer} (${(footer.length)/2})
-  `);
-*/
-  return new Buffer(ticket, 'hex');
+  /*
+    console.log(`Header: ${ticketHeader}
+    Body: ${bodyHeader + ticketBody} (${(ticketBody.length)/2})
+    Footer: ${footer} (${(footer.length)/2})
+    `);
+  */
+  return Buffer.from(ticket, 'hex');
 
+
+}
+
+function genProfile(ticket64, env) {
+  /*
+   <profile result="00">
+       <jid>[online id ]@b3.[country code].[np, sp-int, qa-prod]</jid>
+       <onlinename upd="0">[online id]</onlinename>
+       <country>[country code]</country>
+       <language1>[language id, 1 is english]</language1>
+       <language2 />
+       <language3 />
+       <aboutme />
+       <avatarurl id="1000">[avatar url]</avatarurl>
+       <ptlp>[the flair color]</ptlp>
+   </profile>
+  */
+
+  const onlinename = "online id";
+
+  const jid = `${onlinename}@${"domain"}.${env}`;
+
+  const profile = {
+    profile: {
+      $: {
+        result: '00'
+      },
+      jid: [jid],
+      onlinename: {
+        $: {
+          upd: '0'
+        },
+        _: [onlinename]
+      },
+      country: ["country code"],
+      language1: "1",
+      language2: "",
+      language3: "",
+      aboutme: "",
+      avatarurl: {
+        $: {
+          id: "1000"
+        },
+        _: ["url"]
+      },
+      ptlp: "00000FEE"
+    }
+  }
+
+  /*
+  let profile = {
+    'foo:Foo': {
+      $: {
+        'xmlns:foo': 'http://foo.com'
+      },
+      'bar:Bar': {
+        $: {
+          'xmlns:bar': 'http://bar.com'
+        }
+      }
+    }
+  }
+  */
+  var builder = new Builder({
+    headless: true
+  });
+
+  return builder.buildObject(profile);
 
 }
 
@@ -211,27 +298,36 @@ function randBytes(randGen, length) {
 
 function collectRequestData(request, callback) {
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';
+  const FORM_XML = 'text/xml';
 
-  if (request.headers['content-type'] === FORM_URLENCODED) {
-    let body = '';
-    request.on('data', chunk => {
-      body += chunk.toString();
-    });
-    request.on('end', () => {
-      callback(parse(body));
-    });
-  }
-  else {
-    callback(null);
-  }
+  let body = '';
+  request.on('data', chunk => {
+    body += chunk.toString();
+  });
+  request.on('end', () => {
+    switch (request.headers['content-type']) {
+      case FORM_URLENCODED:
+        callback(parse(body));
+        break;
+      case FORM_XML:
+        parseString(body, (err, xmlResult) => {
+          callback(xmlResult)
+        });
+        break;
+      default:
+        callback(null);
+        break;
+    }
+  });
 }
 
 // these are two functions as strings are padded from end of string to end of length, numbers are from start of length to start of number
 
 function toPaddedHexString(unencodedstr, len) {
-  let str = new Buffer(unencodedstr).toString('hex');
+  let str = Buffer.from(unencodedstr).toString('hex');
   return str + "0".repeat(len - str.length);
 }
+
 function toPaddedHexNum(num, len) {
   let str = num.toString(16);
   return "0".repeat(len - str.length) + str;
