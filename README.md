@@ -20,6 +20,7 @@ GPLv3. I did NOT create "PlayStation®Network" nor am I affiliated with any comp
 - Node.JS
 
   - [random-seed](https://github.com/skratchdot/random-seed)
+  - [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
   
   (Just run `npm install` or `yarn install`, depending on your node package manager to install dependencies from the provided `package.json`)
 
