@@ -26,7 +26,7 @@ Running `$ npm start`, `$ yarn start`, or `$ node www/index.js` will start up th
 
 ## Testing
 
-Form pages to test URLs without an actual system are available
+Available pages to test URLs without an actual system
 
 - `/loginform` (`~/www/testingtools/loginform.html`)
 
