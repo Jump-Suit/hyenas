@@ -22,17 +22,15 @@ The world's first homemade PlayStation®Network emulator for PS3® named **Hyena
 
 ## Running
 
-Use terminal of choice -  
-Run: `npm start`, `yarn start`, or `node www/index.js`  
-Hosts on port 80, http protocol.  
+Running `$ npm start`, `$ yarn start`, or `$ node www/index.js` will start up the HTTP sever.
 
 ## Testing
 
-These pages will generate the correct post requests for you, send them, then give you the output:
+Form pages to test URLs without an actual system are available
 
-- `/loginform` (links to `www/loginform.html`)
+- `/loginform` (`~/www/testingtools/loginform.html`)
 
-- `/profileform` (links to `www/profileform.html`)
+- `/profileform` (`~/www/testingtools/profileform.html`)
 
 ## License
 
