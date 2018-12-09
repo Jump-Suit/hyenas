@@ -17,7 +17,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <a class="navbar-brand">Hyenas Testing Page</a>
+    <a class="navbar-brand" style="color: #595959; font-weight: 550;">Hyenas Testing Page</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -57,18 +57,25 @@
         <input type="text" id="sv" class="form-control" name="firmware" placeholder="Enter Firmware Version" />
       </div>
 	  
+	  		    <div class="col-sm">
+        <label for="country">Country</label>
+        <input type="text" id="country" class="form-control" name="country" placeholder="Enter Country Code" />
+      </div>
+	  
     </div>
 
     <div class="form-group">
       <label for="sid">Service ID</label>
       <input type="text" id="sid" class="form-control" name="serviceid" placeholder="enter service id..." value="IV0001-NPXS01001_00" />
     </div>
+	
+
 
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Input</h5>
     <p class="card-text">
-      <code id="input" style="white-space: pre-line">loginid=[loginid]&password=[password]&serviceid=[serviceid]&firmware=[firmware]</code>
+      <code id="input" style="white-space: pre-line">loginid=[loginid]&password=[password]&serviceid=[serviceid]&firmware=[firmware]&country=[country]</code>
     </p>
 <button type="submit" class="btn btn-primary">Submit (will download file)</button>
 
@@ -90,7 +97,7 @@ $('input').on('input', function () {
 // since the contents of the input codebox don't matter unlike the profile one we could do whatever here
 
 var request = // template as i can't really find a function that does the job for me
-`loginid=${$('input[name=loginid]').val()}&password=${$('input[name=password]').val()}&serviceid=${$('input[name=serviceid]').val()}&firmware=${$('input[name=firmware]').val()}`;
+`loginid=${$('input[name=loginid]').val()}&password=${$('input[name=password]').val()}&serviceid=${$('input[name=serviceid]').val()}&firmware=${$('input[name=firmware]').val()}&country=${$('input[name=country]').val()}`;
 
 $('#input').text(request);
 

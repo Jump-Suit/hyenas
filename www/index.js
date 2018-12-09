@@ -29,7 +29,7 @@ createServer(function (req, res) {
         collectRequestData(req, result => {
 
 
-          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware);
+          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware, result.country);
 
           res.end(ticket);
         });
@@ -114,14 +114,14 @@ createServer(function (req, res) {
 
 }).listen(80);
 
-function ticketGen(loginID, password, serviceID, firmware) {
+function ticketGen(loginID, password, serviceID, firmware, country) {
 
   let verMajor = "3";
 
   let verMinor = "0";
 
 
-  let rand = gen.create(loginID + password, firmware); // i don't want to make a db so this is done to hopefully recreate the same result over and over
+  let rand = gen.create(loginID + password, firmware, country); // i don't want to make a db so this is done to hopefully recreate the same result over and over
 
   // field population
 
