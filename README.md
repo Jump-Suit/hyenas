@@ -13,7 +13,7 @@ The world's first homemade PlayStation®Network emulator for PS3® named **Hyena
 
 ### Dependencies
 
-- Node.JS
+- Node.js
 
   - [random-seed](https://github.com/skratchdot/random-seed)
   - [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
