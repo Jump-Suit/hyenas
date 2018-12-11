@@ -52,10 +52,7 @@
         <label for="pass">Password</label>
         <input type="password" id="pass" class="form-control" name="password" placeholder="Enter Password..." />
       </div>
-	    <div class="col-sm">
-        <label for="sv">Firmware</label>
-        <input type="text" id="sv" class="form-control" name="firmware" placeholder="Enter Firmware Version" />
-      </div>
+
 	  
 	  		    <div class="col-sm">
         <label for="country">Country</label>
@@ -69,13 +66,32 @@
       <input type="text" id="sid" class="form-control" name="serviceid" placeholder="enter service id..." value="IV0001-NPXS01001_00" />
     </div>
 	
+<div class="row">
+      <div class="col-sm">
+        <label for="platform">Platform</label>
+        <input type="text" id="platform" class="form-control" name="platform" placeholder="Enter Platform..." />
+      </div>
+	  		    <div class="col-sm">
+        <label for="firmware">Firmware</label>
+        <input type="text" id="firmware" class="form-control" name="firmware" placeholder="Enter Firmware Version..." />
+      </div>
+	  	  		    <div class="col-sm">
+        <label for="avatarsize">Avatar Size</label>
+        <input type="text" id="avatarsize" class="form-control" name="avatarsize" placeholder="Enter Avatar size number (ex. 1)..." />
+      </div>
+	  
+	  	  	  		    <div class="col-sm">
+        <label for="jidsubdomain">JID Sub-Domain</label>
+        <input type="text" id="jidsubdomain" class="form-control" name="jidsubdomain" value="EPICGAMERUSERNAME@b5.us.np.openpsn.net" />
+      </div>
+	  
+</div>
 
-
-<div class="card">
+<div class="card" style="top: 10px; position: relative;">
   <div class="card-body">
     <h5 class="card-title">Input</h5>
     <p class="card-text">
-      <code id="input" style="white-space: pre-line">loginid=[loginid]&password=[password]&serviceid=[serviceid]&firmware=[firmware]&country=[country]</code>
+      <code id="input" style="white-space: pre-line">loginid=[loginid]&password=[password]&serviceid=[serviceid]&firmware=[firmware]&country=[country]&platform=[platform]&avatarsize=[avatarsize]&jidsubdomain=[jidsubdomain]</code>
     </p>
 <button type="submit" class="btn btn-primary">Submit (will download file)</button>
 
@@ -97,7 +113,7 @@ $('input').on('input', function () {
 // since the contents of the input codebox don't matter unlike the profile one we could do whatever here
 
 var request = // template as i can't really find a function that does the job for me
-`loginid=${$('input[name=loginid]').val()}&password=${$('input[name=password]').val()}&serviceid=${$('input[name=serviceid]').val()}&firmware=${$('input[name=firmware]').val()}&country=${$('input[name=country]').val()}`;
+`loginid=${$('input[name=loginid]').val()}&password=${$('input[name=password]').val()}&serviceid=${$('input[name=serviceid]').val()}&firmware=${$('input[name=firmware]').val()}&avatarsize=${$('input[name=avatarsize]').val()}&country=${$('input[name=country]').val()}&platform=${$('input[name=platform]').val()}&jidsubdomain=${$('input[name=jidsubdomain]').val()}`;
 
 $('#input').text(request);
 
