@@ -121,7 +121,7 @@ function ticketGen(loginID, password, serviceID, firmware, country, platform, av
   let verMinor = "0";
 
 
-  let rand = gen.create(loginID + password, firmware, country, platform, avatarsize, jidsubdomain); // i don't want to make a db so this is done to hopefully recreate the same result over and over
+  let rand = gen.create(loginID + password); // i don't want to make a db so this is done to hopefully recreate the same result over and over
 
   // field population
 
