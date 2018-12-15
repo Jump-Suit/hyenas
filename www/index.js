@@ -4,7 +4,7 @@ const { parseString } = require('xml2js');
 
 const { ticketGen } = require('./modules/ticketTools.js');
 const { profileGen } = require('./modules/profileTools.js');
-
+const { genprofileform } = require('./modules/profilegenTools.js');
 
 
 //console.log("Server started!");
@@ -33,7 +33,7 @@ createServer(function (req, res) {
         collectRequestData(req, result => {
 
 
-          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware, result.country, result.platform, result.avatarsize, result.jidsubdomain);
+          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware, result.country, result.platform, result.avatarsize, result.jidsubdomain,);
 
           res.end(ticket);
         });
@@ -77,6 +77,24 @@ createServer(function (req, res) {
       try {
 
         var formgen = require('path').resolve(__dirname, 'testingtools', 'profileform.html');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/html'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	  case "/genprofileform":
+
+      try {
+
+        var formgen = require('path').resolve(__dirname, 'testingtools', 'genprofileform.html');
 
         res.writeHead(200, {
           'Content-Type': 'text/html'
