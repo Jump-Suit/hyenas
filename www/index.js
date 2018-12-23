@@ -2,10 +2,23 @@ const { createServer } = require('http');
 const { parse } = require('querystring');
 const { parseString } = require('xml2js');
 
+const { resolve } = require('path');
+
 const { ticketGen } = require('./modules/ticketTools.js');
 const { profileGen } = require('./modules/profileTools.js');
-const { genprofileform } = require('./modules/profilegenTools.js');
+//const { genprofileform } = require('./modules/profilegenTools.js');
 
+let port = 80;
+
+if (process.platform != "win32") {
+
+  port = 8080; // on non windows platforms, ports under around 128 are sudo only
+  
+  if(process.getuid && process.getuid() === 0) { 
+    port = 80;
+  }
+  
+}
 
 //console.log("Server started!");
 
@@ -58,7 +71,7 @@ createServer(function (req, res) {
 
       try {
 
-        var formgen = require('path').resolve(__dirname, 'testingtools', 'loginform.html');
+        var formgen = resolve(__dirname, 'testingtools', 'loginform.html');
 
         res.writeHead(200, {
           'Content-Type': 'text/html'
@@ -76,7 +89,7 @@ createServer(function (req, res) {
 
       try {
 
-        var formgen = require('path').resolve(__dirname, 'testingtools', 'profileform.html');
+        var formgen = resolve(__dirname, 'testingtools', 'profileform.html');
 
         res.writeHead(200, {
           'Content-Type': 'text/html'
@@ -94,7 +107,7 @@ createServer(function (req, res) {
 
       try {
 
-        var formgen = require('path').resolve(__dirname, 'testingtools', 'genprofileform.html');
+        var formgen = resolve(__dirname, 'testingtools', 'genprofileform.html');
 
         res.writeHead(200, {
           'Content-Type': 'text/html'
@@ -134,7 +147,7 @@ createServer(function (req, res) {
 
 
 
-}).listen(80);
+}).listen(port);
 
 // stolen functions
 
