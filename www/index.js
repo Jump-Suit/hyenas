@@ -7,6 +7,7 @@ const { resolve } = require('path');
 const { ticketGen } = require('./modules/ticketTools.js');
 const { profileGen } = require('./modules/profileTools.js');
 //const { genprofileform } = require('./modules/profilegenTools.js');
+const { signatureform } = require('./modules/signatureform.js');
 
 let port = 80;
 
@@ -120,6 +121,24 @@ createServer(function (req, res) {
         res.end();
       }
       break;
+	  
+ case "/signatureform":
+
+      try {
+
+        var formgen = resolve(__dirname, 'testingtools', 'signatureform.html');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/html'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
 
     case "/basic_view/sec/get_self_profile":
 
@@ -175,3 +194,4 @@ function collectRequestData(request, callback) {
     }
   });
 }
+
