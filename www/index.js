@@ -85,6 +85,25 @@ createServer(function (req, res) {
         res.end();
       }
       break;
+	  
+	  case "/get_2m":
+
+      try {
+
+var http = require('http');
+var fs = require('fs');
+
+var file = fs.createWriteStream("get_2m");
+var request = http.get("http://get.net.playstation.net/networktest/get_2m", function(response) {
+  response.pipe(file);
+});
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
 
     case "/profileform":
 
@@ -168,6 +187,8 @@ createServer(function (req, res) {
 
 }).listen(port);
 
+
+
 // stolen functions
 
 function collectRequestData(request, callback) {
@@ -194,4 +215,6 @@ function collectRequestData(request, callback) {
     }
   });
 }
+
+
 
