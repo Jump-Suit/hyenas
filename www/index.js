@@ -86,7 +86,7 @@ createServer(function (req, res) {
       }
       break;
 	  
-	  case "/get_2m":
+	  case "/networktest/get_2m":
 
       try {
 
@@ -97,6 +97,29 @@ var file = fs.createWriteStream("get_2m");
 var request = http.get("http://get.net.playstation.net/networktest/get_2m", function(response) {
   response.pipe(file);
 });
+
+
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	  	  case "/networktest/post_128":
+
+      try {
+
+var http = require('http');
+var fs = require('fs');
+
+var file = fs.createWriteStream("post_128");
+var request = http.get("http://post.net.playstation.net/networktest/post_128", function(response) {
+  response.pipe(file);
+});
+
+
 
       } catch (err) {
 
