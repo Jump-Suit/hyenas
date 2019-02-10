@@ -127,6 +127,105 @@ var request = http.get("http://post.net.playstation.net/networktest/post_128", f
         res.end();
       }
       break;
+	  
+	  
+	  
+	  case "/uk/news":
+
+      try {
+
+        var formgen = resolve(__dirname, 'np_infoboard', 'uk_news.xml');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/xml'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	  
+	  
+	  	  case "/au/news":
+
+      try {
+
+        var formgen = resolve(__dirname, 'np_infoboard', 'au_news.xml');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/xml'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	 
+	  	  case "/nz/news":
+
+      try {
+
+        var formgen = resolve(__dirname, 'np_infoboard', 'nz_news.xml');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/xml'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;	 
+	  
+	  
+	  	  	  case "/za/news":
+
+      try {
+
+        var formgen = resolve(__dirname, 'np_infoboard', 'za_news.xml');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/xml'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;	
+	  
+	  
+	  case "/genprofileform":
+
+      try {
+
+        var formgen = resolve(__dirname, 'testingtools', 'genprofileform.html');
+
+        res.writeHead(200, {
+          'Content-Type': 'text/html'
+        });
+        res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+      } catch (err) {
+
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	  
 
     case "/profileform":
 
