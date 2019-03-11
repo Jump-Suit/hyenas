@@ -23,6 +23,6 @@ There is built-in URLs for testing (ie: forms to do POST requests).
 | `/loginform`   | `~/www/testingtools/loginform.html` |
 | `/profileform` | `~/www/testingtools/profileform.html` |
 
-## License
+## Licensing
 
-GPLv3. I did NOT create "PlayStation®Network" NOR am I affiliated with any company, subsidiary, party, partner, affiliate, and any licensed licensor, licensee, publisher, developer, merchant, or vendor. This project has been specially crafted to avoid any copyright infringement and even avoids the use of the service name when possible. I am not responsible or liable for any dispute you may have with any entity over this project. This was created for the cause of preservation — for future generations of players to be able to play decades-old video games online that has its servers shutting down… and possibly the whole network that is *required* to play any game online. **Nothing malicious is intended. For legal disputes, please email** (base64) `am9uaHlwZXJzb21AZ21haWwuY29t`.
+GPLv3. All trademarks and copyright-written content found belong to their respective owners. I DID NOT CREATE "PLAYSTATION®NETWORK" NOR AM I AFFILIATED WITH Sony Corporation, Sony Interactive Entertainment Inc., or any other entity. I am also fully not responsible or liable for any “dispute” you may have with any entity over this project. This was created for the cause of preservation — for future generations of players to be able to play decades-old video games online that has its servers shutting down… and possibly the whole network that is *required* to play any game online. **Nothing malicious is intended. For legal disputes, please email** (base64) `am9uaHlwZXJzb21AZ21haWwuY29t`.
