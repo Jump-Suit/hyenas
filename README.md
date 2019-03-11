@@ -1,37 +1,28 @@
-# hyenas
+# Hyenas
+**Hyenas is the world's first homemade PlayStation®Network emulator for the PS3®**. Look at the `www` (public server directory) folder for files. This project is made for the Javascript programming language running on Node.js.
 
-The world's first homemade PlayStation®Network emulator for PS3® named **Hyenas**. Look at the `www` (public server directory) folder for files. This project is made for the Javascript programming language running on Node.js.
+## Features
+- ✓ Authentication that would allow you to play games online ultra fast and mega securely.
+- ✓ Get past the sign-in prompt when playing games online (mocked ticket authentication).
+- ✓ Completely isolated from the actual servers, which means console-bans are a non-issue.
+- ✓ Guaranteed to be able to play with your future children the games you've played as a kid.
+- 🗙 The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
-## WOULD EMULATE
+## Installation
+First install the required dependencies with `npm install` or `yarn install`.
 
-- Authentication that would allow you to connect online to the Hyenas Network (PS3 only).
-- Get past the sign-in prompt when playing games online (AKA authentication "tickets" signed by Hyenas for custom/unofficial game servers — **but not actually** valid for real game servers, which only allows officially signed actual tickets).
-
-## WILL **NOT** EMULATE
-
-- The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, or anything else that is not required for playing games online.
-
-### Dependencies
-
-- Node.js (https://nodejs.org/en/)
-
-  - [random-seed](https://github.com/skratchdot/random-seed)
-  - [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
-  
-  (Just run `npm install` or `yarn install`, depending on your node package manager to install dependencies from the provided `package.json`)
-
-## Running
-
-Running `$ npm start`, `$ yarn start`, or `$ node www/index.js` will start up the HTTP sever.
+Then run `$ npm start`, `$ yarn start`, or `$ node www/index.js` to start up the HTTPD sever.
 
 ## Testing
+Hyenas can be coded and tested without an actual system, provided that you have an API map.
 
-Available pages to test URLs without an actual system
+There is built-in URLs for testing (ie: forms to do POST requests).
 
-- `/loginform` (`~/www/testingtools/loginform.html`)
-
-- `/profileform` (`~/www/testingtools/profileform.html`)
+| Absolute URI   | Function |
+| -------------- |----------|
+| `/loginform`   | `~/www/testingtools/loginform.html` |
+| `/profileform` | `~/www/testingtools/profileform.html` |
 
 ## License
 
-GPLv3. I did NOT create "PlayStation®Network" nor am I affiliated with any company, subsidiary, party, partner, affiliate, and any licensed licensor, licensee, publisher, developer, merchant, or vendor. This project has been specially crafted to avoid any copyright infringement and even avoids the use of the service name when possible. I am not responsible or liable for any dispute you may have with any entity over this project. This was created for the cause of preservation — for future generations of players to be able to play a more than a decade-old video game system online that has its game servers shutting down and possibly the whole network that is *required* to play any game online. **Nothing malicious is intended.**
+GPLv3. I did NOT create "PlayStation®Network" NOR am I affiliated with any company, subsidiary, party, partner, affiliate, and any licensed licensor, licensee, publisher, developer, merchant, or vendor. This project has been specially crafted to avoid any copyright infringement and even avoids the use of the service name when possible. I am not responsible or liable for any dispute you may have with any entity over this project. This was created for the cause of preservation — for future generations of players to be able to play decades-old video games online that has its servers shutting down… and possibly the whole network that is *required* to play any game online. **Nothing malicious is intended. For legal disputes, please email** (base64) `am9uaHlwZXJzb21AZ21haWwuY29t`.

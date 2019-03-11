@@ -1,5 +1,23 @@
 {
   "name": "hyenas",
+  "author": "Jonathan (https://github.com/llnwn)",
+  "contributors": [
+    "Zmxhawrhbg (https://github.com/Zmxhawrhbg)",
+    "Hope (https://github.com/Hopefullyidontgetbanned)"
+  ],
+  "bugs": "https://github.com/llnwn/hyenas/issues",
+  "homepage": "https://github.com/llnwn/hyenas",
+  "version": "0.5.0",
+  "license": "GPLv3",
+  "keywords": ["psn","playstation","playstation3","ps3","ps3-tool","game-server","game","server"],
+  "description": "The world's first homemade PlayStation®Network emulator for the PS3®.",
+  "repository": "github:llnwn/hyenas",
+  "private": false,
+  "engines": {
+    "node": ">= 8.12.0",
+    "npm": ">= 6.4.1",
+    "yarn": ">= 1.13.0"
+  }
   "scripts": {
     "start": "node www/index.js"
   },

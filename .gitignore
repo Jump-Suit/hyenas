@@ -81,3 +81,7 @@ typings/
 #Remove lock files just in case
 yarn.lock
 package-lock.json
+
+# To prevent bakas
+www/np_community
+www/np_DL
