@@ -102,8 +102,37 @@ exports.ticketGen = function(loginID, password, serviceID, firmware, country, pl
 
 };
 
+exports.readTicket = function(ticketB64) { // ticket is given as base64 so we just take that b64 ye?
+  
+  var ticket = {};
 
+  var ticketHexBuf = Buffer.from(ticketB64, 'base64');
+  // ok so like i don't want to do this but 😔
+  // first we get the offset of the section start
+  /* 
 
+  * username - 0x50 (starts with 00 04 00 20)
+  * domain - 0x7C (starts with 00 04 00 04)
+  * why do they even use the ticket for these 
+  
+  */
+
+  // now we _could_ just go the easy way out and just read exactly 20/4 bytes but why not do it the more fun way
+  // for reading hex like this, lengths/offsets are multiplied by 2 and converted into decimal
+  // thus username is at offset 160
+  
+  const usernameOffset = 160;
+  const domainOffset = 248;
+
+  var ticketHex = ticketHexBuf.toString('hex');
+
+  ticket.onlineID = Buffer.from(readSection(ticketHex, usernameOffset), 'hex').toString('ascii').replace(/\0/g, '');
+  // some vomit here so, replace to remove null character, read section to read, buffer to convert hex to ascii
+  // also same vomit again lol
+  ticket.domain = Buffer.from(readSection(ticketHex, domainOffset), 'hex').toString('ascii').replace(/\0/g, '');
+  return ticket;
+
+}
 
 randBytes = function (randGen, length) {
 
@@ -115,6 +144,7 @@ randBytes = function (randGen, length) {
 
     return bytes;
 };
+
 toPaddedHexString = function(unencodedstr, len) {
   let str = Buffer.from(unencodedstr).toString('hex');
   return str + "0".repeat(len - str.length);
@@ -125,3 +155,88 @@ toPaddedHexNum = function(num, len) {
   return "0".repeat(len - str.length) + str;
 };
 
+readSection = function(hex, offset) {
+  var sectionHeader = hex.substring(offset, offset + 8); // get section start
+  sectionInfo = readSectionHeader(sectionHeader);
+  // ok so now we get the data
+  var section = hex.substring(offset + 8, offset + 8 + sectionInfo.contentLength);
+
+  return section;
+}
+
+readSectionHeader = function(bytes) {
+  if (bytes.length != 8) {
+    return;
+  }
+  
+  var sectionInfo = {};
+  // a0bb00cc
+  // a is type
+  // b is data type
+  // c is length
+
+  // first get the data we can from the string
+  sectionInfo.contentLength = parseInt(bytes.substring(6), 16); // converted to decimal as there is no use for a hex number here
+  sectionInfo.contentTypeBytes = bytes.substring(2,4);
+  sectionInfo.typeBytes = bytes.substring(0,1);
+
+  // then we p a r s e
+
+  switch(sectionInfo.typeBytes) {
+    case "3":
+      sectionInfo.type = "section";
+      break;
+    default:
+      sectionInfo.type = "data";
+      break;
+  }
+
+  switch(sectionInfo.contentTypeBytes) {
+    case '00':
+      if (sectionInfo.type = "section") {
+        sectionInfo.contentType = "body";
+      } else {
+        sectionInfo.contentType = "none";
+      }
+      break;
+
+    case '01':
+      sectionInfo.contentType = "issuer id";
+      break;
+
+    case '02':
+      if (sectionInfo.type = "section") {
+        sectionInfo.contentType = "footer";
+      } else {
+        sectionInfo.contentType = "serial id";
+      }
+      break;
+
+    case '04':
+      sectionInfo.contentType = "string";
+      break;
+
+    case '07':
+      sectionInfo.contentType = "timestamp";
+      break;
+    
+    case '08':
+      sectionInfo.contentType = "string";
+      break;
+
+    case '10':
+      sectionInfo.contentType = "zero";
+      break;
+    
+    case '11':
+      sectionInfo.contentType = "dob";
+      break;
+
+    default:
+      sectionInfo.contentType = "none";
+      break;
+  }
+
+  return sectionInfo;
+
+}

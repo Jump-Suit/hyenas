@@ -127,7 +127,9 @@ margin-right: 15px;
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
+
         reader.onload = () => {
+          //encoded = window.btoa(reader.result);
           let encoded = reader.result.replace(/^data:(.*;base64,)?/, '');
           if ((encoded.length % 4) > 0) {
             encoded += '='.repeat(4 - (encoded.length % 4));
@@ -136,6 +138,7 @@ margin-right: 15px;
         };
         reader.onerror = error => reject(error);
       });
+
     }
 
     // this is wrapped in another promise as it doesn't like trying to go from a non promise to a promise

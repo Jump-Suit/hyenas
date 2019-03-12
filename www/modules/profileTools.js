@@ -17,11 +17,13 @@ exports.profileGen = function(ticket64, env) {
   */
 
   const { Builder } = require('xml2js');
+  const { readTicket } = require('./ticketTools.js');
 
+  ticket = readTicket(ticket64);
 
-  const onlinename = "online id";
+  const onlinename = ticket.onlineID;
 
-  const jid = `${onlinename}@${"domain"}.${env}`;
+  const jid = `${onlinename}@${ticket.domain}.${env}`;
 
   const profile = {
     profile: {
@@ -50,20 +52,7 @@ exports.profileGen = function(ticket64, env) {
     }
   }
 
-  /*
-  let profile = {
-    'foo:Foo': {
-      $: {
-        'xmlns:foo': 'http://foo.com'
-      },
-      'bar:Bar': {
-        $: {
-          'xmlns:bar': 'http://bar.com'
-        }
-      }
-    }
-  }
-  */
+  
   var builder = new Builder({
     headless: true
   });

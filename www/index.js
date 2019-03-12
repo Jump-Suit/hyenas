@@ -73,11 +73,9 @@ createServer(function (req, res) {
     case "/basic_view/sec/get_self_profile":
 
       if (req.method == "POST") {
-
-
         collectRequestData(req, result => {
 
-          var profile = profileGen(result.profile.ticket, result.profile.env);
+          var profile = profileGen(result.profile.ticket[0], result.profile.env);
 
           res.writeHead(200);
           res.end(profile);
