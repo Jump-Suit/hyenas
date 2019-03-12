@@ -153,10 +153,6 @@ createServer(function (req, res) {
       serveLocalPage(res, 'testingtools/signatureform.html');
       break;
 
-    case "/signatureform":
-      serveLocalPage(res, 'testingtools/signatureform.html');
-      break;
-
     case "/favicon.ico":
     case "/logo.png":
         serveLocalPage(res, 'testingtools/logo.png', 'image/png');
