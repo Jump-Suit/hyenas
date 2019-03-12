@@ -1,17 +1,22 @@
 # Hyenas
+
+![Hyenas Logo](www/testingtools/logo.png?raw=true)
 **Hyenas is the world's first homemade PlayStation®Network emulator for the PS3®**. Look at the `www` (public server directory) folder for files. This project is made for the Javascript programming language running on Node.js.
 
 ## Features
+
 - ✓ Authentication that would allow you to play games online ultra fast and mega securely.
 - ✓ Get past the sign-in prompt when playing games online (mocked ticket authentication).
 - ✓ Completely isolated from the actual servers, which means console-bans are a non-issue.
-- ✓ Guaranteed to be able to play with your future children the games you've played as a kid.
+- ✓ Guaranteed to be able to play the games you've played as a kid (with your future children.)
 - 🗙 The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
 ## Installation
+
 [Work In Progress]
 
 ## Testing
+
 [Work In Progress]
 
 ## Licensing

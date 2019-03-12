@@ -98,8 +98,7 @@ createServer(function (req, res) {
             bytes += String.fromCharCode(00); // what even is this
           }
           
-          res.write(bytes);
-          res.end();
+          res.end(bytes);
       } catch (err) {
         res.writeHead(410);
         res.end();
@@ -154,6 +153,15 @@ createServer(function (req, res) {
       serveLocalPage(res, 'testingtools/signatureform.html');
       break;
 
+    case "/signatureform":
+      serveLocalPage(res, 'testingtools/signatureform.html');
+      break;
+
+    case "/favicon.ico":
+    case "/logo.png":
+        serveLocalPage(res, 'testingtools/logo.png', 'image/png');
+        break;
+
     default: // if there's nothing made for the url
       res.writeHead(404);
       res.end();
@@ -164,18 +172,25 @@ createServer(function (req, res) {
 }).listen(port);
 
 /* page url is based on the root of the script, ie. testingtools/loginform.html links to www/testingtools/loginform.html */
-function serveLocalPage(res, fileURL) {
+function serveLocalPage(res, fileURL, fileType) {
   try {
+
+    fileType = fileType || 'text/html';
 
     var formgen = resolve(__dirname, fileURL);
 
     res.writeHead(200, {
-      'Content-Type': 'text/html'
+      'Content-Type': fileType
     });
-    res.end(require('fs').readFileSync(formgen, 'utf8'));
 
+    require('fs').readFile(formgen, function (err, content) {
+      if (err) {
+        res.writeHead(410);
+        res.end();
+      }      
+      res.end(content, 'utf8');
+    })
   } catch (err) {
-
     res.writeHead(410);
     res.end();
   }
