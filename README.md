@@ -1,6 +1,6 @@
 # Hyenas
 
-![Hyenas Logo](www/testingtools/logo.png?raw=true)
+![Hyenas Screenshot](Screenshot.png?raw=true)
 **Hyenas is the world's first homemade PlayStation®Network emulator for the PS3®**. Look at the `www` (public server directory) folder for files. This project is made for the Javascript programming language running on Node.js.
 
 ## Features
