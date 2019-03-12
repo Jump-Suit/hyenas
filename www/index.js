@@ -28,6 +28,8 @@ createServer(function (req, res) {
   //console.log(`New request to ${req.url} on ${new Date().toISOString().replace('T', ' ').substr(0, 19)}`)
 
   switch (req.url) {
+
+    /* currently coded pages go here */
     case "/nav/auth":
 
       if (req.method == "POST") {
@@ -68,219 +70,6 @@ createServer(function (req, res) {
 
       break;
 
-    case "/loginform": // login form, if its not there it shouldn't panic, its just there to make things easier for me
-
-      try {
-
-        var formgen = resolve(__dirname, 'testingtools', 'loginform.html');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/html'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  case "/networktest/get_2m":
-
-      try {
-
-var http = require('http');
-var fs = require('fs');
-
-var file = fs.createWriteStream("get_2m");
-var request = http.get("http://get.net.playstation.net/networktest/get_2m", function(response) {
-  response.pipe(file);
-});
-
-
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  	  case "/networktest/post_128":
-
-      try {
-
-var http = require('http');
-var fs = require('fs');
-
-var file = fs.createWriteStream("post_128");
-var request = http.get("http://post.net.playstation.net/networktest/post_128", function(response) {
-  response.pipe(file);
-});
-
-
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  
-	  
-	  case "/uk/news":
-
-      try {
-
-        var formgen = resolve(__dirname, 'np_infoboard', 'uk_news.xml');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/xml'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  
-	  
-	  	  case "/au/news":
-
-      try {
-
-        var formgen = resolve(__dirname, 'np_infoboard', 'au_news.xml');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/xml'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	 
-	  	  case "/nz/news":
-
-      try {
-
-        var formgen = resolve(__dirname, 'np_infoboard', 'nz_news.xml');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/xml'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;	 
-	  
-	  
-	  	  	  case "/za/news":
-
-      try {
-
-        var formgen = resolve(__dirname, 'np_infoboard', 'za_news.xml');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/xml'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;	
-	  
-	  
-	  case "/genprofileform":
-
-      try {
-
-        var formgen = resolve(__dirname, 'testingtools', 'genprofileform.html');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/html'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  
-
-    case "/profileform":
-
-      try {
-
-        var formgen = resolve(__dirname, 'testingtools', 'profileform.html');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/html'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  case "/genprofileform":
-
-      try {
-
-        var formgen = resolve(__dirname, 'testingtools', 'genprofileform.html');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/html'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
- case "/signatureform":
-
-      try {
-
-        var formgen = resolve(__dirname, 'testingtools', 'signatureform.html');
-
-        res.writeHead(200, {
-          'Content-Type': 'text/html'
-        });
-        res.end(require('fs').readFileSync(formgen, 'utf8'));
-
-      } catch (err) {
-
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-
     case "/basic_view/sec/get_self_profile":
 
       if (req.method == "POST") {
@@ -300,6 +89,71 @@ var request = http.get("http://post.net.playstation.net/networktest/post_128", f
       }
       break;
 
+    /* network tests */
+	  case "/networktest/get_2m": // this could be a local file but debating if we really need 2mb of 0s
+      try {
+          let bytes = ""; // this method of splitting up bytes and res is a bit faster
+
+          for (var i = 0; i < 2097152; i++) { // that many 0s in one file lol
+            bytes += String.fromCharCode(00); // what even is this
+          }
+          
+          res.write(bytes);
+          res.end();
+      } catch (err) {
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+  	case "/networktest/post_128":
+      try {
+        res.writeHead(200); // supposedly all we need is a blank 200 ok
+        res.end();
+      } catch (err) {
+        res.writeHead(410);
+        res.end();
+      }
+      break;
+	  
+	  /* news */
+	  case "/uk/news":
+      serveLocalPage(res, 'np_infoboard/uk_news.xml');
+      break;
+
+    case "/au/news":
+      serveLocalPage(res, 'np_infoboard/au_news.xml');
+      break;
+
+	  case "/nz/news":
+      serveLocalPage(res, 'np_infoboard/nz_news.xml');
+      break;	 
+
+    case "/za/news":
+      serveLocalPage(res, 'np_infoboard/za_news.xml');
+      break;	
+
+    /* forms */
+    case "/loginform":
+      serveLocalPage(res, 'testingtools/loginform.html');
+      break;
+
+	  case "/genprofileform":
+      serveLocalPage(res, 'testingtools/genprofileform.html');
+      break;
+
+    case "/profileform":
+      serveLocalPage(res, 'testingtools/profileform.html');
+      break;
+	  
+	  case "/genprofileform":
+      serveLocalPage(res, 'testingtools/genprofileform.html');
+      break;
+	  
+    case "/signatureform":
+      serveLocalPage(res, 'testingtools/signatureform.html');
+      break;
+
     default: // if there's nothing made for the url
       res.writeHead(404);
       res.end();
@@ -309,7 +163,23 @@ var request = http.get("http://post.net.playstation.net/networktest/post_128", f
 
 }).listen(port);
 
+/* page url is based on the root of the script, ie. testingtools/loginform.html links to www/testingtools/loginform.html */
+function serveLocalPage(res, fileURL) {
+  try {
 
+    var formgen = resolve(__dirname, fileURL);
+
+    res.writeHead(200, {
+      'Content-Type': 'text/html'
+    });
+    res.end(require('fs').readFileSync(formgen, 'utf8'));
+
+  } catch (err) {
+
+    res.writeHead(410);
+    res.end();
+  }
+}
 
 // stolen functions
 
@@ -337,6 +207,3 @@ function collectRequestData(request, callback) {
     }
   });
 }
-
-
-
