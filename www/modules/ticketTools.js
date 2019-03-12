@@ -130,10 +130,8 @@ exports.readTicket = function(ticketB64) { // ticket is given as base64 so we ju
 
   var ticketHex = ticketHexBuf.toString('hex');
 
-  ticket.onlineID = Buffer.from(readSection(ticketHex, usernameOffset), 'hex').toString('ascii').replace(/\0/g, '');
-  // some vomit here so, replace to remove null character, read section to read, buffer to convert hex to ascii
-  // also same vomit again lol
-  ticket.domain = Buffer.from(readSection(ticketHex, domainOffset), 'hex').toString('ascii').replace(/\0/g, '');
+  ticket.onlineID = readSection(ticketHex, usernameOffset);
+  ticket.domain = readSection(ticketHex, domainOffset);
   return ticket;
 
 }
@@ -164,6 +162,12 @@ readSection = function(hex, offset) {
   sectionInfo = readSectionHeader(sectionHeader);
   // ok so now we get the data
   var section = hex.substring(offset + 8, offset + 8 + sectionInfo.contentLength);
+
+  if (sectionInfo.contentType == "string") {
+    console.log(section);
+      // some vomit here so, replace to remove null character, read section to read, buffer to convert hex to ascii
+    section = Buffer.from(section, 'hex').toString('ascii').replace(/\0/g, '');
+  }
 
   return section;
 }
