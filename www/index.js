@@ -49,7 +49,7 @@ createServer(function (req, res) {
         collectRequestData(req, result => {
 
 
-          var ticket = ticketGen(result.loginid, result.password, result.serviceid, result.firmware, result.country, result.platform, result.avatarsize, result.jidsubdomain,);
+          var ticket = ticketGen(result.loginid, result.password, result.serviceid);
 
           res.end(ticket);
         });

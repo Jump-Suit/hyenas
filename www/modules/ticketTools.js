@@ -1,6 +1,10 @@
 var exports = module.exports = {};
 
-exports.ticketGen = function(loginID, password, serviceID, firmware, country, platform, avatarsize, jidsubdomain) {
+exports.ticketGen = function(loginID, password, serviceID) {
+
+  if (!loginID || !password || !serviceID) {
+    return;
+  }
 
   const gen = require('random-seed');
 
