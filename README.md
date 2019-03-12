@@ -11,6 +11,11 @@
 - ✓ Guaranteed to be able to play the games you've played as a kid (with your future children.)
 - 🗙 The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
+## Dependencies
+* [Node.JS](https://nodejs.org/en/)
+* [xml2js](https://www.npmjs.com/package/xml2js)
+* [random-seed](https://www.npmjs.com/package/random-seed)
+
 ## Installation
 
 [Work In Progress]
