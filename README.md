@@ -9,19 +9,10 @@
 - 🗙 The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
 ## Installation
-First install the required dependencies with `npm install` or `yarn install`.
-
-Then run `$ npm start`, `$ yarn start`, or `$ node www/index.js` to start up the HTTPD sever.
+[Work In Progress]
 
 ## Testing
-Hyenas can be coded and tested without an actual system, provided that you have an API map.
-
-There is built-in URLs for testing (ie: forms to do POST requests).
-
-| Absolute URI   | Function |
-| -------------- |----------|
-| `/loginform`   | `~/www/testingtools/loginform.html` |
-| `/profileform` | `~/www/testingtools/profileform.html` |
+[Work In Progress]
 
 ## Licensing
 
