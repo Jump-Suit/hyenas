@@ -28,7 +28,7 @@
     "yarn": ">= 1.13.0"
   },
   "scripts": {
-    "start": "node www/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "mysql": "^2.16.0",
