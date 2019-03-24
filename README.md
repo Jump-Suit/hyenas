@@ -12,13 +12,13 @@
 - ✕ The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
 ## Dependencies
-* [Node.JS](https://nodejs.org/en/)
-* [xml2js](https://www.npmjs.com/package/xml2js)
-* [random-seed](https://www.npmjs.com/package/random-seed)
-
+* [NodeJS](https://nodejs.org)
+* [Yarn](https://yarnpkg.com)
+* [MySQL](https://www.mysql.com/downloads/)
 ## Installation
 
-[Work In Progress]
+[Work In Progress] -
+``run install.sh``
 
 ## Testing
 
