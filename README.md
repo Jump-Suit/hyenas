@@ -16,9 +16,8 @@
 * [Yarn](https://yarnpkg.com)
 * [MySQL](https://www.mysql.com/downloads/)
 ## Installation
-
-[Work In Progress] -
-``run install.sh``
+[Work In Progress]
+`npm install` or `yarn install`
 
 ## Testing
 
