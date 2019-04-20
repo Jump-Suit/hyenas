@@ -114,21 +114,25 @@ createServer(function (req, res) {
       break;
 	  
 	  /* news */
-	  case "/uk/news":
+	  case "/e/uk/news":
       serveLocalPage(res, 'np_infoboard/uk_news.xml');
       break;
 
-    case "/au/news":
+    case "/e/au/news":
       serveLocalPage(res, 'np_infoboard/au_news.xml');
       break;
 
-	  case "/nz/news":
+	  case "/e/nz/news":
       serveLocalPage(res, 'np_infoboard/nz_news.xml');
       break;	 
 
-    case "/za/news":
+    case "/e/za/news":
       serveLocalPage(res, 'np_infoboard/za_news.xml');
-      break;	
+      break;
+      
+    case "/e/country-select-cel":
+      serveLocalPage(res, 'np_infoboard/country-select-cel.xml', 'text/xml');
+      break;	 
 
     /* forms */
     case "/loginform":
@@ -155,6 +159,12 @@ createServer(function (req, res) {
     case "/logo.png":
         serveLocalPage(res, 'testingtools/logo.png', 'image/png');
         break;
+
+    /* profile */
+    case "/staticresources/avatar/default":
+    serveLocalPage(res, 'np_staticresources/avatar/default/DefaultAvatar.png', 'image/png');
+    break;	 
+
 
     default: // if there's nothing made for the url
       res.writeHead(404);
