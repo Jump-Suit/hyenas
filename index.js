@@ -6,8 +6,7 @@ const { resolve } = require('path');
 
 const { ticketGen } = require('./modules/ticketTools.js');
 const { profileGen } = require('./modules/profileTools.js');
-//const { genprofileform } = require('./modules/profilegenTools.js');
-//const { signatureform } = require('./modules/signatureform.js');
+
 
 let port = 80;
 
@@ -101,6 +100,10 @@ createServer(function (req, res) {
         res.writeHead(410);
         res.end();
       }
+      break;
+
+      case "/gs2/networktest/get_6m": // Not Even 00s so we have to serve it locally
+      serveLocalPage(res, 'networktest/get_6m', 'application/x-binary'); // used on ps4
       break;
 	  
   	case "/networktest/post_128":
