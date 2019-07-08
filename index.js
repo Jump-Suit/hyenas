@@ -7,7 +7,6 @@ const { resolve } = require('path');
 const { ticketGen } = require('./modules/ticketTools.js');
 const { profileGen } = require('./modules/profileTools.js');
 
-
 let port = 80;
 
 if (process.platform != "win32") {
@@ -157,6 +156,10 @@ createServer(function (req, res) {
     case "/signatureform":
       serveLocalPage(res, 'testingtools/signatureform.html');
       break;
+	  
+	 case "/tmdbXML":
+      serveLocalPage(res, 'testingtools/tmdbXMLform.html');
+      break;
 
     case "/favicon.ico":
     case "/logo.png":
@@ -166,8 +169,19 @@ createServer(function (req, res) {
     /* profile */
     case "/staticresources/avatar/default":
     serveLocalPage(res, 'np_staticresources/avatar/default/DefaultAvatar.png', 'image/png');
-    break;	 
+    break;
+	
+	 case "/UnknownTitleID":
+    serveLocalPage(res, 'testingtools/unknown.png', 'image/png');
+    break;
 
+    case "/app.js":
+        serveLocalPage(res, 'testingtools/app.js', 'text/javascript');
+        break;	
+    
+	    case "/generator-hmac.js":
+        serveLocalPage(res, 'testingtools/generator-hmac.js', 'text/javascript');
+        break;
 
     default: // if there's nothing made for the url
       res.writeHead(404);
