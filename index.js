@@ -161,9 +161,12 @@ createServer(function (req, res) {
       serveLocalPage(res, 'testingtools/tmdbXMLform.html');
       break;
 
-    case "/favicon.ico":
     case "/logo.png":
         serveLocalPage(res, 'testingtools/logo.png', 'image/png');
+        break;
+		
+    case "/favicon.ico":
+        serveLocalPage(res, 'testingtools/favicon_square.png', 'image/png');
         break;
 
     /* profile */
