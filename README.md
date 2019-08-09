@@ -15,6 +15,7 @@
 * [NodeJS](https://nodejs.org)
 * [Yarn](https://yarnpkg.com)
 * [MySQL](https://www.mysql.com/downloads/)
+* [Express.JS](https://www.npmjs.com/package/express)
 ## Installation
 [Work In Progress]
 `npm install` or `yarn install`
