@@ -66,7 +66,7 @@ function getTitle(instance) {
           $('#status').text('');
           $('#icon0-container').css('display', 'flex');
           $('#icon0').attr('src', '');
-          $('#icon0').attr('src', $(data).find('icon').first().text() || '/UnknownTitleID');
+          $('#icon0').attr('src', $(data).find('icon').first().text() || '/tmdb/unknownTitleID');
           $('#title').text($(data).find('name').first().text());
           var report = '';
           report += `Hash:        <a href="${xmlurl}" target="_blank">${hash}</a>`;

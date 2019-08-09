@@ -1,226 +1,104 @@
-const { createServer } = require('http');
-const { parse } = require('querystring');
-const { parseString } = require('xml2js');
+const express = require('express'),
+      hyenas = express();
 
-const { resolve } = require('path');
+const parse = require('querystring'),
+      parseString= require('xml2js');
 
-const { ticketGen } = require('./modules/ticketTools.js');
-const { profileGen } = require('./modules/profileTools.js');
+const ticketGen  = require('./local_modules/ticketTools.js'),
+      profileGen  = require('./local_modules/profileTools.js');
 
-let port = 80;
+const path = require('path');
 
-if (process.platform != "win32") {
+const { readdirSync } = require('fs');
 
-  port = 8080; // on non windows platforms, ports under around 128 are sudo only
-  
-  if(process.getuid && process.getuid() === 0) { 
-    port = 80;
-  }
-  
-}
+const config = require('./config.json');
 
-//console.log("Server started!");
-
-createServer(function (req, res) {
-
-  //console.log(`New request to ${req.url} on ${new Date().toISOString().replace('T', ' ').substr(0, 19)}`)
-
-  switch (req.url) {
-
-    /* currently coded pages go here */
-    case "/nav/auth":
-
-      if (req.method == "POST") {
-
-        res.writeHead(200, {
-          'Content-Type': 'application/x-i-5-ticket',
-          'X-I-5-Version': "1.0",
-          "X-N": "S",
-          "X-I-5-Status": "OK",
-        });
-
-        /*res.writeHead(200, {
-          'Content-Type': 'text/plain',
-          'X-I-5-Version': "1.0",
-          "X-N": "S"
-        });*/
-        collectRequestData(req, result => {
+/*
+const sql = require('mysql');
 
 
-          var ticket = ticketGen(result.loginid, result.password, result.serviceid);
+hyenas.connection = sql.createConnection({
+  host: config.host,
+  user: config.username,
+  password: config.password,
+  database: config.database,
+  insecureAuth: true
+});
 
-          res.end(ticket);
-        });
+hyenas.connection.config.queryFormat = function (query, values) {
+  if (!values) return query;
+  return query.replace(/\:(\w+)/g, function (txt, key) {
+    if (values.hasOwnProperty(key)) 
+      return this.escape(values[key]);
+    return txt;
+  }.bind(this));
+};
 
-      } else { // if not a post request
-
-        res.writeHead(400, {
-          'Content-Type': 'application/x-i-5-ticket',
-          'Filename': 'ticket.dat',
-          'X-I-5-Version': "1.0",
-          "X-N": "S",
-          "X-I-5-Status": "NG",
-          "reason": "400"
-        }); // likely isn't what its looking for but whatever, its an http response code
-
-        res.end();
-      }
-
-      break;
-
-    case "/basic_view/sec/get_self_profile":
-
-      if (req.method == "POST") {
-        collectRequestData(req, result => {
-
-          var profile = profileGen(result.profile.ticket[0], result.profile.env);
-
-          res.writeHead(200);
-          res.end(profile);
-        });
-      } else {
-        res.writeHead(400); // likely isn't what its looking for but whatever, its an http response code
-
-        res.end();
-      }
-      break;
-
-    /* network tests */
-	  case "/networktest/get_2m": // this could be a local file but debating if we really need 2mb of 0s
-      try {
-          let bytes = ""; // this method of splitting up bytes and res is a bit faster
-
-          for (var i = 0; i < 2097152; i++) { // that many 0s in one file lol
-            bytes += String.fromCharCode(00); // what even is this
-          }
-          
-          res.end(bytes);
-      } catch (err) {
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-
-      case "/gs2/networktest/get_6m": // Not Even 00s so we have to serve it locally
-      serveLocalPage(res, 'networktest/get_6m', 'application/x-binary'); // used on ps4
-      break;
-	  
-  	case "/networktest/post_128":
-      try {
-        res.writeHead(200); // supposedly all we need is a blank 200 ok
-        res.end();
-      } catch (err) {
-        res.writeHead(410);
-        res.end();
-      }
-      break;
-	  
-	  /* news */
-	  case "/e/uk/news":
-      serveLocalPage(res, 'np_infoboard/uk_news.xml');
-      break;
-
-    case "/e/au/news":
-      serveLocalPage(res, 'np_infoboard/au_news.xml');
-      break;
-
-	  case "/e/nz/news":
-      serveLocalPage(res, 'np_infoboard/nz_news.xml');
-      break;	 
-
-    case "/e/za/news":
-      serveLocalPage(res, 'np_infoboard/za_news.xml');
-      break;
-      
-    case "/e/country-select-cel":
-      serveLocalPage(res, 'np_infoboard/country-select-cel.xml', 'text/xml');
-      break;	 
-
-    /* forms */
-    case "/loginform":
-      serveLocalPage(res, 'testingtools/loginform.html');
-      break;
-
-	  case "/genprofileform":
-      serveLocalPage(res, 'testingtools/genprofileform.html');
-      break;
-
-    case "/profileform":
-      serveLocalPage(res, 'testingtools/profileform.html');
-      break;
-	  
-	  case "/genprofileform":
-      serveLocalPage(res, 'testingtools/genprofileform.html');
-      break;
-	  
-    case "/signatureform":
-      serveLocalPage(res, 'testingtools/signatureform.html');
-      break;
-	  
-	 case "/tmdbXML":
-      serveLocalPage(res, 'testingtools/tmdbXMLform.html');
-      break;
-
-    case "/logo.png":
-        serveLocalPage(res, 'testingtools/logo.png', 'image/png');
-        break;
-		
-    case "/favicon.ico":
-        serveLocalPage(res, 'testingtools/favicon_square.png', 'image/png');
-        break;
-
-    /* profile */
-    case "/staticresources/avatar/default":
-    serveLocalPage(res, 'np_staticresources/avatar/default/DefaultAvatar.png', 'image/png');
-    break;
-	
-	 case "/UnknownTitleID":
-    serveLocalPage(res, 'testingtools/unknown.png', 'image/png');
-    break;
-
-    case "/app.js":
-        serveLocalPage(res, 'testingtools/app.js', 'text/javascript');
-        break;	
-    
-	    case "/generator-hmac.js":
-        serveLocalPage(res, 'testingtools/generator-hmac.js', 'text/javascript');
-        break;
-
-    default: // if there's nothing made for the url
-      res.writeHead(404);
-      res.end();
-  }
+hyenas.connection.connect((err) => {
+  if (err) throw err;
+  console.log(`[OK] SQL connection made to database: ${config.database}`);
+});
+*/ // Until proper SQL is setup, this should be commented, I suppose. //
 
 
+// Weird module setup, should probably be changed at some point. //
 
-}).listen(port);
+const getModules = source => readdirSync(source, { withFileTypes: true })
+.filter(dirent => dirent.isDirectory())
+.map(dirent => dirent.name);
 
-/* page url is based on the root of the script, ie. testingtools/loginform.html links to www/testingtools/loginform.html */
-function serveLocalPage(res, fileURL, fileType) {
+const modules = getModules(path.join(__dirname, config.modules));
+modules.forEach((module) => {
   try {
+    require(path.join(__dirname, config.modules, module, 'module.js'))(hyenas)
+    console.log(`Hyenas has initialized module: ${module}`);
+  } catch (error) { console.log(`Hyenas failed to initialize module: ${module}`)}
+});
 
-    fileType = fileType || 'text/html';
+hyenas.use(express.static(config.static));
+hyenas.post('/nav/auth/', (req, res) => {
+  res.writeHead(200, {
+      'Content-Type': 'application/x-i-5-ticket',
+      'X-I-5-Version': '1.0',
+      'X-N': 'S',
+      'X-I-5-Status': 'OK'
+  });
+  collectRequestData(req, result => 
+    res.end(ticketGen(result.loginid, result.password, result.serviceid)));
+});
 
-    var formgen = resolve(__dirname, 'www' , fileURL);
+hyenas.get('/nav/auth/', (req, res) => {
+  res.writeHead(400, {
+    'Content-Type': 'application/x-i-5-ticket',
+    'Filename': 'ticket.dat',
+    'X-I-5-Version': "1.0",
+    'X-N': 'S',
+    'X-I-5-Status': 'NG',
+    'reason': '400'
+  }); // likely isn't what its looking for but whatever, its an http response code
+  res.end();
+});
 
-    res.writeHead(200, {
-      'Content-Type': fileType
-    });
+hyenas.post('/basic_view/sec/get_self_profile/', (req, res) => {
+  collectRequestData(req, result => 
+    res.status(200).end(profileGen(result.profile.ticket[0], result.profile.env)));
+});
 
-    require('fs').readFile(formgen, function (err, content) {
-      if (err) {
-        res.writeHead(410);
-        res.end();
-      }      
-      res.end(content, 'utf8');
-    })
-  } catch (err) {
-    res.writeHead(410);
-    res.end();
-  }
-}
+hyenas.get('/basic_view/sec/get_self_profile', (req, res) => res.status(400).end());
 
-// stolen functions
+hyenas.get('/networktest/get_2m', (req, res) => {
+  try {
+    res.end(Buffer.alloc(2097152));
+  } catch (err) { res.status(410).end(); }
+});
+
+hyenas.get('/gs2/networktest/get_6m', (req, res) => 
+  res.sendFile(path.join(__dirname, config.system, 'networktest/get_6m')));
+
+hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
+hyenas.listen(config.port, () => console.log(`Hyenas has started on Port: ${config.port}`));
+
+// Yay, stolen functions! //
 
 function collectRequestData(request, callback) {
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';

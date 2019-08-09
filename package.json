@@ -31,8 +31,11 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
     "mysql": "^2.16.0",
     "random-seed": "^0.3.0",
+    "require-all": "^3.0.0",
     "xml2js": "^0.4.19"
   }
 }
