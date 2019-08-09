@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <title>Ticket Form</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+img {
+
+width: 53px;
+
+height: 41px;
+
+margin: 5px;
+
+margin-right: 15px;
+}
+
+</style>
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="/logo.png"></img>
+    <a class="navbar-brand" style="color: #595959; font-weight: 550;">Hyenas Testing Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/debug/forms/login">Login Form<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/debug/forms/profile">Get Profile Form</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="/debug/forms/generateProfile">Generate Profile Form</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="/tmdb">Grab XML Title Metadata</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+
+        <a class="nav-link" href="https://github.com/JonHypersomniac/hyenas"><i class="fab fa-github-square fa-2x"></i></a>
+      </span>
+      <span class="navbar-text">
+
+        <a class="nav-link" href="https://discord.gg/RythnDn"><i class="fab fa-discord fa-2x"></i></a>
+      </span>
+    </div>
+  </nav>
+  <form action="/nav/auth" method="post" class="p-5">
+
+    <div class="row">
+      <div class="col-sm">
+        <label for="lid">User ID</label>
+        <input type="email" id="lid" class="form-control" name="loginid" placeholder="Enter Login ID (Email)..." />
+      </div>
+      <div class="col-sm">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" class="form-control" name="password" placeholder="Enter Password..." />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="sid">Service ID</label>
+      <input type="text" id="sid" class="form-control" name="serviceid" placeholder="enter service id..." value="IV0001-NPXS01001_00" />
+    </div>
+
+<div class="card" style="top: 10px; position: relative;">
+  <div class="card-body">
+    <h5 class="card-title">Input</h5>
+    <p class="card-text">
+      <code id="input" style="white-space: pre-line">loginid=[loginid]&password=[password]&serviceid=[serviceid]</code>
+    </p>
+<button type="submit" class="btn btn-primary">Submit (will download file)</button>
+
+  </div>
+</div>
+
+
+
+
+
+  </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+<script>
+$('input').on('input', function () {
+// since the contents of the input codebox don't matter unlike the profile one we could do whatever here
+
+var request = // template as i can't really find a function that does the job for me
+`loginid=${$('input[name=loginid]').val()}&password=${$('input[name=password]').val()}&serviceid=${$('input[name=serviceid]').val()}`;
+
+$('#input').text(request);
+
+});
+  </script>
+
+</body>
+
+</html>

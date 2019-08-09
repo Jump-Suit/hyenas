@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "username": "root",
+  "password": "",
+  "database": "hyenas",
+
+  "port": 80,
+   
+  "system": "./hyenas",
+  "static": "./static",
+  "modules": "./hyenas_modules"
+
+}

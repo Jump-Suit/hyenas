@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <title>Ticket Form</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+
+img {
+
+width: 53px;
+
+height: 41px;
+
+margin: 5px;
+
+margin-right: 15px;
+}
+
+</style>
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="/logo.png"></img>
+    <a class="navbar-brand" style="color: #595959; font-weight: 550;">Hyenas Testing Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/debug/forms/login">Login Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/debug/forms/profile">Get Profile Form</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/debug/forms/generateProfile">Generate Profile Form<span class="sr-only">(current)</span></a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="/tmdb">Grab XML Title Metadata</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+
+        <a class="nav-link" href="https://github.com/JonHypersomniac/hyenas"><i class="fab fa-github-square fa-2x"></i></a>
+      </span>
+      <span class="navbar-text">
+
+        <a class="nav-link" href="https://discord.gg/RythnDn"><i class="fab fa-discord fa-2x"></i></a>
+      </span>
+    </div>
+  </nav>
+  
+    <form action="/nav/auth" method="post" class="p-5">
+
+    <div class="row">
+      <div class="col-sm">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" name="username" placeholder="Enter Your Username..." />
+      </div>
+      <div class="col-sm">
+        <label for="ucbgp">Profile Background Color</label>
+        <input type="text" id="ucbgp" class="form-control" name="ucbgp" placeholder="Enter Hex color value..." />
+      </div>
+
+	  
+	  		    <div class="col-sm">
+        <label for="country">Country</label>
+        <input type="text" id="country" class="form-control" name="country" placeholder="Enter Country Code" />
+      </div>
+	  
+    </div>
+
+	<div class="row">
+    <div class="col-sm">
+      <label for="plusicon">Playstation Plus</label>
+      <input type="text" id="plusicon" class="form-control" name="plusicon" placeholder="0 - False, 1 - True" />
+    </div>
+	    <div class="col-sm">
+      <label for="ptlp">ptlp?</label>
+      <input type="text" id="ptlp" class="form-control" name="ptlp" placeholder="0 - False, 1 - True" />
+    </div>
+	</div>
+	
+<div class="row">
+      <div class="col-sm">
+        <label for="lang1">Language 1</label>
+        <input type="text" id="lang1" class="form-control" name="lang1" placeholder="Enter Language ID..." />
+      </div>
+	  		    <div class="col-sm">
+        <label for="lang2">Language 2</label>
+        <input type="text" id="lang2" class="form-control" name="lang2" placeholder="Enter Language ID..." />
+      </div>
+	  	  		    <div class="col-sm">
+        <label for="lang3">Language 3</label>
+        <input type="text" id="lang3" class="form-control" name="lang3" placeholder="Enter Language ID..." />
+      </div>
+	  
+	  	  	  		    <div class="col-sm">
+        <label for="aboutme">Aboutme</label>
+        <input type="text" id="aboutme" class="form-control" name="aboutme" placeholder="Describe Yourself!" />
+      </div>
+	  
+</div>
+
+<div class="card" style="top: 10px; position: relative;">
+  <div class="card-body">
+    <h5 class="card-title">Input</h5>
+    <p class="card-text">
+      <code id="input" style="white-space: pre-line">username=[username]&ucbgp=[ucbgp]&country=[country]&plusicon=[plusicon]&ptlp=[ptlp]&lang1=[lang1]&lang2=[lang2]&lang3=[lang3]&aboutme=[aboutme]</code>
+    </p>
+<button type="submit" class="btn btn-primary">Submit (will download file)</button>
+
+  </div>
+</div>
+
+
+
+
+
+  </form>
+  
+  
+  
+  </body>
+  
+  <script>
+$('input').on('input', function () {
+// since the contents of the input codebox don't matter unlike the profile one we could do whatever here
+
+var request = // template as i can't really find a function that does the job for me
+`username=${$('input[name=username]').val()}&ucbgp=${$('input[name=ucbgp]').val()}&country=${$('input[name=country]').val()}&plusicon=${$('input[name=plusicon]').val()}&ptlp=${$('input[name=ptlp]').val()}&lang1=${$('input[name=lang1]').val()}&lang2=${$('input[name=lang2]').val()}&lang3=${$('input[name=lang3]').val()}&aboutme=${$('input[name=aboutme]').val()}`;
+
+$('#input').text(request);
+
+});
+  </script>
+  
+  </html>
