@@ -1,11 +1,11 @@
 const express = require('express'),
       hyenas = express();
 
-const parse = require('querystring'),
-      parseString= require('xml2js');
+      const { parse } = require('querystring'),
+      { parseString } = require('xml2js');
 
-const ticketGen  = require('./local_modules/ticketTools.js'),
-      profileGen  = require('./local_modules/profileTools.js');
+      const { ticketGen } = require('./local_modules/ticketTools.js'),
+      { profileGen } = require('./local_modules/profileTools.js');
 
 const path = require('path');
 
