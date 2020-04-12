@@ -1,12 +1,12 @@
 {
   "name": "hyenas",
-  "author": "Jonathan (https://github.com/llnwn)",
+  "author": "Jonathan R (https://github.com/DeltaFlush)",
   "contributors": [
     "Zmxhawrhbg (https://github.com/Zmxhawrhbg)",
     "Hope (https://github.com/Hopefullyidontgetbanned)"
   ],
-  "bugs": "https://github.com/llnwn/hyenas/issues",
-  "homepage": "https://github.com/llnwn/hyenas",
+  "homepage": "https://github.com/DeltaFlush/hyenas",
+  "bugs": "https://github.com/DeltaFlush/hyenas/issues",
   "version": "0.5.0",
   "license": "GPL-3.0-only",
   "keywords": [
@@ -20,7 +20,7 @@
     "server"
   ],
   "description": "The world's first homemade PlayStation®Network emulator for the PS3®.",
-  "repository": "github:llnwn/hyenas",
+  "repository": "github:DeltaFlush/hyenas",
   "private": true,
   "engines": {
     "node": ">= 8.12.0",
