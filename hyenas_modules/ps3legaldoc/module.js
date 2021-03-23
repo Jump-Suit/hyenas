@@ -12,4 +12,9 @@ module.exports = (hyenas) => {
 		res.sendFile('./data/us_tosua_privacy_en01.html', { root: __dirname }));
 	hyenas.get('/ps3-eula/psn/us_tosua_privacy_en02.html', (re, res) =>
 		res.sendFile('./data/us_tosua_privacy_en02.html', { root: __dirname }));
+		
+	hyenas.get('/ps3-eula/psn/us_tosua_en.html', (re, res) =>
+		res.sendFile('./data/us_tosua_en.html', { root: __dirname }));
+	hyenas.get('/ps3-eula/psn/us_copyright_en.html', (re, res) =>
+		res.sendFile('./data/us_copyright_en.html', { root: __dirname }));
 };
