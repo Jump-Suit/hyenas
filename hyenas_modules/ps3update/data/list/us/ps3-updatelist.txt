@@ -1,4 +1,4 @@
 # US
 Dest=84;CompatibleSystemSoftwareVersion=4.8710-;
-Dest=84;IncrementalUpdateVersion=00010938-00010938;ImageVersion=000109a5;SystemSoftwareVersion=4.8710;CDN=http://dus01.ps3.update.playstation.net/update/ps3/image/us/2020_1203_03373a581934f0d2b796156d2fb28b39/PS3UPDAT.PUP;CDN_Timeout=30;
+Dest=84;IncrementalUpdateVersion=00010938-00010938;ImageVersion=000109a5;SystemSoftwareVersion=4.8710;CDN=http://dus01.ps3.update.playstation.net/update/ps3/image/us/2020_1203_03373a581934f0d2b796156d2fb28b39/PS3PATCH.PUP;CDN_Timeout=30;
 Dest=84;ImageVersion=000109a5;SystemSoftwareVersion=4.8710;CDN=http://dus01.ps3.update.playstation.net/update/ps3/image/us/2020_1203_03373a581934f0d2b796156d2fb28b39/PS3UPDAT.PUP;CDN_Timeout=30;

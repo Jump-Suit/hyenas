@@ -1,0 +1,4 @@
+# AU/NZ
+Dest=89;CompatibleSystemSoftwareVersion=4.8700-;
+Dest=89;IncrementalUpdateVersion=00010938-00010938;ImageVersion=000109a5;SystemSoftwareVersion=4.8700;CDN=http://dau01.ps3.update.playstation.net/update/ps3/image/au/2020_1203_03373a581934f0d2b796156d2fb28b39/PS3PATCH.PUP;CDN_Timeout=30;
+Dest=89;ImageVersion=000109a5;SystemSoftwareVersion=4.8700;CDN=http://dau01.ps3.update.playstation.net/update/ps3/image/au/2020_1203_03373a581934f0d2b796156d2fb28b39/PS3UPDAT.PUP;CDN_Timeout=30;
