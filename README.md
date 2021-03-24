@@ -21,7 +21,8 @@
 
 ## Testing
 
-[Work In Progress]
+`node index.js`
+Testing can be achieved using Fakedns.py for now, rerouting the Sony domains to your local PC ip for Hyenas to communicate with your PS3! (WOO!!)
 
 ## Licensing
 
