@@ -22,7 +22,7 @@
 ## Testing
 
 `node index.js`
-Testing can be achieved using Fakedns.py for now, rerouting the Sony domains to your local PC ip for Hyenas to communicate with your PS3! (WOO!!)
+Test by rerouting the Sony domains to your local PC IP in the *hosts* example file in the repo *to the one in updns approaming folder of node!* Redirect your PC Local IP as your Primary DNS in PS3, and congrats! **Hyenas can communicate with your PS3! (WOO!!)**
 
 ## Licensing
 

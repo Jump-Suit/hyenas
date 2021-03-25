@@ -13,6 +13,27 @@ const { readdirSync } = require('fs');
 
 const config = require('./config.json');
 
+const updns = require('updns').createServer(53, '127.0.0.1')
+ 
+updns.on('error', error => {
+    console.log(error)
+})
+ 
+updns.on('listening', server => {
+    console.log('DNS service has started')
+})
+ 
+ /*
+updns.on('message', (domain, send, proxy) => {
+    if(domain === 'playstation.com'){
+		console.log("Redirecting ${domain}")
+        send('127.0.0.1')
+    }else {
+        proxy('127.0.0.1')
+    }
+})
+*/
+
 /*
 const sql = require('mysql');
 

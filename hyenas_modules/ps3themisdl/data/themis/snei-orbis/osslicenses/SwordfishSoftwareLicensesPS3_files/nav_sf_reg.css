@@ -1,0 +1,121 @@
+body {
+	font-family: Helvetica, Arial, Osaka;
+	font-weight: normal;
+	font-size: 24px;
+	color: #cccccc;
+	background-color: #222222;
+}
+
+h1	{
+	margin-bottom: 1.5em;
+	color: white;
+}
+h2	{
+	font-size: 1.3em;
+	margin-bottom: 1em;
+	color: white;
+}
+h3	{
+	font-size: 1.1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	color: white;
+}
+ul	{
+	list-style: lower-roman;
+	margin: 1em 10px 10px 3em;
+}
+li	{
+	margin-bottom: 0.2em;
+	line-height: 120%;
+}
+p	{
+	line-height: 130%;
+	margin-bottom: 1em;
+}
+p a	{
+	color: #797B84;
+	text-decoration: none;
+}
+p a:hover	{
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #6e7e8b;
+}
+hr	{
+	clear: both;
+}
+
+.clear	{
+	clear: both;
+}
+ul.language	{
+	margin: 0px;
+	list-style: none;
+}
+ul.language li	{
+	margin: 0px;
+	text-indent: -10px;
+	padding-left: 10px;
+	margin-bottom: 3px;
+}
+ul.language li a	{
+	padding-left: 10px;
+	text-decoration: none;
+	color: #797B84;
+}
+ul.language li a:hover	{
+	background: url(/ps3-eula/rep/img/li_over2.gif) no-repeat left 3px;
+}
+ul.europe	{
+	margin: 0px 0px 30px;
+	list-style: none;
+	padding-bottom: 10px;
+}
+ul.europe li	{
+	float: left;
+	padding-right: 10px;
+}
+ul.europe li a	{
+	color: #797B84;
+	text-decoration: none;
+}
+ul.europe li a:hover	{
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #6e7e8b;
+}
+ul.asia	{
+	margin: 0px 0px 30px;
+	list-style: none;
+	padding-bottom: 10px;
+}
+ul.asia li	{
+	float: left;
+	padding-right: 5px;
+}
+ul.hk {
+	list-style-type: square;
+}
+ul.eu {
+	list-style-type: circle;
+}
+ul.abc {			/* ---------- Update 07.03.13 */
+	list-style-type: lower-alpha;
+}
+ul.fra	{			/* ---------- Added 07.03.12 */
+	list-style: disc;
+	margin: 1em 10px 10px 1.2em;
+}
+.under {
+	text-decoration: underline;
+}
+.hkInd {
+margin-left: 2em;
+}
+.bold {
+	font-weight: bold;
+}
+.iepngfix {
+	behavior: expression(IEPNGFIX.fix(this));
+}

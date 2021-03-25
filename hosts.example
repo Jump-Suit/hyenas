@@ -1,0 +1,19 @@
+
+
+bind                127.0.0.1:53     # address => port
+proxy               8.8.8.8        # proxy => DNS Server
+
+fus01.ps3.update.playstation.net (Your PC Local IP Here) #PS3 Update List.txt Redirects to .PUP domains
+
+#SCEI-0.auth.np.ac.playstation.net (Your PC Local IP Here) # Date & Time Authentication Server.
+
+playstation.com     (Your PC Local IP Here)      # PS3Landing
+#media.playstation.com (Your PC Local IP Here) # Unknown for now...
+legaldoc.dl.playstation.net     (Your PC Local IP Here) #PSN Legal Docs Domain
+nsx-e.np.dl.playstation.net     (Your PC Local IP Here) #PSN Logger? Log.txt for now. 
+video.dl.playstation.net (Your PC Local IP Here) # 3 value in txt as a response
+comic.dl.playstation.net (Your PC Local IP Here) # 3 value in txt as a response
+#static-resource.np.community.playstation.net (Your PC Local IP Here) #Avatars... and more?
+#cdn-a.sonyentertainmentnetwork.com (Your PC Local IP Here) 
+#themis.dl.playstation.net (Your PC Local IP Here) # Open Souce Licenses
+#trophy.ww.np.community.playstation.net     (Your PC Local IP Here) # PSN Trophies, Sync
