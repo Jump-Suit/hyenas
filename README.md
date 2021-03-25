@@ -21,8 +21,10 @@
 
 ## Testing
 
+Test by rerouting the Sony domains to your local PC IP in the *hosts* example file in the repo coping the contents*to the one in updns approaming folder of node in your User Folder!* 
+Redirect your PC Local IP as your Primary DNS in PS3, and congrats! **Hyenas can communicate with your PS3! (WOO!!)**
+
 `node index.js`
-Test by rerouting the Sony domains to your local PC IP in the *hosts* example file in the repo *to the one in updns approaming folder of node!* Redirect your PC Local IP as your Primary DNS in PS3, and congrats! **Hyenas can communicate with your PS3! (WOO!!)**
 
 ## Licensing
 
