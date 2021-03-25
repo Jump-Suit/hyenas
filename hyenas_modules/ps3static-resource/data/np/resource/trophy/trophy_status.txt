@@ -1,0 +1,6 @@
+﻿<!--Sce-Np-Signature: 2dbdb83b762b5b3ee440cd908444e1337207a491-->
+<?xml version="1.0" encoding="UTF-8"?>
+<nptrophy status="alive">
+	<interval>600</interval>
+	<trophy-fqdn>trophy.ww.np.community.playstation.net</trophy-fqdn>
+</nptrophy>
