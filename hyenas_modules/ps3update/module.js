@@ -1,4 +1,6 @@
 module.exports = (hyenas) => {
+	//fus01 update domain
+
     hyenas.get('/update/ps3/list/us/ps3-updatelist.txt', (req, res) => 
         res.sendFile('./data/list/us/ps3-updatelist.txt', { root: __dirname }));
 		

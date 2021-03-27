@@ -1,4 +1,6 @@
 module.exports = (hyenas) => {
+    //Information Board News...
+
     /* hyenas.get('/e/:region/news/', (req, res) => {
         hyenas.connection.query('SELECT * FROM news WHERE region = :region', 
         { region : req.params.region }, (error, results) => {
