@@ -117,7 +117,8 @@ hyenas.get('/gs2/networktest/get_6m', (req, res) =>
   res.sendFile(path.join(__dirname, config.system, 'networktest/get_6m')));
 
 hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
-hyenas.listen(config.port, () => console.log(`Hyenas has started on Port: ${config.port}`));
+hyenas.listen(config.port1, () => console.log(`Hyenas has started on Port: ${config.port1}`));
+//hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
 
 // Yay, stolen functions! //
 

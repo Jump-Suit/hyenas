@@ -3,38 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Hyenas", "Hyenas.njsproj", "{06214157-284C-4465-8C47-009517F5CCC0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C37ECA7-AE90-4189-BAF9-5E9D7675DE34}"
 	ProjectSection(SolutionItems) = preProject
 		hyenas\getprof\auth_req.html = hyenas\getprof\auth_req.html
+		config.json = config.json
 		hyenas_modules\debug\data\generateProfile.html = hyenas_modules\debug\data\generateProfile.html
 		hyenas\networktest\get_6m = hyenas\networktest\get_6m
 		hyenas_modules\debug\data\login.html = hyenas_modules\debug\data\login.html
 		hyenas_modules\debug\module.js = hyenas_modules\debug\module.js
 		hyenas_modules\news\module.js = hyenas_modules\news\module.js
 		hyenas_modules\ps3update\module.js = hyenas_modules\ps3update\module.js
+		hyenas_modules\ps3static-resource\module.js = hyenas_modules\ps3static-resource\module.js
+		hyenas_modules\ps3apollo\module.js = hyenas_modules\ps3apollo\module.js
+		hyenas_modules\ps3legaldoc\module.js = hyenas_modules\ps3legaldoc\module.js
+		hyenas_modules\ps3poseidon\module.js = hyenas_modules\ps3poseidon\module.js
+		hyenas_modules\ps3ares\module.js = hyenas_modules\ps3ares\module.js
+		hyenas_modules\ps3zeus\module.js = hyenas_modules\ps3zeus\module.js
 		hyenas_modules\debug\data\profile.html = hyenas_modules\debug\data\profile.html
 		local_modules\profileTools.js = local_modules\profileTools.js
 		local_modules\signatureform.js = local_modules\signatureform.js
 		local_modules\ticketTools.js = local_modules\ticketTools.js
 	EndProjectSection
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{06214157-284C-4465-8C47-009517F5CCC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06214157-284C-4465-8C47-009517F5CCC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06214157-284C-4465-8C47-009517F5CCC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06214157-284C-4465-8C47-009517F5CCC0}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5FB47606-8DB1-45C6-BCD3-596135653677}
-	EndGlobalSection
-EndGlobal
