@@ -9,7 +9,8 @@
 - ✓ Get past the sign-in prompt when playing games online (mocked ticket authentication).
 - ✓ Completely isolated from the actual servers, which means console-bans are a non-issue.
 - ✓ Guaranteed to be able to play the games you've played as a kid (with your future children.)
-- ✓ Brings back Web Browser ![Landing Pages](Example2.png?raw=true) so you can visit that nostalgic game.
+- ✓ Brings back Web Browser Landing Pages so you can visit that nostalgic game.
+![Landing Pages](Example2.png?raw=true)
 - ✓ Mocked EULA, TOS, Privacy Legal documents, Network Test, and Updating via Internet.
 - ✕ The PlayStation®Store, PlayStation®Plus, PlayStation®Now, PlayStation®TV, CrossPlay, etc…
 
