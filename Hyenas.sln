@@ -19,8 +19,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		hyenas_modules\ps3poseidon\module.js = hyenas_modules\ps3poseidon\module.js
 		hyenas_modules\ps3ares\module.js = hyenas_modules\ps3ares\module.js
 		hyenas_modules\ps3zeus\module.js = hyenas_modules\ps3zeus\module.js
+		hyenas_modules\ps3nsxnp\module.js = hyenas_modules\ps3nsxnp\module.js
 		hyenas_modules\debug\data\profile.html = hyenas_modules\debug\data\profile.html
 		local_modules\profileTools.js = local_modules\profileTools.js
 		local_modules\signatureform.js = local_modules\signatureform.js
 		local_modules\ticketTools.js = local_modules\ticketTools.js
 	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4521118-B75C-4C57-A1C8-A2E3535B6928}
+	EndGlobalSection
+EndGlobal

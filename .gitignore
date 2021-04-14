@@ -94,3 +94,5 @@ obj/Debug/Hyenas.njsproj.FileListAbsolute.txt
 hyenas_modules/ps3blob/data/lbi/lbiAnnouncementXML.php
 hyenas_modules/ps3blob/module.js
 *.PUP
+*.crt
+*.key

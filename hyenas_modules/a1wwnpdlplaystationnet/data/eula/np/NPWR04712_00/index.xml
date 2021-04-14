@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<eula npcommid="NPWR04712_00">
+    <file name="GT-eula-scej-ja-20131129.html" version="3" country="jp"              />
+
+    <file name="GT-eula-scea_English-20131125.html" version="2" country="us"              />
+    <file name="GT-eula-scea_French-20140521.html"  version="3" country="us" language="2" />
+    <file name="GT-eula-scea_es-20131125.html"      version="2" country="us" language="3" />
+
+    <file name="GT-eula-scea_English-20131125.html" version="2" country="ca"              />
+    <file name="GT-eula-scea_French-20140521.html"  version="3" country="ca" language="2" />
+    <file name="GT-eula-scea_es-20131125.html"      version="2" country="ca" language="3" />
+
+    <file name="GT-eula-scea_English-20131125.html" version="2" country="mx"              />
+    <file name="GT-eula-scea_French-20140521.html"  version="3" country="mx" language="2" />
+    <file name="GT-eula-scea_es-20131125.html"      version="2" country="mx" language="3" />
+
+    <file name="GT-eula-scea_English-20131125.html" version="2" country="br"              />
+    <file name="GT-eula-scea_French-20140521.html"  version="3" country="br" language="2" />
+    <file name="GT-eula-scea_es-20131125.html"      version="2" country="br" language="3" />
+    <file name="GT-eula-scea_pt-BR-20131125.html"   version="2" country="br" language="7" />
+
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="hk"               />
+    <file name="GT-eula-sceh-cn-1203-2.html" version="5" country="hk" language="10" />
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="tw"               />
+    <file name="GT-eula-sceh-cn-1203-2.html" version="5" country="tw" language="10" />
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="sg"               />
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="my"               />
+    <file name="GT-eula-sceh-kr-1203-2.html" version="5" country="kr"               />
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="id"               />
+    <file name="GT-eula-sceh-en-1203.html" version="4" country="th"               />
+
+    <file name="GT-eula-scee-en-v3.html"  version="5" />
+    <file name="GT-eula-scee-French.html" version="5" language="2" />
+    <file name="GT-eula-scee-Spanish.html"  version="5" language="3" />
+    <file name="GT-eula-scee-de-v4.html"  version="6" language="4" />
+    <file name="GT-eula-scee-Italian.html"  version="6" language="5" />
+    <file name="GT-eula-scee-nl-v7.html" version="11" language="6" />
+    <file name="GT-eula-scee-pt-v4.html" version="8" language="7" />
+    <file name="GT-eula-scee-ru-v3.html"  version="7" language="8" />
+    <file name="GT-eula-scee-en-v2_FI.html"  version="5" language="12" />
+    <file name="GT-eula-scee-en-v2_SV.html"  version="5" language="13" />
+    <file name="GT-eula-scee-en-v2_DA.html"  version="5" language="14" />
+    <file name="GT-eula-scee-en-v2_NO.html"  version="5" language="15" />
+    <file name="GT-eula-scee-pl-v2.html"  version="5" language="16" />
+    <file name="GT-eula-scee-tr-v4.html"  version="7" language="19" />
+
+</eula>

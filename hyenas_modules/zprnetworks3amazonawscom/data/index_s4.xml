@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<news_index npcommid="NPWR01295_00" format="1">
+  <item file="s4_prod_au.html" version="4" language="australian" /> 
+  <item file="s4_prod_dk.html" version="4" language="danish" /> 
+  <item file="s4_prod_fi.html" version="4" language="finnish" /> 
+  <item file="s4_prod_fr.html" version="4" language="french" /> 
+  <item file="s4_prod_de.html" version="4" language="german" /> 
+  <item file="s4_prod_uk.html" version="4" language="british" /> 
+  <item file="s4_prod_it.html" version="4" language="italian" /> 
+  <item file="s4_prod_jp.html" version="4" language="japanese" /> 
+  <item file="s4_prod_kr.html" version="4" language="korean" /> 
+  <item file="s4_prod_nl.html" version="4" language="dutch" /> 
+  <item file="s4_prod_usa.html" version="5" language="english" /> 
+  <item file="s4_prod_no.html" version="4" language="norwegian" /> 
+  <item file="s4_prod_pl.html" version="4" language="polish" /> 
+  <item file="s4_prod_pt.html" version="4" language="portuguese" /> 
+  <item file="s4_prod_ru.html" version="4" language="russian" /> 
+  <item file="s4_prod_es.html" version="4" language="spanish" /> 
+  <item file="s4_prod_se.html" version="4" language="swedish" /> 
+</news_index>

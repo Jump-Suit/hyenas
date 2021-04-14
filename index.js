@@ -8,13 +8,23 @@ const express = require('express'),
       { profileGen } = require('./local_modules/profileTools.js');
 
 const path = require('path');
-
 const { readdirSync } = require('fs');
-
 const config = require('./config.json');
-
 const updns = require('updns').createServer(53, '127.0.0.1')
- 
+
+/*
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var privateKey = fs.readFileSync('certs/SCEIDNASROOT05.key', 'utf8');
+var certificate = fs.readFileSync('certs/SCEIDNASROOT05.crt', 'utf8');
+
+var credentials = { key: privateKey, cert: certificate };
+
+var httpsServer = https.createServer(credentials, hyenas);
+
+httpsServer.listen(443);
+*/
 updns.on('error', error => {
     console.log(error)
 })
@@ -22,7 +32,8 @@ updns.on('error', error => {
 updns.on('listening', server => {
     console.log('DNS service has started')
 })
- 
+
+
  /*
 updns.on('message', (domain, send, proxy) => {
     if(domain === 'playstation.com'){
@@ -109,7 +120,8 @@ hyenas.get('/basic_view/sec/get_self_profile', (req, res) => res.status(400).end
 
 hyenas.get('/networktest/get_2m', (req, res) => {
   try {
-    res.end(Buffer.alloc(2097152));
+      res.end(Buffer.alloc(2097152));
+      console.log("Sent Empty String");
   } catch (err) { res.status(410).end(); }
 });
 
@@ -117,8 +129,12 @@ hyenas.get('/gs2/networktest/get_6m', (req, res) =>
   res.sendFile(path.join(__dirname, config.system, 'networktest/get_6m')));
 
 hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
+
 hyenas.listen(config.port1, () => console.log(`Hyenas has started on Port: ${config.port1}`));
-//hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
+hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
+//hyenas.listen(config.port3, () => console.log(`Hyenas has started on Port: ${config.port3}`));
+
+//hyenas.listen(config.port4, () => console.log(`Hyenas has started on Port: ${config.port4}`));
 
 // Yay, stolen functions! //
 

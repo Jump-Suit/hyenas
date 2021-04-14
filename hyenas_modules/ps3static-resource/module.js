@@ -87,8 +87,6 @@ module.exports = (hyenas) => {
 	hyenas.get('/np/resource/basic/us_searchjid.xml', (req, res) =>
 		res.sendFile('./data/np/resource/basic/us_searchjid.xml', { root: __dirname }));
     */
-    hyenas.get('/np/resource/title/NPXS01005_00/matching/NPXS01005_00-matching.xml', (req, res) => 
-        res.sendFile('./data/np/resource/title/NPXS01005_00/matching/NPXS01005_00-matching.txt', { root: __dirname }));
 
 	// Avatars
     //Default Avatar
@@ -98,8 +96,31 @@ module.exports = (hyenas) => {
         res.sendFile('./data/avatar/3RD/EP43321110007_5FEED32BFD118575442A_L.png', { root: __dirname }));
     hyenas.get('/avatar_n/3RD/EP43321110007_5FEED32BFD118575442A_N.png', (req, res) => 
         res.sendFile('./data/avatar_n/3RD/EP43321110007_5FEED32BFD118575442A_N.png', { root: __dirname }));
+    //Spiderman
+    hyenas.get('/psn-rsc/avatar/UP9000/CUSA02299_00-SPIDERMANAVATAR1_7BFBCC8CD9157D0D21F8_l.png', (req, res) =>
+        res.sendFile('./data/psn-rsc/avatar/UP9000/CUSA02299_00-SPIDERMANAVATAR1_7BFBCC8CD9157D0D21F8_l.png', { root: __dirname }));
+
+
+
+
 
     //PS Vita
     hyenas.get('/panel_s/SCEI/IP91001111018_D3F55F4266B345BF7CE9_S.png', (req, res) =>
         res.sendFile('./data/panel_s/SCEI/IP91001111018_D3F55F4266B345BF7CE9_S.png', { root: __dirname }));
+		
+	hyenas.get('/np/resource/title/NPXS01005_00/matching/NPXS01005_00-matching.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPXS01005_00/matching/NPXS01005_00-matching.txt', { root: __dirname }));
+		
+	//Tom Clancy's Rainbow Six Vegas 1
+	//Lobby
+	hyenas.get('/np/resource/title/NPWR00022_00/lobby/NPWR00022_00-lobby.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPWR00022_00/lobby/NPWR00022_00-lobby.xml', { root: __dirname }));
+		
+	//Tom Clancy's Ghost Recon: Future Soldier
+	//Ranking
+	hyenas.get('/np/resource/title/NPWR00848_00/ranking/NPWR00848_00-ranking.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPWR00848_00/ranking/NPWR00848_00-ranking.xml', { root: __dirname }));
+	//Rating for UplayPassport
+	hyenas.get('/np/resource/title/NPWR01196_00/rating/NPWR01196_00-rating.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPWR01196_00/rating/NPWR01196_00-rating.xml', { root: __dirname }));
 };

@@ -1,0 +1,6 @@
+module.exports = (hyenas) => {
+	
+	//Ace Combat Infinity Encrypted Trophy Data
+    hyenas.get('/trophy/np/NPWR04428_00_01B0B4615303BBF122FA35372304F540836A5F3D24/347DA32363F85364B56B875EF418B94FA195FD5E.ESFM', (req, res) => 
+        res.sendFile('./data/trophy/np/NPWR04428_00_01B0B4615303BBF122FA35372304F540836A5F3D24/347DA32363F85364B56B875EF418B94FA195FD5E.ESFM', { root: __dirname }));
+};

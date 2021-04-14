@@ -5,7 +5,8 @@
   "database": "hyenas",
 
   "port1": 80,
-   
+  "port2": 53,
+
   "system": "./hyenas",
   "static": "./static",
   "modules": "./hyenas_modules"
