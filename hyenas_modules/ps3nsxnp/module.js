@@ -17,9 +17,12 @@ module.exports = (hyenas) => {
     //Movies
     hyenas.get('/nsx/material/7/7ac8ebd3de7c54b21a76593a79b8a55580c67477-1207265.jpg', (req, res) =>
         res.sendFile('./data/nsx/material/7/7ac8ebd3de7c54b21a76593a79b8a55580c67477-1207265.jpg', { root: __dirname }));
-    //PlayStation Store 
-    hyenas.get('/nsx/material/b/b786496313e01ceda47b6c5d6ea60693ad038667-30594.jpg', (req, res) =>
-        res.sendFile('./data/nsx/material/b/b786496313e01ceda47b6c5d6ea60693ad038667-30594.jpg', { root: __dirname }));
+    //PlayStation Store - Controller BG
+    hyenas.get('/nsx/material/b/b786496313e01ceda47b6c5d6ea60693ad038667-30594.png', (req, res) =>
+        res.sendFile('./data/nsx/material/b/b786496313e01ceda47b6c5d6ea60693ad038667-30594.png', { root: __dirname }));
+    //PlayStation Store - Movie BG
+    hyenas.get('/nsx/material/b/b0d756b5a4f132829a8fe3dc3c320673aa453c31-30595.png', (req, res) =>
+        res.sendFile('./data/nsx/material/b/b0d756b5a4f132829a8fe3dc3c320673aa453c31-30595.png', { root: __dirname }));
     //Youtube
     hyenas.get('/nsx/material/6/62c86f1cc8f6e341d0763977f802f55aa1dfb204-973553.png', (req, res) =>
         res.sendFile('./data/nsx/material/6/62c86f1cc8f6e341d0763977f802f55aa1dfb204-973553.png', { root: __dirname }));

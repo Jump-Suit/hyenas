@@ -1,0 +1,672 @@
+@charset "UTF-8";/*! normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+[hidden]{display:none}
+html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{margin:0}
+a:focus{outline:thin dotted}
+a:hover,a:active{outline:0}
+h1{font-size:2em}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+blockquote{margin:1em 40px}
+dfn{font-style:italic}
+mark{background:#ff0;color:#000}
+pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
+pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}
+q{quotes:none}
+q:before,q:after{content:'';content:none}
+small{font-size:75%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+ul,ol{margin-left:0;padding:0 0 0 40px}
+dd{margin:0 0 0 40px}
+nav ul,nav ol{list-style:none;list-style-image:none}
+img{border:0;-ms-interpolation-mode:bicubic}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+form{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;*margin-left:-7px}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}
+button,input{line-height:normal}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+.visuallyhidden,.hide{display:none}
+ul.float-list{margin:0;padding:0;*zoom:1}
+ul.float-list:before,ul.float-list:after{content:" ";display:table}
+ul.float-list:after{clear:both}
+ul.float-list li{list-style:none;float:left;overflow:hidden}
+ol.number-list{margin:0;padding:0 0 0 20px;font-style:italic;font-weight:bold;color:#0b5cc3}
+ol.number-list li{line-height:25px}
+ol.number-list li span.list-item{font-style:normal;color:#363636;font-weight:normal}
+a.plain-link,a.blank-link{color:#363636;text-decoration:none}
+a.plain-link:hover{text-decoration:none;color:#8fdffd}
+.hidden{display:none}
+.box-container{display:-webkit-box;display:-moz-box;display:box}
+.box-element{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1}
+button{margin:0;padding:15px 10px;border:0;color:#fff;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;font-size:20px;text-shadow:0 -1px 1px rgba(0,0,0,0.3)}
+.bold{font-weight:bold}
+button.game-finder{padding-left:50px;background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/game-finder.png"),-webkit-linear-gradient(top,#016ec6,#0148a0);background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/game-finder.png"),-moz-linear-gradient(top,#016ec6,#0148a0);background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/game-finder.png"),-ms-linear-gradient(top,#016ec6,#0148a0);background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/game-finder.png"),-o-linear-gradient(top,#016ec6,#0148a0);background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/game-finder.png"),linear-gradient(top,#016ec6,#0148a0);background-repeat:no-repeat}
+#page-content{overflow:hidden;width:100%;height:100%}
+#page-content.age-gate-on{top:-100%;position:absolute}
+.placeholder{text-align:center;margin:0 0 60px 0;overflow:hidden}
+.placeholder img{max-width:976px}
+.fullscreen img{max-width:100%;width:100%}
+.samplebox{max-width:980px;margin:0 auto;height:500px;position:relative;background-color:#8b0000}
+.dummy-block div{max-width:980px;padding-top:60px;margin-left:auto;margin-right:auto;margin-bottom:60px}
+.dummy-block div h2{color:#0068bf;font-face:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif;-moz-font-feature-settings:"lnum";-ms-font-feature-settings:"lnum";-webkit-font-feature-settings:"lnum";-o-font-feature-settings:"lnum";font-feature-settings:"lnum"}
+.ie10hide{display:inline-block}
+.ie10Show{display:none}
+.browser-ie10 .ie10hide{display:none}
+.browser-ie10 .ie10Show{display:inline-block}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0) !important}
+@-webkit-keyframes slideit{0{width:0}
+}
+@-moz-keyframes slideit{0{width:0}
+}
+@font-face{font-family:"BebasRegular";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/BEBAS___-webfont.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/BEBAS___-webfont.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/BEBAS___-webfont.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/BEBAS___-webfont.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/BEBAS___-webfont.svg#BebasRegular") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W01 Bold";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/52adf2b6-12bd-41e4-bfee-9ca637d6045d.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/52adf2b6-12bd-41e4-bfee-9ca637d6045d.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/21ee40af-ca04-4a40-a3cc-e0f6a8d68101.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/7c0c7307-e38f-4784-a632-d49333cb65e8.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/f3aa7336-d7d0-40dd-9177-d17f97a16f45.svg#SST W01 Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W02 Bold";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/f398313c-adca-4275-b34f-ed819865ebfa.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/f398313c-adca-4275-b34f-ed819865ebfa.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/81378746-c9ce-4cc8-8cf6-5b334c85f6a7.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/dba35e13-8cbf-4991-b1a5-f69bfd0a68d3.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/74189d4b-3706-4973-aef8-ed2e8bde8221.svg#SST W02 Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W10 Bold";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/906d3993-2a23-440e-bed9-73a49e1c4901.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/906d3993-2a23-440e-bed9-73a49e1c4901.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/ffa31ab7-7876-4dd7-aae3-2e8a545764f5.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/0f91fe5e-e9a3-4a9c-a362-2312cdc327bc.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/f4c1e4e0-5fe0-44fe-9c34-551ef9a512d2.svg#SST W10 Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W15 Bold";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/6d2fa15d-4fd3-41ed-a2a6-e7291a9ef2ee.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/6d2fa15d-4fd3-41ed-a2a6-e7291a9ef2ee.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/9a6d3858-767a-4868-865a-f6aac86b5743.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/fb4c3c63-5804-43a6-8c85-ad8fbfbfd360.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/6fbcead9-f1b4-4e3e-be75-8bf2bfdd9fe8.svg#SST W15 Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W01 Roman";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/580b2ea4-f6e0-4626-9ef8-3562f00da4b3.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/580b2ea4-f6e0-4626-9ef8-3562f00da4b3.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/5c14fe05-1e00-48ad-90a4-7fa0de36fb7b.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/2ed52a6a-e86f-4b97-923e-5c9af2866617.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/8f7596eb-da17-4318-8ca4-46c048c4e97a.svg#SST W01 Roman") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W02 Roman";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/528f616e-5ccf-4909-a15c-e1ec0e64394c.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/528f616e-5ccf-4909-a15c-e1ec0e64394c.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/9229f9c2-ffc5-4d39-aeb0-57fc81bbe1cd.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/87dd785f-4929-4f00-be0d-8cd2bdc13d54.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/e873a9c7-ccda-4488-9023-3102aca3d902.svg#SST W02 Roman") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W10 Roman";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/55b4f92c-fb2a-42cb-8e4c-1bd8995b4423.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/55b4f92c-fb2a-42cb-8e4c-1bd8995b4423.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/f23593b7-bd5b-4444-8c7f-0530b9403c7c.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/3fcad4b5-76eb-4e6f-abf0-62a6fe480cb3.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/ace03747-ad82-496b-86d7-b3cad06e99ed.svg#SST W10 Roman") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"SST W15 Roman";src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/bc0d5f4e-d7f8-488f-98cd-1f078d55a00d.eot");src:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/bc0d5f4e-d7f8-488f-98cd-1f078d55a00d.eot#iefix") format("embedded-opentype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/7687b8a4-eed3-4809-9255-0ba442f86027.woff") format("woff"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/8e36b540-58b4-4b93-ae6c-4918548a09cd.ttf") format("truetype"),url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/fonts/a01a2bc8-7168-409b-b2a0-3129d042af93.svg#SST W15 Roman") format("svg");font-weight:normal;font-style:normal}
+body,input,textarea{color:#363636;font-size:.813em;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;letter-spacing:-0.2px;-moz-osx-font-smoothing:grayscale}
+body,html{cursor:default}
+body.body-page,html.html-page{overflow-x:hidden}
+body:after,head:after{content:'mobile';position:absolute;bottom:0;visibility:hidden;z-index:-1}
+@media screen and (min-width:700px){body:after,head:after{content:'tablet'}
+}
+@media screen and (min-width:1023px){body:after,head:after{content:'desktop'}
+}
+#sso-redirect{position:absolute;width:1px;height:1px;left:-999px;top:-999px}
+html.mobile-lock{overflow:hidden;position:relative;width:100%}
+html.mobile-lock body{overflow:hidden;position:relative;width:100%}
+body.debug-mode:before{content:"Debug mode";color:#fff;padding:12px;text-align:center;position:fixed;font-weight:700;background:#d00;line-height:.5;margin:2px;bottom:0;z-index:2000}
+a[name]:not([href]){display:block;position:relative;top:-120px;visibility:hidden}
+.touch a[name]:not([href]){top:-60px}
+h1,h2,h3,h4,h5,h6{margin:0;line-height:1.2}
+p{margin:0;font-size:1.2em;line-height:1.4em}
+p.smaller{font-size:1.1em;line-height:1.3em}
+section{position:relative;background-color:#fff;zoom:1}
+section:before,section:after{content:"";display:table}
+section:after{clear:both}
+section h1,section h2,section h3,section h4{text-align:center}
+section .headingWrapper{margin:0 auto 60px auto;overflow:hidden;max-width:980px}
+section.full-height .headingWrapper{margin-top:60px}
+section .headingWrapper.no-title-spacing{margin:0 auto 0 auto}
+section.full-height .headingWrapper.no-title-spacing{margin-top:0}
+section .iconHeading{zoom:1;width:620px;margin:0 auto}
+section .iconHeading:before,section .iconHeading:after{content:"";display:table}
+section .iconHeading:after{clear:both}
+section .iconHeading .iconWrapper{width:140px;height:130px;text-align:center;overflow:hidden;display:inline-block;float:left}
+section .iconHeading hgroup{display:inline-block;overflow:hidden;width:450px}
+section .iconHeading hgroup h2,section .iconHeading hgroup h3,section .iconHeading hgroup h4{text-align:left}
+section hgroup{margin-left:auto;margin-right:auto}
+section hgroup.white-title h2,section hgroup.white-title h3{color:#fff}
+section hgroup.grey-title h2,section hgroup.grey-title h3{color:#363636}
+section.no-top-padding hgroup{margin-top:0}
+section.sans-header-padding{padding-top:60px}
+section h2.section-heading.left,section h3.section-sub-heading.left,section h4.section-sub-text.left{text-align:left}
+section h2.section-heading.right,section h3.section-sub-heading.right,section h4.section-sub-text.right{text-align:right}
+section h2.section-heading{font-size:28px;color:#0068bf;margin-bottom:0;font-weight:normal;font-style:italic;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif;-moz-font-feature-settings:"lnum";-ms-font-feature-settings:"lnum";-webkit-font-feature-settings:"lnum";-o-font-feature-settings:"lnum";font-feature-settings:"lnum"}
+section h3.section-sub-heading{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;color:#363636;font-size:40px;margin:0;line-height:1.2em;position:relative}
+section h3.section-sub-heading .section-sub-image{position:absolute;top:-23px}
+section h4.section-sub-text{color:#363636;font-size:16px;line-height:1.2em;margin:10px 20px 0 20px;font-weight:normal}
+section .section-break{height:1px;border-bottom:2px solid #e6e6e6;margin:50px 0 60px 140px}
+section .sectionStep{position:absolute;height:60px;width:170px}
+section .topStep{top:0;right:50%;margin-right:520px}
+section .bottomStep{bottom:0;left:50%;margin-left:520px}
+.has-secondary-nav ~ #page-content .no-herobanner{height:60px}
+@media screen and (min-width:700px){.has-secondary-nav ~ #page-content .no-herobanner{height:64px}
+}
+section.page-section,section.background-section{padding:60px 0 0 0}
+section.full-height,section.pull-up{padding-top:0}
+section.hide-overflow{overflow:hidden}
+section.background-section{background-position:50% 0;background-repeat:no-repeat}
+section.background-section.upper-limit{background-size:100%}
+section.left-align-heading .headingWrapper,section.right-align-heading .headingWrapper{margin-bottom:30px;max-width:940px}
+section.left-align-heading .headingWrapper hgroup,section.right-align-heading .headingWrapper hgroup{max-width:100%}
+section.left-align-heading h2.section-heading,section.left-align-heading h3.section-sub-heading,section.left-align-heading h4.section-sub-text{text-align:left}
+section.right-aligned-heading h2.section-heading,section.right-aligned-heading h3.section-sub-heading,section.right-aligned-heading h4.section-sub-text{text-align:right}
+@media screen and (max-width:1000px){section.left-align-heading .headingWrapper,section.right-align-heading .headingWrapper{margin-left:20px;margin-right:20px;max-width:100%}
+section.left-align-heading .headingWrapper hgroup,section.right-align-heading .headingWrapper hgroup{max-width:100%}
+}
+section.blue-pattern{background:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/CM090_inlineTabs/blue-tile.jpg") repeat}
+section.blue-pattern h2.section-heading,section.blue-pattern h3.section-sub-heading,section.blue-pattern h4.section-sub-text{color:#fff}
+.lt-ie8 .section .iconHeading .iconWrapper{zoom:1;*display:inline}
+.lt-ie8 .section .iconHeading hgroup{zoom:1;*display:inline}
+@media screen and (min-width:1320px){section .topStep{left:0;right:auto;margin-right:0;width:130px}
+section .bottomStep{bottom:0;left:auto;right:0;margin-left:0;width:130px}
+}
+section div.headingWrapper h2.left-align-heading,section div.headingWrapper h3.left-align-heading,section div.headingWrapper h4.left-align-heading,section div.headingWrapper h4.left-align-heading p{text-align:left}
+section div.headingWrapper h2.center-align-heading,section div.headingWrapper h3.center-align-heading,section div.headingWrapper h4.center-align-heading,section div.headingWrapper h4.center-align-heading p{text-align:center}
+@media screen and (max-width:736px){section h2.section-heading{font-size:20px;color:#0068bf !important}
+section h3.section-sub-heading{font-size:24px;line-height:30px;color:#363636 !important}
+.pg_sec_overflow{overflow:visible !important}
+section .headingWrapper.richtext{margin-top:-85px !important}
+section.page-section.default-align-heading,section.background-section.default-align-heading{padding-top:0 !important}
+}
+@media screen and (max-width:500px) and (orientation:portrait){section.background-section{background-size:auto 240px}
+section.background-section .parsys.page-section-par{margin-top:300px}
+section .headingWrapper.iconHeading.richtext .iconWrapper{width:80px}
+section .headingWrapper.iconHeading.richtext hgroup{width:230px}
+}
+@media screen and (max-width:736px) and (orientation:landscape){section.background-section{background-size:auto 300px}
+section.background-section .parsys.page-section-par{margin-top:360px}
+}
+.richtext{font-size:16px}
+.richtext h1,.richtext h2,.richtext h3,.richtext p,.richtext ul,.richtext blockquote{margin:0 0 30px 0;text-align:left}
+.richtext ol li ul{margin-top:20px}
+.richtext h1,.richtext h2,.richtext h3{color:#363636;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+.richtext h1,.richtext h2{font-size:29px}
+.richtext h3{font-size:20px;line-height:27px}
+.richtext p,.richtext li{font-size:16px;line-height:22px}
+.richtext p.smaller,.richtext li.smaller{font-size:14px}
+.richtext p small,.richtext li small{display:block;width:100%}
+.richtext ul{list-style-type:none;padding:0;margin-left:15px}
+.lt-ie8 .richtext ul{list-style-type:square}
+.richtext ul li{position:relative;padding:0 0 0 10px;margin:0 0 15px 0}
+.richtext ul li:before{content:"\25A0";position:absolute;top:0;left:-15px;color:#0068c3;font-size:13px}
+.richtext a{color:#0068bf}
+.richtext a:hover{text-decoration:none}
+.richtext b,.richtext strong{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+.richtext blockquote{text-align:left;display:block;color:#0068bf;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif;font-size:30px;line-height:40px;font-style:italic;font-weight:normal;margin-bottom:40px;width:100%;-moz-font-feature-settings:"lnum";-ms-font-feature-settings:"lnum";-webkit-font-feature-settings:"lnum";-o-font-feature-settings:"lnum";font-feature-settings:"lnum"}
+.richtext ul.block-list{display:table;border-spacing:20px;padding:0;margin:-20px -20px 0 -20px}
+.lt-ie8 .richtext ul.block-list{display:block;list-style-type:none;margin:0}
+.richtext ul.block-list li{background:#f5f5f5;display:table-cell;width:50%;padding:0;margin:0}
+.richtext ul.block-list li:before{display:none}
+.lt-ie8 .richtext ul.block-list li{width:49%;display:block;float:left;margin:0 0 15px 0}
+.lt-ie8 .richtext ul.block-list li:first-child{margin-right:1%}
+.richtext ul.block-list li img{float:left;margin-bottom:20px}
+.richtext ul.block-list li span{display:block;margin:20px 20px 20px 140px}
+@media all and (max-width:800px){.richtext ul.block-list li{display:table-row}
+.lt-ie9 .richtext ul.block-list li{display:block;float:none}
+}
+.sonyDarkGrey{background-color:#525151 !important}
+.sonyGrey{background-color:whitesmoke !important}
+.sonyLightGrey{background-color:#eee !important}
+.sonyBlue{background-color:#01439a !important}
+.white{background-color:#fff !important}
+.textWhite{color:#fff !important}
+.textGrey{color:#363636 !important}
+.textSatinBlue{color:#0068bf !important}
+.textHighlight{color:#8fdffd !important}
+.backgroundWhite{background-color:#fff !important}
+.backgroundScreenBlack{background-color:#1f1f1f !important}
+.backgroundSatinBlue{background-color:#0068bf !important}
+.backgroundMidSilver{background-color:#eee !important}
+.clearfix{*zoom:1}
+.clearfix:before,.clearfix:after{content:" ";display:table}
+.clearfix:after{clear:both}
+.lt-ie8 .clearfix{*zoom:1}
+.lt-ie8 .clearfix:before,.lt-ie8 .clearfix:after{content:"";display:table}
+.lt-ie8 .clearfix:after{clear:both}
+.float-left{float:left}
+.float-right{float:right}
+.hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
+.hidden,.hiddenOverlay{display:none}
+.overflow-hidden{overflow:hidden}
+section .titleWithIcon h1,section .titleWithIcon h2,section .titleWithIcon h3{text-align:left}
+.moduleComponent,.moduleComponentOverflow{min-width:740px;padding-bottom:60px}
+.moduleComponent.no-bottom-padding{padding-bottom:0}
+.full-height .moduleComponent,.push-down .moduleComponent,.full-height .moduleComponentOverflow,.push-down .moduleComponentOverflow{padding-bottom:0}
+.moduleComponent .buttonRow,.moduleComponentOverflow .buttonRow{margin-bottom:0}
+.moduleComponentOverflow{overflow:hidden}
+.moduleHeader.headingWrapper{position:relative;margin:9px auto 10px auto;overflow:visible;padding-bottom:20px;max-width:940px;z-index:1}
+.moduleHeader.headingWrapper h2.module-sub-heading{font-size:2.4em;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;color:#363636;margin:0;position:relative;text-align:left}
+.moduleHeader.headingWrapper h3.module-sub-text{color:#363636;font-size:16px;font-weight:normal;margin-top:5px;text-align:left;text-transform:uppercase}
+.moduleHeader.headingWrapper h3.module-sub-text strong{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+.moduleHeader.headingWrapper h3.module-sub-text a{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;color:#0068bf;text-decoration:none}
+.moduleHeader.headingWrapper .count-label{display:inline-block;margin-right:10px}
+.moduleHeader.headingWrapper .count-link{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;color:#0068bf;text-decoration:none}
+.moduleHeader.headingWrapper .overflow-border{margin-top:20px;background:none repeat scroll 0 0 #f5f5f5;height:2px;overflow:hidden;width:2000em}
+.moduleHeader.pull-up{margin-top:-60px}
+.moduleHeader.no-border .overflow-border{display:none}
+@media screen and (max-width:1000px){.moduleHeader.headingWrapper{width:100%;margin-left:20px;margin-right:20px}
+.moduleHeader.headingWrapper .overflow-border{width:100%}
+.moduleHeader.headingWrapper.mypsn{max-width:700px;margin-left:auto;margin-right:auto}
+.moduleHeader.headingWrapper.mypsn .overflow-border{width:2000em}
+}
+.moduleComponent.no-space{padding-bottom:0}
+.link-btn{text-decoration:none;color:#fff;font-size:14px;text-align:center;display:inline-block;min-width:140px;position:relative;text-transform:uppercase;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+.link-btn .btn{padding:13px 15px;text-shadow:0 -1px 1px rgba(0,0,0,0.3)}
+.link-btn.cta-icon.auto-download .imageText,.link-btn.cta-icon.manual-download .imageText,.link-btn.cta-icon.auto-retail .imageText,.link-btn.cta-icon.manual-retail .imageText{padding-left:26px}
+.link-btn.cta-icon.auto-download .btn,.link-btn.cta-icon.manual-download .btn,.link-btn.cta-icon.auto-retail .btn,.link-btn.cta-icon.manual-retail .btn,.link-btn.cta-icon .btn.short{background-repeat:no-repeat;background-size:20px auto;background-position:15px center;padding-left:38px}
+div.priceSpiderButton.cta-icon>div.ps-widget,.CM106-lead-product-info .prod-meta .genericButtonRow .priceSpiderButton.cta-icon .ps-widget,.CM999-ways-to-buy .ways-to-buy .game .box.main-game-info #fluid.right div.priceSpiderButton.cta-icon .ps-widget,.CM999-ways-to-buy .ways-to-buy .game .box.main-game-info #fluid #fluid.right #inner-block .link-btn.cta-icon{padding:0;width:auto;min-width:144px}
+.CM999-ways-to-buy .ways-to-buy .game .box.main-game-info #fluid #fluid.right #inner-block .link-btn.cta-icon{white-space:nowrap}
+@media screen and (max-width:350px){.CM999-ways-to-buy .ways-to-buy .game .box.main-game-info .right ul li.buy-service .left .service-type .price-and-get .left-panel .price{font-size:26px}
+}
+div.priceSpiderButton.cta-icon>div.ps-widget span.ps-button-label{background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/buttons/buy-icon.png");background-repeat:no-repeat;background-position:7px center;padding:13px 20px 13px 38px;display:block;background-size:20px auto}
+div.priceSpiderButton.cta-icon.white-btn>div.ps-widget span.ps-button-label{color:#363636}
+.link-btn.cta-icon.auto-download .btn,.link-btn.cta-icon.manual-download .btn,.link-btn.cta-icon.auto-retail .btn{background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/buttons/store-icon.png")}
+.link-btn.cta-icon.manual-retail .btn{background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/buttons/buy-icon.png")}
+.link-btn .btn.short{padding:8px 15px}
+.link-btn:hover{text-decoration:none !important}
+.link-btn .icon{position:absolute;top:5px;left:15px}
+.link-btn .imageText{padding-left:45px}
+.small-btn{font-size:14px}
+.small-btn .btn{padding-top:10px;padding-bottom:10px}
+.black-btn{background-color:#1f1f1f}
+.cssgradients .black-btn,.cssgradients .orange-btn.black-btn,.priceSpiderButton.cta-icon.black-btn .ps-widget{background-image:-webkit-linear-gradient(top,#424242,#1f1f1f);background-image:-moz-linear-gradient(top,#424242,#1f1f1f);background-image:-ms-linear-gradient(top,#424242,#1f1f1f);background-image:-o-linear-gradient(top,#424242,#1f1f1f);background-image:linear-gradient(top,#424242,#1f1f1f)}
+.black-btn:hover{background-image:none;background-color:#1f1f1f}
+.white-btn{background-color:#d5d6d7;color:#363636 !important}
+.cssgradients .white-btn,.cssgradients .orange-btn.white-btn,.priceSpiderButton.cta-icon.white-btn .ps-widget{background-image:-webkit-linear-gradient(top,#eee,#d5d6d7);background-image:-moz-linear-gradient(top,#eee,#d5d6d7);background-image:-ms-linear-gradient(top,#eee,#d5d6d7);background-image:-o-linear-gradient(top,#eee,#d5d6d7);background-image:linear-gradient(top,#eee,#d5d6d7)}
+.white-btn:hover{background-image:none;background-color:#d5d6d7}
+.blue-btn{background:#0072ce;color:#fff}
+.blue-btn:hover{background:#0064b5}
+.blue-btn:focus{background:#00569b;border:2px solid #00a2ff}
+.blue-btn:active{background:#00569b}
+.orange-btn{background:#d53b00;color:#fff}
+.orange-btn:hover{background:#c63700}
+.orange-btn:focus{background:#b63300;outline:2px solid #00a2ff}
+.orange-btn:active{background:#b63300}
+.lt-ie9 .black-btn,.lt-ie10 .black-btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#020202',endColorstr='#2a2a2a')}
+.lt-ie9 .red-btn,.lt-ie10 .red-btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e04c25',endColorstr='#fe7435')}
+.lt-ie9 .blue-btn,.lt-ie10 .blue-btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0148a0',endColorstr='#016dc5')}
+.lt-ie9 .white-btn,.lt-ie10 .white-btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d7d8d8',endColorstr='#ebebeb')}
+.lt-ie9 .orange-btn,.lt-ie10 .orange-btn{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f86d37',endColorstr='#e55526')}
+.lt-ie9 .orange-btn:hover,.lt-ie10 .orange-btn:hover{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e55526',endColorstr='#e55526')}
+ol{counter-reset:li;margin-left:0;padding-left:0}
+ol>li{position:relative;margin:0 0 30px 35px;padding:0;list-style:none outside none}
+ol>li:before{text-align:left;content:counter(li,decimal-leading-zero);counter-increment:li;position:absolute;top:0;left:-35px;width:2em;margin-right:8px;color:#0068bf;font-size:20px;font-family:'BebasRegular','SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif}
+ol li ul{margin-top:20px}
+.buttonRow{width:100%;text-align:center;margin:0 0 60px 0}
+@media screen and (max-width:1000px){.buttonRow{margin:0 0 55px 0}
+}
+.buttonRow.left{text-align:left}
+.buttonRow.right{text-align:right}
+.buttonRow .link-btn{margin:0 20px 2px 0}
+.buttonRow .priceSpiderButton{display:inline-block;margin:0 20px 0 0}
+.buttonRow .priceSpiderButton .ps-widget{min-width:140px;width:auto;margin:0;padding:13px 15px;float:none}
+.form-row{margin:10px 0 30px}
+.form-row input[type="checkbox"]{left:-9999px;position:relative}
+.form-row .link-btn{background:0}
+.button-row .checkBox-row{float:left;width:auto}
+.button-row .checkBox-row .link-btn{min-width:40px}
+.button-row .checkBox-row .link-btn.favourite div.btn{color:#363636;font-weight:bold}
+.ajax-loader{display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:101;background-color:rgba(255,255,255,0.5);background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/common/loader.gif");background-repeat:no-repeat;background-position:50% 100px}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.os-android body,.os-ios body,.mobile-experience body{position:relative}
+.touch .touch-overlay{position:fixed;width:100%;z-index:1000;background:#000;height:0;opacity:0;-webkit-transition:height 0 linear .3s,opacity .3s ease-in-out;-moz-transition:height 0 linear .3s,opacity .3s ease-in-out;-ms-transition:height 0 linear .3s,opacity .3s ease-in-out;-o-transition:height 0 linear .3s,opacity .3s ease-in-out;transition:height 0 linear .3s,opacity .3s ease-in-out}
+.touch .touch-overlay.visible{opacity:.6;height:100%;-webkit-transition:opacity .3s ease-in-out;-moz-transition:opacity .3s ease-in-out;-ms-transition:opacity .3s ease-in-out;-o-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out}
+.priceSpiderButton .ps-button-label{text-transform:uppercase;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+@keyframes fadein{from{opacity:0}
+to{opacity:1}
+}
+@-webkit-keyframes fadein{from{opacity:0}
+to{opacity:1}
+}
+@keyframes fadeout{from{opacity:1}
+to{opacity:0;visibility:hidden}
+}
+@-webkit-keyframes fadeout{from{opacity:1}
+to{opacity:0;visibility:hidden}
+}
+footer{position:relative;overflow:hidden}
+footer a{color:#fff;text-decoration:none;cursor:pointer}
+footer a:link,footer a:visited{color:#fff;text-decoration:none}
+footer #footer-more-container{border-top:0 solid rgba(255,255,255,0.1);border-bottom:2px solid rgba(255,255,255,0.1);padding:20px 16px}
+@media screen and (min-width:700px){footer #footer-more-container{padding:0 0 0 15px;border:0;overflow:hidden;width:100%;box-sizing:border-box}
+}
+@media screen and (min-width:1023px){footer #footer-more-container{padding:0 0 8px 15px}
+}
+footer #footer-more-container .footer-more{overflow:hidden}
+footer .footer-content{width:100%;position:relative}
+footer .footer-content .footer-meta-bg{width:100%;right:51%;top:0;height:72px;background-color:#fff;position:absolute;display:none}
+footer .footer-content .footer-content-wrapper{width:100%;background:#003791;background-size:100% auto;overflow:hidden}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper{background-color:#003791;background-size:auto}
+}
+footer .footer-content .footer-content-wrapper .footer-meta{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;font-size:1.1em;color:#fff;text-transform:uppercase}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta{height:0;line-height:68px;overflow:visible}
+footer .footer-content .footer-content-wrapper .footer-meta .drop-down{margin-left:35px;float:left;overflow:visible}
+}
+footer .footer-content .footer-content-wrapper .footer-meta>a{display:block;outline:0}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta>a{margin:0;display:inline}
+}
+footer .footer-content .footer-content-wrapper .footer-meta .to-top{padding:18px 16px 14px;margin-bottom:20px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta .to-top{padding:0;margin:0;border-bottom:0}
+}
+footer .footer-content .footer-content-wrapper .footer-meta .to-top .drop-down{text-align:right;display:block;clear:both}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta .to-top .drop-down{margin-right:30px;float:right;clear:none;display:inline}
+}
+footer .footer-content .footer-content-wrapper .footer-meta .to-top .drop-down:after{content:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/double_arrow.png");display:inline;vertical-align:sub;margin-left:12px}
+footer .footer-content .footer-content-wrapper .footer-meta .button-show-more{margin:21px 16px 25px;background-color:rgba(255,255,255,0.1);text-align:center;padding:11px 0}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta .button-show-more{padding:0;margin:0;background-color:transparent}
+}
+footer .footer-content .footer-content-wrapper .footer-meta .button-show-more .drop-down{background:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/pagination.png") right -35px no-repeat;background-size:16px auto;padding:0 35px 0 0}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta .button-show-more .drop-down{margin-right:30px;background-size:auto}
+}
+footer .footer-content .footer-content-wrapper .footer-meta .icon-list{list-style-type:none;padding:0;margin:0 16px 14px}
+footer .footer-content .footer-content-wrapper .footer-meta .icon-list img{vertical-align:middle;margin-right:12px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta .icon-list{display:none}
+}
+footer .footer-content .footer-content-wrapper .footer-meta.active .drop-down{background-position:right 3px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-meta.active .drop-down{background-position:right 25px}
+}
+footer .footer-content .footer-content-wrapper .footer-meta.active ~ .footer-info .float-list,footer .footer-content .footer-content-wrapper .footer-meta.active ~ .footer-info .footer-logos{display:block}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-more{width:100%;margin:2em 0;padding:0 0 0 25px}
+}
+@media screen and (min-width:1023px){footer .footer-content .footer-content-wrapper .footer-more{display:table;width:auto;margin:0 auto;padding:40px 0}
+}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column{width:calc(50% - 11px);display:inline-block;vertical-align:top}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(even){margin-left:16px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(even){margin-left:0}
+}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-more .footer-more-column{width:auto;float:left;display:block;max-width:170px;border-left:2px solid rgba(255,255,255,0.1);padding:0 20px;min-width:40%}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:first-child{border:0}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(3){clear:left;border-left:0}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(n+3){margin-top:30px}
+}
+@media screen and (min-width:1023px){footer .footer-content .footer-content-wrapper .footer-more .footer-more-column{padding-right:60px;min-width:0}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(3),footer .footer-content .footer-content-wrapper .footer-more .footer-more-column:nth-child(n+3){clear:none;margin:0;border-left:2px solid rgba(255,255,255,0.1)}
+}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column h3{color:#8fd5fd;font-weight:400;font-size:15px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-more .footer-more-column h3{font-size:16px}
+}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column ul{padding-left:0;list-style-type:none;word-wrap:break-word}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column li{margin-bottom:8px}
+footer .footer-content .footer-content-wrapper .footer-more .footer-more-column li a{font-size:14px;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-more .footer-more-column li a{background:transparent url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/chevron-sm.png") no-repeat top left;padding-left:15px;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+}
+footer .footer-content .footer-content-wrapper .footer-info{margin:25px 16px}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info{width:auto;margin:0 auto;padding:2rem 2rem 0 2rem;border-bottom:2px solid rgba(255,255,255,0.1)}
+}
+footer .footer-content .footer-content-wrapper .footer-info .float-list{margin:0 -6px 24px;font-size:14px;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .float-list{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;font-size:inherit}
+}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li{display:inline;line-height:1.9}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .float-list li{line-height:38px;height:38px}
+}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li a{padding:0 6px 0 7px}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li:after{content:"|";color:#8fd5fd}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li:first-child{padding-left:0}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li:last-child,footer .footer-content .footer-content-wrapper .footer-info .float-list li.no-separator{background-image:none}
+footer .footer-content .footer-content-wrapper .footer-info .float-list li:last-child:after,footer .footer-content .footer-content-wrapper .footer-info .float-list li.no-separator:after{content:normal}
+footer .footer-content .footer-content-wrapper .footer-info .float-list .logo{display:none}
+footer .footer-content .footer-content-wrapper .footer-info .float-list .logo:after{content:normal}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .float-list .logo{display:block}
+}
+footer .footer-content .footer-copy{color:#8fd5fd}
+footer .footer-content .footer-copy a{color:inherit;text-decoration:underline}
+footer .footer-content .footer-details{width:100%;padding:1rem 0 1rem 1rem;background-color:#003791}
+@media screen and (min-width:700px){footer .footer-content .footer-details{padding:1rem 0 1rem 2rem}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-logos{margin:0 0 2px;padding:0}
+@media screen and (min-width:490px){footer .footer-content .footer-content-wrapper .footer-info .footer-logos{display:flex;justify-content:flex-end}
+}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-logos{float:right;margin-top:1rem;width:30%;text-align:right}
+}
+@media screen and (min-width:1023px){footer .footer-content .footer-content-wrapper .footer-info .footer-logos{margin-top:1rem}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-logos li{display:inline-block;margin:0 24px 0 0}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-logos li{height:80px;text-align:center;margin:0 0 0 15px}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-logos img{vertical-align:middle}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .more-link{display:none}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-links .more-link{display:block}
+}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-links{float:left;width:auto;margin-top:14px;line-height:27px;font-size:1.1em;padding:0 0 30px;display:block}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links div{float:left;clear:left;margin-top:1rem;margin-bottom:1rem}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-links div{margin-bottom:auto}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .link{background-image:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/chevron-sm.png");background-repeat:no-repeat;background-position:left 4px;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal;padding-left:15px;text-transform:uppercase;overflow:visible;text-decoration:none;float:left}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .link.country-selector{margin-right:2rem;background-image:none;padding-left:0;width:100vw}
+@media screen and (min-width:490px){footer .footer-content .footer-content-wrapper .footer-info .footer-links .link.country-selector{width:auto}
+}
+@media screen and (min-width:700px){footer .footer-content .footer-content-wrapper .footer-info .footer-links .link.country-selector{margin-right:80px}
+}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .link img{vertical-align:middle;margin-right:10px}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .link a:link,footer .footer-content .footer-content-wrapper .footer-info .footer-links .link a:visited{font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:normal}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .link a:hover{text-decoration:none;color:#8fdffd}
+footer .footer-content .footer-content-wrapper .footer-info .footer-links .more-link{float:right;clear:right}
+footer .footer-content .footer-content-wrapper .footer-meta a:hover,footer .footer-content .footer-content-wrapper .footer-more a:hover,footer .footer-content .footer-content-wrapper .footer-info a:hover{color:#8fdffd}
+footer .footer-content .float-list{display:block}
+footer.full-width-footer .footer-content .footer-content-wrapper .footer-meta.active+#footer-more-container{display:block}
+footer #footer-more-container{display:none !important}
+.footerRef ~ img[width="1"][height="1"]{display:none}
+body.body-page img[width="1"][height="1"]{display:none}
+#colorbox,#cboxOverlay,#cboxWrapper{position:absolute;top:0;left:0;z-index:9999;outline:0}
+#cboxOverlay{position:fixed;width:100%;height:100%;z-index:9999}
+#cboxMiddleLeft,#cboxBottomLeft{clear:left}
+#cboxContent{position:relative}
+#cboxLoadedContent{overflow:auto}
+#cboxTitle{margin:0}
+#cboxLoadingOverlay,#cboxLoadingGraphic{position:absolute;top:0;left:0;width:100%;height:100%}
+#cboxPrevious,#cboxNext,#cboxClose,#cboxSlideshow{cursor:pointer;outline:0}
+.cboxPhoto{float:left;margin:auto;border:0;display:block;max-width:none}
+.cboxIframe{width:100%;height:100%;display:block;border:0}
+#colorbox,#cboxContent,#cboxLoadedContent{box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box}
+#cboxOverlay{background:black;filter:alpha(opacity=90);opacity:.9}
+#cboxContent{margin-top:51px;border:2px solid white}
+.cboxIframe{background:#fff}
+#cboxError{padding:50px;border:1px solid #ccc}
+#cboxLoadedContent{background:#fff}
+#cboxTitle{position:absolute;top:-20px;left:0;color:#ccc}
+#cboxCurrent{position:absolute;top:-20px;right:0;color:#ccc}
+#cboxSlideshow{position:absolute;top:-20px;right:90px;color:#fff}
+#cboxPrevious{filter:alpha(opacity=60);opacity:.6;position:absolute;top:49%;left:30px;margin-top:-32px;z-index:1;background:url(https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/controls.png) no-repeat top left;width:48px;height:72px;text-indent:-9999px;background-position:0 50%}
+#cboxPrevious:hover{filter:alpha(opacity=100);opacity:1}
+#cboxNext{filter:alpha(opacity=60);opacity:.6;position:absolute;top:49%;right:30px;margin-top:-32px;z-index:1;background:url(https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/controls.png) no-repeat top right;width:48px;height:71px;text-indent:-9999px;background-position:100% 50%}
+#cboxNext:hover{filter:alpha(opacity=100);opacity:1}
+#cboxLoadingOverlay{background:#000}
+#cboxLoadingGraphic{background:url(https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/common/loader.gif) no-repeat center center}
+#cboxClose{position:absolute;display:block;background:url(https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/controls.png) no-repeat 21% 1%;width:50px;height:50px;text-indent:-9999px}
+#colorbox #cboxClose{top:-53px;right:-2px}
+#cboxClose:hover{position:absolute;display:block;background:url(https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/controls.png) no-repeat 84% 0;width:50px;height:49px;text-indent:-9999px}
+#colorbox #cboxClose:hover{top:-53px;right:-2px}
+#cboxCurrent{display:none !important}
+#cboxShare{width:50px;height:50px;background-color:red;background-color:red;height:50px;margin-right:40px;position:absolute;right:12px;top:-53px;width:50px;cursor:pointer}
+#cboxShare{display:none}
+.colorbox-age-gate{height:100%;width:100%;position:relative;background-color:#000;z-index:1;background-repeat:no-repeat;display:table;background-position:50% 50%}
+.colorbox-age-gate.portrait{background-size:auto 100%}
+.colorbox-age-gate.landscape{background-size:100% auto}
+.colorbox-age-gate .opacity{background:#000;opacity:.6;position:absolute;width:100%;height:100%}
+.colorbox-age-gate .age-gate-content{display:table-cell;vertical-align:middle;position:relative}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents,.colorbox-age-gate .age-gate-content .wrapper .age-form{width:100%;max-width:500px;margin:0 auto}
+.colorbox-age-gate .age-gate-content .wrapper{margin:0 130px}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents h1{color:#fff;margin-bottom:10px;font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif;font-size:28px;font-style:italic;font-weight:400;-moz-font-feature-settings:"lnum";-ms-font-feature-settings:"lnum";-webkit-font-feature-settings:"lnum";-o-font-feature-settings:"lnum";font-feature-settings:"lnum"}
+}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents p{color:#fff;margin-bottom:20px;font-size:1.1em}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents h2{color:#fff;margin-bottom:20px;font-size:40px;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Arial,Helvetica,sans-serif;font-weight:400}
+.colorbox-age-gate .age-gate-content a{cursor:pointer}
+.colorbox-age-gate .age-form input{border-radius:0;margin-right:20px;width:70px;border:0 none;box-shadow:0 -1px 1px rgba(0,0,0,0.3);background-color:#FFF;color:#363636;font-size:1.2em;position:relative;z-index:1;padding:16px 10px}
+.colorbox-age-gate .age-form .left,.colorbox-age-gate .age-form .right{display:inline;float:left}
+.colorbox-age-gate .age-form input.fail{background-image:url('https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/CM104_ageGateOverlay/errorValidation.gif');background-repeat:no-repeat;background-position:right center;color:#e82222;font-weight:400}
+.colorbox-age-gate .age-form .let-me-in{margin-left:3px}
+.colorbox-age-gate .age-form .let-me-in .btn{padding:15px 16px 17px}
+@media screen and (max-width:500px) and (orientation:portrait){#colorbox.mediaContent{width:90% !important;height:7% !important;left:5% !important}
+#cboxWrapper.mediaContent,#cboxContent.mediaContent{width:90% !important;left:20px;position:fixed !important;height:80% !important}
+#cboxCurrent.mediaContent{margin-top:-20px;left:0;font-size:20px;width:100px}
+#cboxWrapper.mediaContent{position:fixed}
+#cboxLoadedContent.mediaContent{left:20px;width:100% !important;height:100% !important}
+.cboxPhoto{max-width:100%;max-height:100%;width:100% !important;height:auto !important}
+#cboxClose.with-dam{position:fixed !important;top:0 !important;left:83% !important}
+}
+@media screen and (max-width:736px) and (orientation:landscape){#colorbox.mediaContent{width:90% !important;height:7% !important;left:5% !important}
+#cboxWrapper.mediaContent,#cboxContent.mediaContent{width:90% !important;left:20px;position:fixed !important;height:80% !important}
+#cboxCurrent.mediaContent{margin-top:-20px;left:0;font-size:20px;width:100px}
+#cboxWrapper.mediaContent{position:fixed}
+#cboxLoadedContent.mediaContent{left:20px;width:100% !important;height:100% !important}
+.cboxPhoto{max-width:100%;max-height:100%}
+#cboxClose.with-dam{position:fixed !important;top:0 !important;left:86% !important}
+}
+@media screen and (min-width:376px) and (max-width:450px) and (orientation:portrait){.colorbox-age-gate .age-gate-content .wrapper{margin:0 50px}
+#cboxPrevious.mediaContent{left:10px !important;opacity:.6 !important}
+#cboxNext.mediaContent,#cboxNext.mediaContent:hover{right:5px !important;opacity:.6 !important}
+}
+@media screen and (max-width:375px) and (orientation:portrait){.colorbox-age-gate .age-gate-content .wrapper{margin:0 0 0 50px}
+#cboxPrevious.mediaContent{left:5px !important;opacity:.6 !important}
+#cboxNext.mediaContent,#cboxNext.mediaContent:hover{right:5px !important;opacity:.6 !important}
+}
+@media screen and (width:361px) and (orientation:portrait){#cboxPrevious.mediaContent,#cboxNext.mediaContent,#cboxPrevious.mediaContent:after,#cboxNext.mediaContent:after{position:fixed !important;top:49% !important}
+#cboxNext.mediaContent,#cboxNext.mediaContent:hover{right:25px !important}
+#cboxPrevious.mediaContent,#cboxPrevious.mediaContent:hover{left:25px !important}
+.s7NativeVideoIconEffect{position:fixed !important;top:50% !important}
+}
+@media screen and (max-width:320px) and (orientation:portrait){.colorbox-age-gate .age-gate-content .wrapper{margin:0 -10px 0 20px}
+}
+@media screen and (max-width:640px) and (orientation:landscape){.colorbox-age-gate .age-gate-content .wrapper{margin:0 80px}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents h2{font-size:32px}
+#cboxNext.mediaContent{opacity:.6 !important;right:30px !important}
+#cboxPrevious.mediaContent{left:20px !important;opacity:.6 !important}
+}
+@media screen and (max-width:568px) and (orientation:landscape){.colorbox-age-gate .age-gate-content .wrapper{margin:0 10px 0 65px}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents h2{font-size:32px}
+#cboxPrevious.mediaContent{left:10px !important;opacity:.6 !important}
+#cboxNext.mediaContent,#cboxNext.mediaContent:hover{right:10px !important;opacity:.6 !important}
+}
+@media screen and (max-width:667px) and (orientation:landscape){.colorbox-age-gate .age-gate-content .wrapper{margin:0 80px}
+.colorbox-age-gate .age-gate-content .wrapper .text-contents h2{font-size:32px}
+#cboxNext.mediaContent{opacity:.6 !important;right:30 !important}
+#cboxPrevious.mediaContent{left:20px !important;opacity:.6 !important}
+}
+@media screen and (min-width:700px) and (max-width:900px) and (orientation:landscape){.colorbox-age-gate .age-gate-content .wrapper .text-contents h2{font-size:32px}
+}
+@media screen and (min-width:700px) and (max-width:800px) and (orientation:portrait){#colorbox.ipadVideo{width:600px !important;left:12% !important;position:fixed !important;top:5% !important}
+#cboxWrapper.ipadVideo,#cboxContent.ipadVideo,#cboxLoadedContent.ipadVideo{width:100% !important}
+}
+@media screen and (min-width:850px) and (max-width:1025px) and (orientation:landscape){#colorbox.ipadVideo{width:600px !important;left:20% !important;position:fixed !important;top:3% !important;height:92% !important}
+#cboxWrapper.ipadVideo,#cboxContent.ipadVideo,#cboxLoadedContent.ipadVideo{width:100% !important;height:650px !important}
+.colorbox-age-gate .age-form .let-me-in{margin-left:0}
+.colorbox-age-gate .age-form input{margin-bottom:30px}
+}
+@media screen and (width:768px) and (max-device-width:500px) and (orientation:portrait){#colorbox.mobileDisabled{width:90% !important;height:7% !important;left:5% !important}
+#cboxWrapper.mobileDisabled,#cboxContent.mobileDisabled{width:90% !important;left:30px;top:80px;position:fixed !important;height:80% !important}
+#cboxCurrent.mobileDisabled{margin-top:-20px;left:0;font-size:20px;width:100px}
+#cboxWrapper.mobileDisabled{position:fixed}
+#cboxLoadedContent.mobileDisabled{left:20px;width:100% !important;height:100% !important}
+}
+@media screen and (width:768px) and (max-device-width:736px) and (orientation:landscape){#colorbox.mobileDisabled{width:90% !important;height:7% !important;left:5% !important}
+#cboxWrapper.mobileDisabled,#cboxContent.mobileDisabled{width:90% !important;left:20px;position:fixed !important;height:80% !important}
+#cboxCurrent.mobileDisabled{margin-top:-20px;left:0;font-size:20px;width:100px}
+#cboxWrapper.mobileDisabled{position:fixed}
+#cboxLoadedContent.mobileDisabled{left:20px;width:100% !important;height:100% !important}
+}
+.sbHolder{background-color:#f5f5f5;font-family:Arial,sans-serif;font-size:14px;font-weight:normal;outline:0;height:40px;position:relative;width:200px}
+.sbHolder.red .sbToggle{background-position:-2px 18px}
+.sbHolder.red .sbSelector{color:red}
+.sbSelector{display:block;height:30px;left:0;line-height:40px;outline:0;overflow:hidden;position:absolute;text-indent:21px;top:0;background-color:#f5f5f5;width:55px;height:40px}
+.sbSelector:link,.sbSelector:visited,.sbSelector:hover{color:#363636;outline:0;text-decoration:none}
+.sbToggle{background:url("https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/select-icons.png") -2px -141px no-repeat;background-color:#f5f5f5;display:block;height:40px;outline:none !important;position:absolute;right:0;top:0;width:30px}
+.sbToggleOpen{background:url('https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/select-icons.png') -2px -38px no-repeat;outline:0}
+.sbToggleOpen:hover{background:url('https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/select-icons.png') -2px -38px no-repeat;outline:0}
+.sbHolderDisabled{background-color:#3c3c3c}
+.sbOptions{background-color:#f5f5f5;list-style:none;margin:0;padding:0;position:absolute;top:30px;width:200px;z-index:2;overflow-y:auto;padding-top:3px}
+.sbOptions li{padding:0}
+.sbOptions a{display:block;outline:0;padding:7px 0 7px 3px;text-indent:18px}
+.sbOptions a:link,.sbOptions a:visited{color:#363636;text-decoration:none}
+.sbOptions a:hover,.sbOptions a:focus,.sbOptions a.sbFocus{color:#fff;background-color:#363636}
+.sbOptions li.last a{border-bottom:0}
+.sbOptions .sbDisabled{color:#999;display:block;padding:7px 0 7px 3px}
+.sbOptions .sbGroup{color:#ebb52d;display:block;font-family:'SST W01 Bold','SST W02 Bold','SST W10 Bold','SST W15 Bold','Arial Bold',Helvetica;font-weight:normal;padding:7px 0 7px 3px}
+.sbOptions .sbSub{padding-left:17px}
+ins.textAdded{color:#0c0}
+del.textRemoved{color:#c00}
+.search-container .double .tt-dropdown-menu .tt-dataset-two-column-related-game .tt-suggestions{margin-left:12px}
+.search-container .double .tt-dropdown-menu .tt-dataset-two-column-previous{display:none}
+.search-container .double .tt-dropdown-menu .tt-dataset-two-column-related-game{float:left;width:100%}
+.search-container .double .tt-dropdown-menu .tt-dataset-two-column-related-game .tt-suggestions{margin-left:0}
+#search-overlay .all-results{position:relative;top:445px;width:100%;clear:both;bottom:0}
+.search-container .double .tt-dropdown-menu .tt-suggestion p.related .second span{padding-left:125px}
+section h3.section-sub-text{font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif}
+.buttonRow .link-btn{margin:0 20px 0 0}
+@media screen and (max-width:1000px){.buttonRow .link-btn{margin:0 20px 5px 0}
+}
+@media only screen and (max-width:767px){.buttonRow .link-btn{margin:0 10px 5px 0}
+}
+section.ps_title_55{padding-top:55px}
+section.background-section>a.section-link{display:block;height:100%;position:absolute;top:0;width:100%;z-index:1}
+.background-section a,section.background-section .headingWrapper a,section.background-section .sectionButtonRow a,section.background-section .priceSpiderButton .ps-widget{position:relative;z-index:2}
+@media(max-width:900px){.colorbox-age-gate .age-form .let-me-in{margin-left:0}
+.colorbox-age-gate .age-form input{margin-bottom:30px}
+}
+section.page-section.default-align-heading,section.background-section.default-align-heading{padding-top:55px}
+@media only screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait){section.top-align-heading{background-size:cover}
+}
+section.page-section.top-align-heading,section.background-section.top-align-heading{padding-top:5px}
+section.page-section.no-align-heading,section.background-section.no-align-heading{padding-top:0}
+.footermargin{padding:0 !important}
+.clearfix.nopseudo:before,.clearfix.nopseudo:after{content:initial !important}
+.textRed{color:red}
+.slick-slider{position:relative;display:block;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}
+.slick-list:focus{outline:0}
+.slick-list.dragging{cursor:pointer;cursor:hand}
+.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.slick-track{position:relative;top:0;left:0;display:block}
+.slick-track:before,.slick-track:after{display:table;content:''}
+.slick-track:after{clear:both}
+.slick-loading .slick-track{visibility:hidden}
+.slick-slide{display:none;float:left;height:100%;min-height:1px}
+[dir='rtl'] .slick-slide{float:right}
+.slick-slide img{display:block}
+.slick-slide.slick-loading img{display:none}
+.slick-slide.dragging img{pointer-events:none}
+.slick-initialized .slick-slide{display:block}
+.slick-loading .slick-slide{visibility:hidden}
+.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
+@charset 'UTF-8';.slick-loading .slick-list{background:#fff url('https://www.playstation.com/en-us/etc/designs/pdc/clientlibs_base/images/common/loader.gif') center center no-repeat}
+.slick-prev,.slick-next{font-size:0;line-height:0;position:absolute;top:50%;display:block;width:40px;height:80px;margin-top:-30px;padding:0;cursor:pointer;color:white;border:0;outline:0;background:#0068bf;border-radius:9px;opacity:.50}
+.slick-prev:hover,.slick-prev:focus,.slick-next:hover,.slick-next:focus{color:white;outline:0;background:#0068bf;opacity:1}
+.slick-prev:hover:before,.slick-prev:focus:before,.slick-next:hover:before,.slick-next:focus:before{opacity:1}
+.slick-prev.slick-disabled:before,.slick-next.slick-disabled:before{opacity:.25}
+.slick-prev:before,.slick-next:before{font-size:30px;line-height:1;opacity:.75;color:white;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.slick-dots li button:before{font-size:40px}
+.slick-prev{left:-25px}
+[dir='rtl'] .slick-prev{right:-25px;left:auto}
+.slick-prev:before{content:'<'}
+[dir='rtl'] .slick-prev:before{content:'>'}
+.slick-next{right:-25px}
+[dir='rtl'] .slick-next{right:auto;left:-25px}
+.slick-next:before{content:'>'}
+[dir='rtl'] .slick-next:before{content:'<'}
+.slick-slider{margin-bottom:30px}
+.slick-dots{position:absolute;bottom:-45px;display:block;width:100%;padding:0;list-style:none;text-align:center}
+.slick-dots li{position:relative;display:inline-block;width:20px;height:20px;margin:0 5px;padding:0;cursor:pointer}
+.slick-dots li button{font-size:0;line-height:0;display:block;width:20px;height:20px;padding:5px;cursor:pointer;color:transparent;border:0;outline:0;background:transparent}
+.slick-dots li button:hover,.slick-dots li button:focus{outline:0}
+.slick-dots li button:hover:before,.slick-dots li button:focus:before{opacity:1}
+.slick-dots li button:before{font-family:'SST W01 Roman','SST W02 Roman','SST W10 Roman','SST W15 Roman',Arial,Helvetica,sans-serif ';
+	font-size: 40px;
+	line-height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '•';text-align:center;opacity:.50;color:#666;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.slick-dots li.slick-active button:before{opacity:.75;color:#0068bf}
+/*
+     FILE ARCHIVED ON 21:22:24 Jun 15, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:36:29 Apr 14, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 410.165
+  exclusion.robots: 189.399
+  exclusion.robots.policy: 189.39
+  xauthn.identify: 125.737
+  xauthn.chkprivs: 63.369
+  RedisCDXSource: 2.447
+  esindex: 0.01
+  LoadShardBlock: 114.119 (3)
+  PetaboxLoader3.datanode: 140.274 (5)
+  CDXLines.iter: 38.498 (3)
+  load_resource: 388.441 (2)
+  PetaboxLoader3.resolve: 260.25 (2)
+*/

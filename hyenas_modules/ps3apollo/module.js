@@ -38,4 +38,8 @@ module.exports = (hyenas) => {
 	hyenas.get('/cdn/UP9000/PCSA00017_00/PqooDxqeGOAeOhxzzOPejSJECpJWXbRe.png', (req, res) =>
 		res.sendFile('./data/cdn/UP9000/PCSA00017_00/PqooDxqeGOAeOhxzzOPejSJECpJWXbRe.png', { root: __dirname })
 	);
+	//Tom Clancy's Ghost Recon - Future Soldier Uplay Passport
+	hyenas.get('/cdn/UP0001/BLUS30521_00/rGJGnwuuydQEzaxxTIIEpKiwiWPNIEsi.png', (req, res) =>
+		res.sendFile('./data/cdn/UP0001/BLUS30521_00/rGJGnwuuydQEzaxxTIIEpKiwiWPNIEsi.png', { root: __dirname })
+	);
 };

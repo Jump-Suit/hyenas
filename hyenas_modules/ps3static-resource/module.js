@@ -123,4 +123,9 @@ module.exports = (hyenas) => {
 	//Rating for UplayPassport
 	hyenas.get('/np/resource/title/NPWR01196_00/rating/NPWR01196_00-rating.xml', (req, res) => 
 		res.sendFile('./data/np/resource/title/NPWR01196_00/rating/NPWR01196_00-rating.xml', { root: __dirname }));
+	//Ace Combat Infinity matching & storage
+	hyenas.get('/np/resource/title/NPWR04428_00/matching/NPWR04428_00-matching.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPWR04428_00/matching/NPWR04428_00-matching.xml', { root: __dirname }));
+	hyenas.get('/np/resource/title/NPWR04428_00/storage/NPWR04428_00-storage.xml', (req, res) => 
+		res.sendFile('./data/np/resource/title/NPWR04428_00/storage/NPWR04428_00-storage.xml', { root: __dirname }));
 };

@@ -121,7 +121,6 @@ hyenas.get('/basic_view/sec/get_self_profile', (req, res) => res.status(400).end
 hyenas.get('/networktest/get_2m', (req, res) => {
   try {
       res.end(Buffer.alloc(2097152));
-      console.log("Sent Empty String");
   } catch (err) { res.status(410).end(); }
 });
 
@@ -132,12 +131,8 @@ hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
 
 hyenas.listen(config.port1, () => console.log(`Hyenas has started on Port: ${config.port1}`));
 hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
-//hyenas.listen(config.port3, () => console.log(`Hyenas has started on Port: ${config.port3}`));
-
-//hyenas.listen(config.port4, () => console.log(`Hyenas has started on Port: ${config.port4}`));
 
 // Yay, stolen functions! //
-
 function collectRequestData(request, callback) {
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';
   const FORM_XML = 'text/xml';
