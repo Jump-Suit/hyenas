@@ -30,6 +30,7 @@ Test by rerouting the Sony domains to your local PC IP in the *hosts* example fi
 Redirect your PC Local IP as your Primary DNS in PS3, and congrats! **Hyenas can communicate with your PS3! (WOO!!)**
 
 `updns start/stop`
+
 `node index.js`
 
 ## Licensing

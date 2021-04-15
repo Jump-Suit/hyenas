@@ -12,6 +12,7 @@ const { readdirSync } = require('fs');
 const config = require('./config.json');
 const updns = require('updns').createServer(53, '127.0.0.1')
 
+//TLSv1.2 Testing with a Certificate and Key.
 /*
 var fs = require('fs');
 var http = require('http');
@@ -25,6 +26,8 @@ var httpsServer = https.createServer(credentials, hyenas);
 
 httpsServer.listen(443);
 */
+
+// Updns functions, error and starting Updns as a service.
 updns.on('error', error => {
     console.log(error)
 })
@@ -33,8 +36,7 @@ updns.on('listening', server => {
     console.log('DNS service has started')
 })
 
-
- /*
+/*
 updns.on('message', (domain, send, proxy) => {
     if(domain === 'playstation.com'){
 		console.log("Redirecting ${domain}")
@@ -45,6 +47,7 @@ updns.on('message', (domain, send, proxy) => {
 })
 */
 
+//MySQL Testing
 /*
 const sql = require('mysql');
 
@@ -118,6 +121,7 @@ hyenas.post('/basic_view/sec/get_self_profile/', (req, res) => {
 
 hyenas.get('/basic_view/sec/get_self_profile', (req, res) => res.status(400).end());
 
+//Network Test Functions
 hyenas.get('/networktest/get_2m', (req, res) => {
   try {
       res.end(Buffer.alloc(2097152));
@@ -128,11 +132,11 @@ hyenas.get('/gs2/networktest/get_6m', (req, res) =>
   res.sendFile(path.join(__dirname, config.system, 'networktest/get_6m')));
 
 hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
-
+//Start Hyenas on Port 80 as port1 and Port 53 as port2
 hyenas.listen(config.port1, () => console.log(`Hyenas has started on Port: ${config.port1}`));
 hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
 
-// Yay, stolen functions! //
+// Yay, stolen functions!
 function collectRequestData(request, callback) {
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';
   const FORM_XML = 'text/xml';
