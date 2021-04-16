@@ -1,0 +1,10 @@
+/*1080
+---------------------------*/
+#familylogo { 
+	background-image: url(../imgs/pslogo_1080.gif);
+	width: 915px;
+	padding-left: 65px;
+}
+#headbox { width: 980px; padding-top: 8px; }
+#search { padding-top: 12px; }
+.arrow1 { height: 55px; }

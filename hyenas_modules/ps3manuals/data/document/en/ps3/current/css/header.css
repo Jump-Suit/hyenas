@@ -1,0 +1,132 @@
+/*------change link color-------*/
+#headerlogo a {
+	color: #3a3a3a;
+	text-decoration: none;
+}
+#headerlogo a:hover { color: #3a3a3a; }
+/*---------------------------------------------------*/
+/* header 
+---------------------------------------------------- */
+#headerlogo {
+	width: 100%;
+	clear: both;
+	text-align: left;
+}
+
+#header {
+	width: 100%;
+	height: 64px;
+	margin-bottom: 23px;
+	background: url(../imgs/bg_header.png) repeat-x;
+}
+#headbox:after { content:""; clear:both; display:block; }
+#headbox {
+	width: 780px;
+	margin: 0 auto;
+	padding-top: 13px;
+}
+#headbox h1#PSlogo,
+#headbox a#PSlogo{
+	display: block;
+	float: left;
+	padding-left: 165px;
+	background: url(../imgs/logo_ps3.png) left center no-repeat;
+	color: #fff;
+	text-decoration: none;
+	line-height: 1.2em;
+	font-size: 130%;
+	font-weight: bold;
+}
+#headbox #PSlogo span {
+	font-size: 80%;
+	font-weight: normal;
+}
+
+.arrow1 {
+	text-align:right;
+	height: 40px;
+	display: block;
+}
+
+p.text-hide {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 1px; */
+    /* height: 1px; */
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+/* search
+---------------------------------------------------- */
+#search {
+	float: right;
+	text-align: left;
+	padding-top: 8px;
+}
+#search form {
+	line-height: 1em;
+}
+.inputS {
+	width: 150px;
+	height: 17px;
+	margin: 0 5px 0 0;
+	padding: 0px;
+	line-height: 17px;
+	color:#333333;
+	background-color: #FFFFFF;
+	border: 1px solid #C7C7C7;
+	font-size: 90%;
+}
+input:focus { background:#f6f8f9; }
+textarea:focus { background:#f6f8f9; }
+
+
+/*---------------------------*/
+/* photogallery
+---------------------------------------------------- */
+/* 2008.11.17 YIT */
+/**/
+#familylogo_photog:after { content:""; clear:both; display:block; }
+#familylogo_photog {
+	width: 780px;
+	margin: 0 auto;
+	padding-top: 13px;
+}
+#familylogo_photog h1#PSlogo,
+#familylogo_photog a#PSlogo{
+	display: block;
+	float: left;
+	padding-left: 165px;
+	background: url(../imgs/logo_ps3_print.png) left center no-repeat;
+	text-decoration: none;
+	line-height: 1.2em;
+	font-size: 130%;
+	font-weight: bold;
+}
+#familylogo_photog #PSlogo span {
+	font-size: 80%;
+	font-weight: normal;
+}
+
+#photoglogo {
+	float: right;
+	width: 235px;
+	background: url(../imgs/photoglogo.jpg) no-repeat left top;
+	height: 84px;
+}
+#headbox_photog {
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 0px;
+}
+#header_photog {
+	width: 100%;
+	background-repeat: repeat-x;
+	background-image: url(../imgs/photog_bg_main.jpg);
+	height: 85px;
+	margin-bottom: 0px;
+}

@@ -1,0 +1,470 @@
+/*------change link color-------*/
+#maintop a, #main a, #main_full a {
+	color: #336699;
+	text-decoration: none;
+}
+#maintop a:hover, #main a:hover {
+	color: #FFFFFF;
+	background-color: #336699;
+}
+#mainlist li a:hover, #main_full a:hover {
+	color: #FFFFFF;
+	background-color: #336699;
+}
+#mainlist li a {
+	color: #3a3a3a;
+	text-decoration: none;
+}
+
+/*---------------------------*/
+/* preparation
+---------------------------------------------------- */
+/* 2007.06.08 YIT */
+.preparation{
+	margin-top: 15px;
+	margin-bottom: 215px;
+}
+/*---------------------------*/
+#maintop {
+	float: right;
+	clear: right;
+	width: 535px;
+	text-align: center;
+/*2007.11.26
+-----------------------------*/
+	padding-top: 47px;
+/*---------------------------*/
+}
+#maintop h1 {
+	line-height: 150%;
+}
+#maintop p {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	line-height: 150%;
+}
+#maintitle h1 {
+	line-height: 110%;
+}
+#maintitle p {
+	line-height: 150%;
+	font-weight: bold;
+}
+#maintop .arrow_top {
+	margin-top: 38px;
+	text-align: left;
+	margin-top: 38px;
+}
+
+#main h3, #main_full h3 {
+	padding-top: 20px;
+	text-decoration: underline;
+}
+#main h3.top, #main_full h3.top {
+	padding-top: 4px;
+	text-decoration: underline;
+}
+#main p, #main_full p {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	line-height: 125%;
+}
+#main {
+	float: right;
+	clear: right;
+	width: 535px;
+	margin: 0px;
+	padding-top: 3px;
+}
+#main_full {
+	float: right;
+	clear: right;
+	width: 780px;
+	padding-top: 3px;
+}
+#mainlist {
+	padding-left: 5px;
+	padding-bottom: 30px; /* 2007.01.17 YIT */
+}
+#mainlist ul {
+	color: #3e4a5c;
+	list-style-type: none;
+	padding: 0px;
+}
+#mainlist li {
+	line-height: 2em;
+	text-align: left;
+}
+.list{
+	padding-top: 4px;
+	font-weight: bold;
+	background-image: url(../imgs/p_arrow-.gif);
+	background-position: left 0.9em;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+.list_expand{
+	padding-top: 4px;
+	padding-bottom: 0px;
+	font-weight: bold;
+	margin: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	background-image: url(../imgs/p_arrow+.gif);
+	background-repeat: no-repeat;
+	background-position: left 0.9em;
+	padding-left: 25px;
+}
+.list_close{
+	padding-top: 4px;
+	padding-bottom: 0px;
+	font-weight: bold;
+	margin: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	background-image: url(../imgs/p_arrow-.gif);
+	background-repeat: no-repeat;
+	background-position: left 0.9em;
+	padding-left: 25px;
+}
+.list-circle{
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background-image: url(../imgs/p_arrowo.gif);
+	background-repeat: no-repeat;
+	background-position: left 0.4em;
+	font-weight: normal;
+	padding-left: 42px;
+}
+#index ul {
+	margin-left: 20px;
+	padding: 0;
+	line-height: 1.45em;
+	text-align: left;
+	list-style-type: none;
+}
+
+/* 2007.01.16 YIT */
+#index .list_ind {
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+.list_ind h4 {
+	font-size: 0.9em;
+}
+
+#archives ul {
+	margin-top: 15px;
+	margin-bottom: 50px;
+	padding: 0;
+	line-height: 1.45em;
+	text-align: left;
+	list-style-type: none;
+}
+li.none {
+	list-style: none;
+	line-height: 125%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 0px;
+}
+
+/* contents table
+---------------------------------------------------- */
+
+#main .table, #main_full .table, #main_photog .table, #main_full_photog .table {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #a3a3a3;
+	border-left-color: #a3a3a3;
+}
+#main .table_full, #main_full .table_full, #main_photog .table_full, #main_full_photog .table_full {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: top;
+	width:100%;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #a3a3a3;
+	border-left-color: #a3a3a3;
+}
+#main .th, #main_full .th, #main_photog .th, #main_full_photog .th {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+	padding: 4px;
+	margin: 0px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+	vertical-align: baseline;
+}
+#main .th1, #main_full .th1, #main_photog .th1, #main_full_photog .th1 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+}
+#main .th2, #main_full .th2, #main_photog .th2, #main_full_photog .th2 {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+}
+
+#main .th3, #main_full .th3, #main_photog .th3, #main_full_photog .th3 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+}
+
+#main .td, #main_full .td, #main_photog .td, #main_full_photog .td {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+	margin: 0px;
+	padding: 4px;
+	/* 2007.03.14 YIT */
+	vertical-align: baseline;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+}
+#main .td1, #main_full .td1, #main_photog .td1, #main_full_photog .td1 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	/* 2007.03.14 YIT */
+	vertical-align: top;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #a3a3a3;
+	border-bottom-color: #a3a3a3;
+}
+#main .td2, #main_full .td2, #main_photog .td2, #main_full_photog .td2 {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+	margin: 0px;
+	padding: 4px;
+	/* 2007.03.14 YIT */
+	vertical-align: top;
+}
+#main .td3, #main_full .td3, #main_photog .td3, #main_full_photog .td3 {
+	list-style-type: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+	margin: 0px;
+	padding: 4px;
+	/* 2007.03.14 YIT */
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+}
+#main .tableS, #main_full .tableS, #main_photog .tableS, #main_full_photog .tableS {
+	margin-top:-6px;
+	margin-bottom:0px;
+}
+#main .tableS th, #main_full .tableS th, #main_photog .tableS th, #main_full_photog .tableS th {
+	font-size: 0.80em;
+	vertical-align: top;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	text-align: left;
+}
+#main .tableS td, #main_full .tableS td, #main_photog .tableS td, #main_full_photog .tableS td {
+	vertical-align: top;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+
+/* 2008.09.29 YIT */
+#main td.center_v, #main_photog td.center_v {
+	vertical-align: middle;
+	padding: 4px;
+	font-weight: normal;
+	text-align: left;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #a3a3a3;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #a3a3a3;
+}
+
+#main .tableS p, #main_full .tableS p, #main_photog .tableS p, #main_full_photog .tableS p {
+	padding: 0px;
+}
+
+#main div.ind, #main_photog div.ind {
+	padding-left: 0.5em;
+}
+
+
+
+/*---------------------------*/
+/* photogallery
+---------------------------------------------------- */
+/* 2008.11.17 YIT */
+/*------change link color-------*/
+#main_full_photog a { color: #336699; text-decoration: none;}
+#main_full_photog a:hover { color: #336699; 
+	color: #FFFFFF;
+ background-color: #336699;}
+/*---------------------------*/
+
+/* 2008.12.08 YIT */
+#main_full_photog .movietitle {
+	text-align: center;
+}
+
+/* 2010.08.10 */
+#demoMovie { width: 745px;	height: 433px; margin: 0px auto; background: #eeeeee; }
+#demoMovie span { display:block; padding: 80px 20px 0; text-align:center; }
+#photogMenu { width: 780px; margin: 0px; }
+/**/
+#main_full .arrow_top { margin-top: 38px; text-align: center; margin-top: 40px; }
+/**/
+#main_full_photog { float: none; width: 780px; padding-top: 3px; }
+#main_full_photog .arrow_top { margin-top: 38px; text-align: center; margin-top: 10px; }
+#main_full_photog h3 {	padding-top: 20px;	text-decoration: underline; }
+#main_full_photog h3.top {	padding-top: 4px;	text-decoration: underline; }
+#main_full_photog p { 	padding-top: 4px; padding-bottom: 5px; line-height: 125%; }
+#main_photog p { padding-top: 4px;	padding-bottom: 5px;	line-height: 125%; }
+
+/*----------------mainmenu------------------*/
+/*text*/
+#photogMenu .hoverBtn02 span, 
+#photogMenu .hoverBtn03 span, 
+#photogMenu .hoverBtn04 span, 
+#photogMenu .hoverBtn05 span, 
+#photogMenu .hoverBtn06 span, 
+#photogMenu .hoverBtn07 span, 
+#photogMenu .hoverBtn08 span { position: relative; padding-left: 90px; line-height: 63px; color: #FFFFFF; }
+
+/*defort*/
+#photogMenu .hoverBtn01 a, 
+#photogMenu .hoverBtn02 a, 
+#photogMenu .hoverBtn03 a, 
+#photogMenu .hoverBtn04 a, 
+#photogMenu .hoverBtn05 a, 
+#photogMenu .hoverBtn06 a, 
+#photogMenu .hoverBtn07 a, 
+#photogMenu .hoverBtn08 a { position: relative; z-index:2; display:block; width:390px; height:63px; line-height:1.2em; font-size:1.2em; ext-decoration:none; color:#FFF; background: transparent none repeat-x 0 0 scroll; }
+
+/*menu background*/
+#photogMenu .hoverBtn01, 
+#photogMenu .hoverBtn02, 
+#photogMenu .hoverBtn03, 
+#photogMenu .hoverBtn04, 
+#photogMenu .hoverBtn05, 
+#photogMenu .hoverBtn06,
+#photogMenu .hoverBtn07, 
+#photogMenu .hoverBtn08 { position: relative; float: left; height: 63px; width: 390px; }
+/*backgorund image*/
+#photogMenu .hoverBtn01 { background:url(../imgs/photog_navbase01.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn02 { background:url(../imgs/photog_navbase02.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn03 { background:url(../imgs/photog_navbase03.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn04 { background:url(../imgs/photog_navbase04.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn05 { background:url(../imgs/photog_navbase09.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn06 { background:url(../imgs/photog_navbase06.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn07 { background:url(../imgs/photog_navbase10.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn08 { background:url(../imgs/photog_navbase08.jpg) no-repeat scroll 0px 0px; }
+
+/*mouse over*/
+#photogMenu .hoverBtn01 div, 
+#photogMenu .hoverBtn02 div,
+#photogMenu .hoverBtn03 div, 
+#photogMenu .hoverBtn04 div, 
+#photogMenu .hoverBtn05 div, 
+#photogMenu .hoverBtn06 div, 
+#photogMenu .hoverBtn07 div, 
+#photogMenu .hoverBtn08 div { display:none; position:absolute; z-index:1; top:0px; height: 63px; width: 390px; left: 0px; }
+/*backgorund image*/
+#photogMenu .hoverBtn01 div { background:url(../imgs/photog_navon01.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn02 div { background:url(../imgs/photog_navon02.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn03 div { background:url(../imgs/photog_navon03.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn04 div { background:url(../imgs/photog_navon04.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn05 div { background:url(../imgs/photog_navon09.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn06 div { background:url(../imgs/photog_navon06.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn07 div { background:url(../imgs/photog_navon10.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn08 div { background:url(../imgs/photog_navon08.jpg) no-repeat scroll 0px 0px; }
+
+/*longtext*/
+#photogMenu .hoverBtn01 .longtext, 
+#photogMenu .hoverBtn02 .longtext, 
+#photogMenu .hoverBtn03 .longtext, 
+#photogMenu .hoverBtn04 .longtext, 
+#photogMenu .hoverBtn05 .longtext, 
+#photogMenu .hoverBtn06 .longtext, 
+#photogMenu .hoverBtn07 .longtext, 
+#photogMenu .hoverBtn08 .longtext { line-height: 1.2em; display: block; padding-top: 13px; padding-right: 20px; padding-left: 90px; }
+
+/*not icon*/
+#photogMenu .hoverBtn01 span { position: relative; line-height: 63px; color: #FFFFFF; text-align:center;}
+#photogMenu .hoverBtn01 { text-align: center; }
+
+/* for PageMove by YIT (copy from PlayStation Store) */
+#next_prev	{ width: 780px; padding-top: 20px; text-align:center; }
+#next_prev .btn_prev	{ display: block; width: 375px; text-align:right; height: 20px; float: left; }
+#next_prev .sep_center	{ display: block; width: 28px; text-align:center; height: 20px; float: left; }
+#next_prev .btn_next	{ display: block; width: 375px; text-align:left; height: 20px; float: right; }
+
+/* image change */
+.imgs-pg_view002 { background: url(../imgs/pg_view002.jpg) no-repeat 0px 0px; height: 95px; width: 720px; }
+
+/* R3 button */
+p.r3_zoom {
+	text-align: right;
+	margin-top: 30px;
+}

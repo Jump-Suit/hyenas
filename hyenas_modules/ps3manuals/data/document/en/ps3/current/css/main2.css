@@ -1,0 +1,94 @@
+/*1080
+---------------------------*/
+#maintop { width: 735px; }
+#main { width: 735px; }
+#main_full { width: 980px; }
+#mainlist { width: 735px; }
+
+
+
+/*---------------------------*/
+/* photogallery
+---------------------------------------------------- */
+/* 2008.11.17 YIT */
+/**/
+#photogMenu { width: 840px; margin: 0px auto; }
+#familylogo_photog { width: 925px; padding: 15px 0px 5px 55px; }
+#headbox_photog { width: 980px; }
+#mainlist_photog { width: 735px; }
+#main_full_photog { width: 870px; margin-left: auto; margin-right: auto; }
+/*----------------mainmenu------------------*/
+/*text*/
+#photogMenu .hoverBtn02 span, 
+#photogMenu .hoverBtn03 span, 
+#photogMenu .hoverBtn04 span, 
+#photogMenu .hoverBtn05 span, 
+#photogMenu .hoverBtn06 span, 
+#photogMenu .hoverBtn07 span, 
+#photogMenu .hoverBtn08 span { position: relative; padding-left: 80px; line-height: 63px; color: #FFFFFF; }
+/*defort*/
+#photogMenu .hoverBtn01 a, 
+#photogMenu .hoverBtn02 a, 
+#photogMenu .hoverBtn03 a, 
+#photogMenu .hoverBtn04 a, 
+#photogMenu .hoverBtn05 a, 
+#photogMenu .hoverBtn06 a, 
+#photogMenu .hoverBtn07 a, 
+#photogMenu .hoverBtn08 a { position: relative; z-index:2; display:block; width:420px; height:63px; line-height:1.1em; font-size:1.1em; ext-decoration:none; color:#FFF; background: transparent none repeat-x 0 0 scroll; }
+
+/*menu background*/
+#photogMenu .hoverBtn01, 
+#photogMenu .hoverBtn02, 
+#photogMenu .hoverBtn03, 
+#photogMenu .hoverBtn04, 
+#photogMenu .hoverBtn05, 
+#photogMenu .hoverBtn06,
+#photogMenu .hoverBtn07, 
+#photogMenu .hoverBtn08 { position: relative; float: left; height: 63px; width: 420px; }
+/*backgorund image*/
+#photogMenu .hoverBtn01 { background:url(../imgs/photog_navbase01_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn02 { background:url(../imgs/photog_navbase02_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn03 { background:url(../imgs/photog_navbase03_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn04 { background:url(../imgs/photog_navbase04_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn05 { background:url(../imgs/photog_navbase09_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn06 { background:url(../imgs/photog_navbase06_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn07 { background:url(../imgs/photog_navbase10_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn08 { background:url(../imgs/photog_navbase08_1080.jpg) no-repeat scroll 0px 0px; }
+
+/*mouse over*/
+#photogMenu .hoverBtn01 div, 
+#photogMenu .hoverBtn02 div,
+#photogMenu .hoverBtn03 div, 
+#photogMenu .hoverBtn04 div, 
+#photogMenu .hoverBtn05 div, 
+#photogMenu .hoverBtn06 div, 
+#photogMenu .hoverBtn07 div, 
+#photogMenu .hoverBtn08 div { display:none; position:absolute; z-index:1; top:0px; height: 63px; width: 420px; left: 0px; }
+/*backgorund image*/
+#photogMenu .hoverBtn01 div { background:url(../imgs/photog_navon01_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn02 div { background:url(../imgs/photog_navon02_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn03 div { background:url(../imgs/photog_navon03_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn04 div { background:url(../imgs/photog_navon04_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn05 div { background:url(../imgs/photog_navon09_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn06 div { background:url(../imgs/photog_navon06_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn07 div { background:url(../imgs/photog_navon10_1080.jpg) no-repeat scroll 0px 0px; }
+#photogMenu .hoverBtn08 div { background:url(../imgs/photog_navon08_1080.jpg) no-repeat scroll 0px 0px; }
+
+/*longtext*/
+#photogMenu .hoverBtn01 .longtext, 
+#photogMenu .hoverBtn02 .longtext, 
+#photogMenu .hoverBtn03 .longtext, 
+#photogMenu .hoverBtn04 .longtext, 
+#photogMenu .hoverBtn05 .longtext, 
+#photogMenu .hoverBtn06 .longtext, 
+#photogMenu .hoverBtn07 .longtext, 
+#photogMenu .hoverBtn08 .longtext { line-height: 1.1em; width: 330px; margin-top: auto; margin-bottom: auto; padding-top: 13px; padding-right: 10px; padding-left: 80px; }
+
+
+/*not icon*/
+#photogMenu .hoverBtn01 span { position: relative; line-height: 63px; color: #FFFFFF; text-align:center;}
+#photogMenu .hoverBtn01 { text-align: center; }
+
+/*next_prev btn 2008.12.08 YIT */
+#next_prev	{ width: 870px; }
+#next_prev .btn_prev, #next_prev .btn_next	{ width: 421px; }

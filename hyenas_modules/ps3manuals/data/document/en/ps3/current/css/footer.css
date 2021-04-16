@@ -1,0 +1,70 @@
+/*------change link color-------*/
+#pan a {
+	color: #336699;
+	text-decoration: none;
+}
+#pan a:hover {
+	color: #FFFFFF;
+	background-color: #336699;
+}
+/*---------------------------*/
+/* footer
+---------------------------------------------------- */
+#footer {
+	width: 100%;
+	background-repeat: repeat-x;
+	background-image: url(../imgs/bg_mainfix.jpg);
+	clear: both;
+	text-align: center;
+}
+#footbox {
+	text-align: center;
+	width: 780px;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 40px;
+}
+#pan {
+	width: 780px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.back{
+	float: right;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	vertical-align: middle;
+	margin: 0px;
+	clear: both;
+}
+.copy{
+	float: left;
+	padding-left: 0px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFFFFF;
+}
+.arrow {
+	clear: right;
+	float: right;
+	padding-top: 25px;
+	width: 535px;
+	text-align: right;
+}
+
+#footer .print {
+	display:none;
+}
+
+/*---------------------------*/
+/* photogallery
+---------------------------------------------------- */
+/* 2008.11.17 YIT */
+/**/
+#footer_photog { width: 100%; background-repeat: repeat-x; background-image: url(../imgs/photog_bg_mainfix.jpg); clear: both; text-align: center; }
+#footer_photog .print { display:none; }

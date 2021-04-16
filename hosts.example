@@ -8,6 +8,7 @@ apollo.dl.playstation.net (Your PC Local IP Here) # PS3 Store PNGs
 ares.dl.playstation.net (Your PC Local IP Here) # PS3 Misc PKGs, Apps, Betas
 fus01.psp2.update.playstation.net (Your PC Local IP Here) #PS Vita List.xml redirecting to PSP2UPDAT.PUP Domains
 fus01.ps3.update.playstation.net (Your PC Local IP Here) #PS3 Update List.txt Redirects to .PUP domains
+fjp01.ps3.update.playstation.net (Your PC Local IP Here #PS3 Update List.txt Redirects to .PUP domains for Japan
 playstation.com (Your PC Local IP Here) # PS3Landing
 xmb-e.dl.playstation.net (Your PC Local IP Here) #xmb launch native applications? Spotify and Music Unlimited Support this.
 legaldoc.dl.playstation.net (Your PC Local IP Here) #PSN Legal Docs Domain
@@ -20,6 +21,7 @@ zprnetwork.s3.amazonaws.com (Your PC Local IP Here) # Socom 4 news?
 hakoniwa.dl.playstation.net (Your PC Local IP Here) # System PKGs, Photo Gallery, VSH
 nsx.np.dl.playstation.net (Your PC Local IP Here) # What's New JPEGs
 projectaces-newtitle.bngames.net (Your PC Local IP Here) # EULA for Ace Combat Infinity
+manuals.playstation.net (Your PC Local IP Here #PS3 Manuals Domain
 
 #us.np.adproxy.ndmdhs.com (Your PC Local IP Here) #Encrypted Data... Amazon ads served to Sony? Either way, domain name server no longer exists?...
 #themis.dl.playstation.net (Your PC Local IP Here) # Open Souce Licenses #Seems to request a TCP response?

@@ -1,0 +1,430 @@
+/*                          */
+/*        入力部             */
+/*                          */
+
+/* 検索窓の color */
+#searchplus-query {
+    color: #495057;
+    border-color: #eee;
+}
+
+/* 検索窓placeholderの color */
+#searchplus-query::placeholder {
+    color: #C8CED0;
+}
+
+/* 検索窓のbackground color */
+#searchplus-query, #searchplus-suggests {
+    background-color: #fff;
+}
+
+
+/*                          */
+/*        サジェスト部        */
+/*                          */
+
+/* サジェストリストの color */
+#searchplus-suggests {
+    border-color: #ddd;
+    background-color: #fff;
+}
+
+/* サジェストリストの選択時の color */
+#searchplus-suggests li:hover, #searchplus-suggests li.selected {
+    background-color: #ddd;
+    color: #2166bd;
+}
+
+/* 検索・ページングボタンの color */
+#searchplus-submit {
+    background: #2166bd;
+    border-color: #2166bd;
+    color: #fff;
+}
+
+/* サジェストリストの選択時の style */
+#searchplus-submit:hover {
+    box-shadow: 0px 0px 3px 1px #2166bd;
+    -moz-box-shadow: 0px 0px 3px 1px #2166bd;
+    -webkit-box-shadow: 0px 0px 3px 1px #2166bd;
+}
+
+
+/*                          */
+/*        検索結果部         */
+/*                          */
+
+/* 検索結果情報テキストの color */
+.searchplus-result-header {
+    color: #5c6370;
+}
+
+/* 検索結果の背景の color */
+.searchplus-result-list-unit {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 検索結果タイトル部とコンテンツ部の境界線 */
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper {
+    border-top: 1px solid #efefef;
+}
+
+/* 検索結果のタイトル表示部の color */
+.searchplus-result-list-unit .searchplus-result-list-unit-header, .searchplus-result-list-unit .searchplus-result-list-unit-header a {
+    color: #2166bd;
+}
+
+/* 検索結果URL部の color */
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper .searchplus-result-list-unit-url {
+    color: #288a5a;
+}
+
+/* 検索結果コンテンツ部の color */
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper .searchplus-result-list-unit-content {
+    color: #5c6370;
+}
+
+/* 検索結果ハイライトの color */
+.searchplus-result-list-unit strong {
+    color: #117ba7;
+    background: #e9f7fd;
+}
+mark {
+    font-weight:bold;
+}
+
+/* 検索結果なし color */
+.searchplus-no-result {
+    color: #909bab;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* 検索結果なし color */
+.searchplus-error-result {
+    color: #909bab;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 3em;
+}
+
+
+/*                          */
+/*        ページング部       */
+/*                          */
+
+/* ページング部ボタンの color */
+.searchplus-result-pagination button {
+    background: #efefef;
+    color: #5e6371;
+    border-color: #e0e0e0;
+}
+
+/* ページング部ボタン（無効時）の color */
+.searchplus-result-pagination button:disabled {
+    background: #f7f7f7;
+    color: #edeffa;
+    border-color: #f7f7f7;
+}
+
+/* ページング部ボタン（選択時）の color */
+.searchplus-result-pagination button:hover {
+    color: #2166bd;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ページング部ボタン（フォーカス時）の color */
+.searchplus-result-pagination button:focus {
+    border-color: #2166bd;
+}
+
+/* ページング部ボタン（表示中）の color */
+.searchplus-result-pagination button.active {
+    background: #2166bd;
+    color: #fff;
+    border-color: #2166bd;
+}
+
+/* ページング部ボタン（表示中・選択時）の color */
+.searchplus-result-pagination button.active:hover {
+    color: #fff;
+    box-shadow: 0px 0px 3px 1px #2166bd;
+    -moz-box-shadow: 0px 0px 3px 1px #2166bd;
+    -webkit-box-shadow: 0px 0px 3px 1px #2166bd;
+}
+
+/*                         */
+/*        フィルタ部         */
+/*                          */
+
+/* 検索結果フィルタ カテゴリ部のcolor */
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > span.searchplus-filter-group-title {
+    color: #5c6370;
+    border-bottom-color: #eee;
+}
+
+/* 検索結果フィルタ リスト部（非選択時）のcolor */
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li {
+    border-bottom-color: #eee;
+    color: #717885;
+}
+
+/* 検索結果フィルタ リスト部（選択時）のcolor */
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li > input[type=checkbox]:checked + span.searchplus-filter-name {
+    color: #000;
+}
+
+/* 検索結果フィルタ ドキュメント数表示部のcolor */
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li span.searchplus-filter-count {
+    color: #a3a6ad;
+}
+
+
+
+
+
+/*                            */
+/*    以下は色に関係ないです     */
+/*                            */
+
+.searchplus-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+#searchplus-query {
+    flex-grow: 4;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    line-height: 1.5rem;
+    padding: 0.45rem 0.75rem 0.45rem 2.5em;
+    margin: 0.25rem 0.5rem;
+    font-size: 1rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20id%3D%22searchplus-search-icon%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2095.715%2095.832%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%231a396c%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Esearch-icon%3C%2Ftitle%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M73.631%2C63.933a39.324%2C39.324%2C0%2C1%2C0-10%2C9.962L87.732%2C98l9.983-9.983Zm-32.3%2C2.74A25.176%2C25.176%2C0%2C1%2C1%2C66.505%2C41.5%2C25.176%2C25.176%2C0%2C0%2C1%2C41.329%2C66.673Z%22%20transform%3D%22translate(-2%20-2.168)%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-size: 1.3em;
+    background-position: top 0.5em left 0.5em;
+}
+#searchplus-query.searchplus-demo {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+}
+.searchplus-demo-logo-wrapper {
+    display: inline-block;
+    width: 2.75em;
+    line-height: 1.5rem;
+    padding: 0.45rem 0.75rem;
+    background-color: #eee;
+    background-image: url('data:image/png;base64,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');
+    background-repeat: no-repeat;
+    background-size: 1.6em;
+    background-position: top 0.4em left 0.5em;
+    border: 2px solid #eee;
+    margin: 0.25rem 0 0.25rem 0.5rem;
+    font-size: 1rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#searchplus-suggests {
+    border-width: 1px;
+    border-style: solid;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+    z-index: 1111;
+}
+#searchplus-suggests li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#searchplus-submit {
+    flex-grow: 1;
+    cursor: pointer;
+    border-radius: 2em;
+    margin: 0.25rem 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 200;
+    transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+#searchplus-submit:hover {
+    font-weight: 400;
+}
+
+#searchplus-result {
+    margin: 0.5rem;
+}
+
+.searchplus-result-header {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+}
+
+.searchplus-result-list-unit {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+.searchplus-result-list-unit strong {
+    font-weight: bold;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-header {
+     font-size: 1.1rem;
+ }
+.searchplus-result-list-unit .searchplus-result-list-unit-header a {
+    text-decoration: none;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-header a:hover {
+    text-decoration: underline;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper {
+    margin: 0.5rem -0.5rem -0.5rem -0.5rem;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper .searchplus-result-list-unit-url {
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    word-wrap: break-word;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper .searchplus-result-list-unit-content {
+    font-size: 0.9rem;
+    padding: 0.25rem;
+}
+.searchplus-result-list-unit .searchplus-result-list-unit-content-wrapper .searchplus-result-list-unit-content span {
+    word-wrap: break-word;
+}
+.searchplus-result-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+.searchplus-result-pagination button {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border-radius: 2em;
+    margin: 0.25rem 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    font-family: "Noto Sans Japanese", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    font-weight: 200;
+}
+.searchplus-result-pagination button:hover {
+    font-weight: 400;
+}
+
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper {
+    list-style-type: none;
+    padding-left: 0;
+}
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li {
+    margin-top: 1rem;
+}
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > span.searchplus-filter-group-title {
+    display: block;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul {
+    margin-top: 0.75em;
+    list-style-type: none;
+    padding-left: 0.5em;
+}
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25em;
+    word-break: break-word;
+}
+
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li span.searchplus-filter-count {
+    font-size: 0.9rem;
+    padding: 0 0.25rem;
+}
+.searchplus-filter-wrapper ul.searchplus-filter-group-wrapper > li > ul > label > li > span.searchplus-filter-name {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 200px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(159,172,191, 0.2);
+    border-right: 1.1em solid rgba(159,172,191, 0.2);
+    border-bottom: 1.1em solid rgba(159,172,191, 0.2);
+    border-left: 1.1em solid #9facbf;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:479px) {
+    .searchplus-demo-logo-wrapper {
+        display: none;
+    }
+    #searchplus-submit {
+        margin: 15px 0;
+    }
+}

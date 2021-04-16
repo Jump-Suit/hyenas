@@ -1,0 +1,257 @@
+ /* page all
+---------------------------------------------------- */
+/*  styele reset  */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {/*2006.09.27 C*/
+	background-color: #FFFFFF;
+	color: #3a3a3a;
+	font-family: Arial;
+	font-size: 75%;
+	line-height: 140%;
+}
+h1 {
+	font-size: 130%;
+	font-weight: bold;
+}
+h2 {
+	font-size: 110%;
+	font-weight: bold;
+}
+h3 {
+	font-size: 100%;
+	font-weight: bold;
+}
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+}
+h5 {
+	font-size: 100%;
+	font-weight: bold;
+	padding-top: 10px;
+}
+td,th {
+	font-size: 100%;
+}
+a img {
+	border:0px;
+}
+ul,ol {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 24px;
+}
+li {
+	line-height: 125%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+li.ind {
+	list-style: none;
+	line-height: 125%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 20px;
+}
+li.sup {
+	line-height: 135%;
+	padding-bottom: 3px;
+}
+p { line-height: 100%; }
+p.subMenu {
+	font-size: 85%;
+	line-height: 140%;
+}
+
+/* 2007.04.23 YIT */
+p.option {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.clear {
+	clear:both;
+}
+
+.point{
+	font-size: 0.80em;
+	vertical-align: text-top;
+}
+
+.hint {
+	background-color: #EDF0F4;
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.caution {
+	background-color: #DFE3E8;
+	color: #333333;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.warning {
+	background-color: #F3EA89;
+	color: #333333;
+	padding: 10px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.tableC {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	width: 100%;
+}
+.tableC th {
+	width: 10px;
+	vertical-align: top;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: bold;
+}
+.tableC td {
+	vertical-align: top;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: normal;
+}
+
+/* 2008.09.30 YIT */
+.tableC .table_full th {
+	width: auto;
+	vertical-align: top;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: bold;
+}
+/* 2008.12.01 YIT */
+.tableC .table th {
+	width: auto;
+	vertical-align: top;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: bold;
+}
+
+/*2006.09.27 ?
+---------------------------------------------------- */
+.tableC td p img{
+	margin-top: -8px;
+}
+
+.hr_line{
+	background-image: url(../imgs/hr.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	padding-bottom: 6px;
+	height: 8px;
+}
+
+/* common
+---------------------------------------------------- */
+
+#iBox {
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+/* language Selection
+---------------------------------------------------- */
+/*lang1*/
+.langmenu {
+	width: 177px;
+}
+.idt {
+	padding-left: 3px;
+}
+
+/*lang2*/
+#langselect {
+	width: 220px;
+	background-image: url(../imgs/menu_bg_topline.gif);
+	background-repeat: no-repeat;
+	padding-top: 3px;
+}
+#langselect p {
+	padding-bottom: 5px;
+}
+.langmenu2 {
+	width: 177px;
+}
+.langwaku {
+	padding: 10px 0px 5px 10px;
+	width: 210px;
+	display: block;
+	list-style: none;
+	color: #3a3a3a;
+	background-image: url(../imgs/menu_bg.gif);
+	background-repeat: repeat-y;
+}
+#langselect-end {
+	width: 220px;
+	background: url(../imgs/menu_end.gif) left top no-repeat;
+	clear: both;
+	height: 10px;
+	margin-bottom: 3px;
+}
+
+/*2007.11.26
+---------------------------------------------------- */
+.important {
+	color: #E51A1A;
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin: 8px 0px;
+	padding: 8px 0px;
+}
+
+
+/*2008.04.10 dammy for stock images
+---------------------------------------------------- */
+.dammy_img_caution{
+	background-image:url(../imgs/caution.gif);
+}
+
+.dammy_img_spacer{
+	background-image: url(../imgs/spacer.gif);
+}
+
+/*2013.07.08 sup modified
+---------------------------------------------------- */
+/*上付き文字*/
+sup{
+	height: 0;
+	line-height: 1;
+  vertical-align: super;
+  position: relative;
+  top: 0.3em;
+		font-size: 70%;
+		margin-right: 3px;
+}

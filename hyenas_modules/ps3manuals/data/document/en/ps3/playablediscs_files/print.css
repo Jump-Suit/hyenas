@@ -1,0 +1,301 @@
+/*print*/
+body {
+	background: none;
+	color:black;
+	font-size:10pt;
+}
+/*---------------------------------------------------*/
+/* header
+---------------------------------------------------- */
+#header {
+	background: none;
+	border-bottom: 1px solid #000;
+}
+#headbox,
+#familylogo_photog{
+	width: auto;
+	padding: 10px;
+}
+#headbox h1#PSlogo,
+#headbox a#PSlogo{
+	background-image: url(../imgs/logo_ps3_print.png);
+	color: #000;
+}
+
+/*---------------------------------------------------*/
+/* content
+---------------------------------------------------- */
+#iBox {
+	width: 100%;
+}
+#maintop {
+	float: none;
+	width: auto;
+	padding: 0 20px;
+}
+p.r3_zoom {
+	display: none;
+}
+
+/*07.02.09
+-------------------------------*/
+#maintitle p {
+	display:none;
+}
+/*---------------------------*/
+.arrow1 {
+	font-size:9pt;
+}
+.arrow {
+	font-size:9pt;
+}
+#ps3logo, #menuBox, #search, .back {
+	display:none;
+}
+#main, #main_full {
+	float:none;
+	width: auto;
+	margin: 0px;
+	padding: 0 20px;
+}
+
+
+#maintop p {
+	padding-top: 4px;
+	padding-bottom: 5px;
+	line-height: 150%;
+}
+#maintop .arrow_top {
+	font-size: 75%;
+}
+/*---------------------------------------------------*/
+/* footer
+---------------------------------------------------- */
+#footer,
+#footer_photog{
+	margin-top: 20px;
+	background: none;
+	border-top: 1px solid #000;
+}
+#footbox	{
+	display: none;
+}
+#footer .print,
+#footer_photog .print{
+	display:block;
+	padding: 10px;
+	text-align:center;
+	font-size:75%;
+}
+/*PS familiy logo dosen't display it.*/
+#maintop h1, #header img {
+	display:none;
+}
+
+
+/* contents table
+---------------------------------------------------- */
+
+#main .table {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-left-color: #000000;
+}
+
+#main .table_full {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: top;
+	width:100%;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-left-color: #000000;
+}
+
+#main .th {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	padding: 4px;
+	margin: 0px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #000000;
+	vertical-align: top;
+}
+
+#main .th1 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #000000;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+#main .th2 {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+}
+
+#main .th3 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+#main .td {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	margin: 0px;
+	padding: 4px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #000000;
+}
+
+#main .td1 {
+	list-style-type: none;
+	padding: 4px;
+	margin: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+}
+
+#main .td2 {
+	list-style-type: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #000000;
+	margin: 0px;
+	padding: 4px;
+}
+
+#main .td3 {
+	list-style-type: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #000000;
+	margin: 0px;
+	padding: 4px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+
+.tableC {
+	width: 535px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.tableC th {
+	width: 10px;
+	vertical-align: top;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: bold;
+	text-align: left;
+}
+.tableC td {
+	vertical-align: top;
+	padding-top: 6px;
+	padding-left: 2px;
+	margin-bottom: 2px;
+	padding-right: 4px;
+	font-weight: normal;
+	text-align: left;
+}
+.tableS {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.tableS th {
+	font-size: 0.80em;
+	vertical-align: top;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 4px;
+	font-weight: normal;
+	text-align: left;
+}
+.tableS td {
+	vertical-align: top;
+	padding-top: 0px;
+	padding-left: 2px;
+	margin-bottom: 0px;
+	padding-right: 4px;
+	font-weight: normal;
+	text-align: left;
+}
+
+/*---------------------------*/
+/* photogallery
+---------------------------------------------------- */
+/* 2008.11.17 YIT */
+/**/
+#headbox_photog {
+	width: 80%;
+}
+#photogMenu	{
+	 margin: 0 auto;
+ }
+#main_full_photog,#mainlist_photog, #mainlist_photog ul {
+	float:none;
+	width: auto;
+	margin: 0px;
+	padding: 0 20px;
+}
+
+#mainlist_photog li { line-height:normal;}
+
+.arrow_top	{
+	display: none;
+}

@@ -1,0 +1,188 @@
+/*------change link color-------*/
+#menuTop li a, #menuTop2 li a {
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	color: #3a3a3a;
+	width: 220px;
+}
+#menuTop li a:hover, #menuTop2 li a:hover {
+	color: #3a3a3a;
+	text-decoration: underline;
+}
+#menu li a, #menu2 li a {
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	color: #3a3a3a;
+	width: 220px;
+}
+#menu li a:hover, #menu2 li a:hover {
+	color: #3a3a3a;
+	text-decoration: underline;
+}
+#menu ul, #menu2 ul {
+	width: 220px;
+	display: block;
+	list-style: none;
+	color: #3a3a3a;
+	background-image: url(../imgs/menu_bg.gif);
+	background-repeat: repeat-y;
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------*/
+/* menu
+---------------------------------------------------- */
+#menuBox {
+	float: left;
+	width: 220px;
+	margin: 0px;
+	padding: 0px;
+	clear: left;
+}
+#menuTop, #menu {
+	float: left;
+	width: 220px;
+	background-image: url(../imgs/menu_bg_topline.gif);
+	background-repeat: no-repeat;
+	padding-top: 3px;
+}
+#menuTop2, #menu2 {
+	float: left;
+	width: 220px;
+	background-image: url(../imgs/menu_bg_topline2.gif);
+	background-repeat: no-repeat;
+	padding-top: 3px;
+}
+#menuTop ul, #menuTop2 ul {
+	background-image: url(../imgs/menu_bg.gif);
+	background-repeat: repeat-y;
+	width: 220px;
+	display: block;
+	list-style: none;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+}
+#menuTop li, #menuTop2 li {
+	display: block;
+	line-height: 2.9em;
+	text-align: left;
+	text-indent: 10px;
+	font-size: 0.9em;
+}
+#menuTop2 li.selected {
+	background-color: #e8e8e8;
+	line-height: 2.9em;
+}
+#menu li, #menu2 li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	line-height: 2.99em;
+	text-align: left;
+	text-indent: 45px;
+}
+#menu li.selected, #menu2 li.selected { 
+	background-color: #e8e8e8;
+}
+#menu-end {
+	width: 220px;
+	background: url(../imgs/menu_end.gif) left top no-repeat;
+	clear: both;
+	height: 10px;
+	margin-bottom: 3px;
+}
+#menu-endselected{
+	width: 220px;
+	position: static;
+	background: url(../imgs/menu_end_selected.gif) left top no-repeat;
+	clear: both;
+	height: 10px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+}
+/* basic operations of XMB */
+li#c00  {
+	margin: 0px;
+	padding: 0px;
+}
+/* game */
+li#c01  {
+	background-image: url(../imgs/i_01.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* video */
+li#c02  {
+	background-image: url(../imgs/i_02.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* music */
+li#c03  {
+	background-image: url(../imgs/i_03.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* photo */
+li#c04  {
+	background-image: url(../imgs/i_04.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* network */
+li#c05  {
+	background-image: url(../imgs/i_05.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* friends */
+li#c06 {
+	background-image: url(../imgs/i_06.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+}
+/* setting */
+li#c07 {
+	background-image: url(../imgs/i_07.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* user */
+li#c08 {
+	background-image: url(../imgs/i_08.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* playstation_network */
+li#c09 {
+	background-image: url(../imgs/i_09.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+.menusubtxt{
+	font-size: 0.90em;
+	text-indent: 72px;
+}
+.menusubtxt2{
+	font-size: 0.80em;
+	text-indent: 72px;
+}
+/* tv_and_videos*/
+li#c12 {
+	background-image: url(../imgs/i_12.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}

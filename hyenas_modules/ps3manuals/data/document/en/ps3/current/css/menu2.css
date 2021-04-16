@@ -1,0 +1,74 @@
+/*1080
+---------------------------*/
+#menu li, #menu2 li { text-indent: 55px; font-size:0.8em; line-height: 3.50em; }
+/* basic operations of XMB */
+li#c00  {
+	margin: 0px;
+	padding: 0px;
+}
+/* game */
+li#c01  {
+	background-image: url(../imgs/i_01_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* video */
+li#c02  {
+	background-image: url(../imgs/i_02_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* music */
+li#c03  {
+	background-image: url(../imgs/i_03_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* photo */
+li#c04  {
+	background-image: url(../imgs/i_04_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* network */
+li#c05  {
+	background-image: url(../imgs/i_05_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* friends */
+li#c06 {
+	background-image: url(../imgs/i_06_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+}
+/* setting */
+li#c07 {
+	background-image: url(../imgs/i_07_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* user */
+li#c08 { border-bottom: 1px solid #e0e0e0; background: url(../imgs/i_08_1080.gif) no-repeat 5%; }
+/* playstation_network */
+li#c09 {
+	background-image: url(../imgs/i_09_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+/* tv_and_videos*/
+li#c12 {
+	background-image: url(../imgs/i_12_1080.gif);
+	background-repeat: no-repeat;
+	background-position: 5%;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+
