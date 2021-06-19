@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<select>
+<messages>
+<message lang="en">Sorry, Japanese Language only. Please set your System Language to Japanese from System Settings menu.</message>
+<message lang="ja">インフォメーションボードでは、PLAYSTATION®に関する最新情報をお届けします。”XMB”(クロスメディアバー)の[ネットワーク]→[インフォメーションボード]で詳細が表示できます。</message>
+</messages>
+<countries>
+<country news_url="jp/jp/news.xml" skin_url="jp/jp/skin.xml">日本</country>
+</countries>
+</select>

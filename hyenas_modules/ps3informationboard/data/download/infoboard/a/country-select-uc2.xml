@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<select>
+	<messages>
+		<message lang="en">Latest PLAYSTATION(R)Network News</message>
+		<message lang="es">Latest PLAYSTATION(R)Network News</message>
+		<message lang="fr">Actualités de PLAYSTATION(R)Network</message>
+		<message lang="da">Latest PLAYSTATION(R)Network News</message>
+		<message lang="de">Latest PLAYSTATION(R)Network News</message>
+		<message lang="fi">Latest PLAYSTATION(R)Network News</message>
+		<message lang="it">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ja">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ko">Latest PLAYSTATION(R)Network News</message>
+		<message lang="nl">Latest PLAYSTATION(R)Network News</message>
+		<message lang="no">Latest PLAYSTATION(R)Network News</message>
+		<message lang="pt">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ru">Latest PLAYSTATION(R)Network News</message>
+		<message lang="sv">Latest PLAYSTATION(R)Network News</message>
+		<message lang="zh-cn">Latest PLAYSTATION(R)Network News</message>
+		<message lang="zh-tw">Latest PLAYSTATION(R)Network News</message>
+	</messages>
+	<countries>
+		<country news_url="us/en/news.xml" skin_url="us/en/skin.xml">UNITED STATES</country>
+		<country news_url="ca/en/news.xml" skin_url="ca/en/skin.xml">CANADA - English</country>
+		<country news_url="ca/fr/news.xml" skin_url="ca/fr/skin.xml">CANADA - Français</country>
+	</countries>
+</select>

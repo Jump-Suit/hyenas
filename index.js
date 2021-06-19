@@ -1,3 +1,6 @@
+const path = require('path');
+const { readdirSync } = require('fs');
+const config = require('./config.json');
 const express = require('express'),
       hyenas = express();
 
@@ -7,34 +10,35 @@ const express = require('express'),
       const { ticketGen } = require('./local_modules/ticketTools.js'),
       { profileGen } = require('./local_modules/profileTools.js');
 
-const path = require('path');
-const { readdirSync } = require('fs');
-const config = require('./config.json');
+hyenas.use(express.static(config.static));
+
 const updns = require('updns').createServer(53, '127.0.0.1')
 
-//TLSv1.2 Testing with a Certificate and Key.
-/*
-var fs = require('fs');
-var http = require('http');
-var https = require('https');
-var privateKey = fs.readFileSync('certs/SCEIDNASROOT05.key', 'utf8');
-var certificate = fs.readFileSync('certs/SCEIDNASROOT05.crt', 'utf8');
-
-var credentials = { key: privateKey, cert: certificate };
-
-var httpsServer = https.createServer(credentials, hyenas);
-
-httpsServer.listen(443);
-*/
 
 // Updns functions, error and starting Updns as a service.
 updns.on('error', error => {
     console.log(error)
 })
- 
+
 updns.on('listening', server => {
     console.log('DNS service has started')
 })
+
+//TLSv1.2 Testing with a Certificate and Key.
+
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+//var privateKey = fs.readFileSync('certs/SCEIDNASROOT05.key', 'utf8');
+//var certificate = fs.readFileSync('certs/SCEIDNASROOT05.crt', 'utf8');
+
+//var credentials = { key: privateKey, cert: certificate };
+
+var httpsServer = https.createServer(/*credentials,*/ hyenas);
+
+
+httpsServer.listen(config.port3, () => console.log(`Hyenas has started https server on Port: ${config.port3}`));
+
 
 /*
 updns.on('message', (domain, send, proxy) => {
@@ -86,11 +90,9 @@ const modules = getModules(path.join(__dirname, config.modules));
 modules.forEach((module) => {
   try {
     require(path.join(__dirname, config.modules, module, 'module.js'))(hyenas)
-    console.log(`Hyenas has initialized module: ${module}`);
+      console.log(`Hyenas has initialized module: ${module}`);
   } catch (error) { console.log(`Hyenas failed to initialize module: ${module}`)}
 });
-
-hyenas.use(express.static(config.static));
 hyenas.post('/nav/auth/', (req, res) => {
   res.writeHead(200, {
       'Content-Type': 'application/x-i-5-ticket',
@@ -132,9 +134,12 @@ hyenas.get('/gs2/networktest/get_6m', (req, res) =>
   res.sendFile(path.join(__dirname, config.system, 'networktest/get_6m')));
 
 hyenas.post('/networktest/post_128', (req, res) => res.status(200).end());
+
 //Start Hyenas on Port 80 as port1 and Port 53 as port2
 hyenas.listen(config.port1, () => console.log(`Hyenas has started on Port: ${config.port1}`));
 hyenas.listen(config.port2, () => console.log(`Hyenas has started on Port: ${config.port2}`));
+
+hyenas.listen(config.port4, () => console.log(`Hyenas has started on Port: ${config.port4}`));
 
 // Yay, stolen functions!
 function collectRequestData(request, callback) {

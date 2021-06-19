@@ -65,7 +65,7 @@ module.exports = (hyenas) => {
         res.sendFile('./data/document/en/ps3/current/imgs/menu_bg.gif', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/imgs/menu_end.gif', (req, res) =>
         res.sendFile('./data/document/en/ps3/current/imgs/menu_end.gif', { root: __dirname }));
-
+    //GIF
     hyenas.get('/document/en/ps3/current/imgs/i_12.gif', (req, res) =>
         res.sendFile('./data/document/en/ps3/current/imgs/i_12.gif', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/imgs/i_12_1080.gif', (req, res) =>
@@ -114,7 +114,6 @@ module.exports = (hyenas) => {
     //HTML - Users
     hyenas.get('/document/en/ps3/current/users/index.html', (req, res) =>
         res.sendFile('./data/document/en/ps3/current/users/index.html', { root: __dirname }));
-
     //CSS
     hyenas.get('/document/en/ps3/current/users/index_files/style_import.css', (req, res) =>
         res.sendFile('./data/document/en/ps3/current/users/index_files/style_import.css', { root: __dirname }));
@@ -137,15 +136,15 @@ module.exports = (hyenas) => {
 
     //JS
     hyenas.get('/document/en/ps3/current/users/index_files/lang-en-mod.js', (req, res) =>
-        res.sendFile('./data/document/en/ps3/current/users/index_files/lang-en-mod.js', { root: __dirname }));
+        res.sendFile('./data/document/en/ps3/current/js/lang-en-mod.js', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/users/index_files/list.js', (req, res) =>
-        res.sendFile('./data/document/en/ps3/current/users/index_files/list.js', { root: __dirname }));
+        res.sendFile('./data/document/en/ps3/current/js/list.js', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/users/index_files/jumpmenu.js', (req, res) =>
-        res.sendFile('./data/document/en/ps3/current/users/index_files/jumpmenu.js', { root: __dirname }));
+        res.sendFile('./data/document/en/ps3/current/js/jumpmenu.js', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/users/index_files/polyfill.js', (req, res) =>
-        res.sendFile('./data/document/en/ps3/current/users/index_files/polyfill.js', { root: __dirname }));
+        res.sendFile('./data/document/en/ps3/current/js/polyfill.js', { root: __dirname }));
     hyenas.get('/document/en/ps3/current/users/index_files/searchplus.js', (req, res) =>
-        res.sendFile('./data/document/en/ps3/current/users/index_files/searchplus.js', { root: __dirname }));
+        res.sendFile('./data/document/en/ps3/current/js/searchplus.js', { root: __dirname }));
 
     //IMGS
     hyenas.get('/document/en/ps3/current/users/index_files/cat_0008.gif', (req, res) =>
@@ -209,4 +208,99 @@ module.exports = (hyenas) => {
         res.sendFile('./data/document/en/ps3/current/imgs/logo_ps3.png', { root: __dirname }));
     hyenas.get('/document/en/ps3/imgs/hr.gif', (req, res) =>
         res.sendFile('./data/document/en/ps3/current/imgs/hr.gif', { root: __dirname }));
+
+    //HTML - Language Selection
+    hyenas.get('/document/index.html', (req, res) =>
+        res.sendFile('./data/document/index.html', { root: __dirname }));
+    //CSS
+    hyenas.get('/document/index_files/default.css', (req, res) =>
+        res.sendFile('./data/document/index_files/default.css', { root: __dirname }));
+    hyenas.get('/document/index_files/common.css', (req, res) =>
+        res.sendFile('./data/document/index_files/common.css', { root: __dirname }));
+    hyenas.get('/document/index_files/module.css', (req, res) =>
+        res.sendFile('./data/document/index_files/module.css', { root: __dirname }));
+    hyenas.get('/document/index_files/style.css', (req, res) =>
+        res.sendFile('./data/document/index_files/style.css', { root: __dirname }));
+    hyenas.get('/document/index_files/style_responsive.css', (req, res) =>
+        res.sendFile('./data/document/index_files/style_responsive.css', { root: __dirname }));
+    hyenas.get('/document/css/style_responsive.css', (req, res) =>
+        res.sendFile('./data/document/css/style_responsive.css', { root: __dirname }));
+    //JS
+    hyenas.get('/document/index_files/jquery-1.js', (req, res) =>
+        res.sendFile('./data/document/index_files/jquery-1.js', { root: __dirname }));
+    hyenas.get('/document/index_files/s_code.js', (req, res) =>
+        res.sendFile('./data/document/index_files/s_code.js', { root: __dirname }));
+    //PNG
+    hyenas.get('/document/index_files/L1.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L1.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L2.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L2.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L3.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L3.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L4.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L4.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L5.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L5.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L6.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L6.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L7.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L7.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L8.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L8.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L9.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L9.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L10.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L10.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L11.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L11.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L12.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L12.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L13.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L13.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L14.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L14.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L15.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L15.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L16.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L16.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L17.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L17.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L18.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L18.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L19.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L19.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L20.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L20.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L21.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L21.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L22.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L22.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L23.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L23.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L24.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L24.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L25.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L25.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L26.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L26.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L27.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L27.png', { root: __dirname }));
+    hyenas.get('/document/index_files/L28.png', (req, res) =>
+        res.sendFile('./data/document/index_files/L28.png', { root: __dirname }));
+    hyenas.get('/document/index_files/sL1.png', (req, res) =>
+        res.sendFile('./data/document/index_files/sL1.png', { root: __dirname }));
+
+    hyenas.get('/document/images/bg_headerBox.png', (req, res) =>
+        res.sendFile('./data/document/images/bg_headerBox.png', { root: __dirname }));
+    hyenas.get('/document/images/bg_body.png', (req, res) =>
+        res.sendFile('./data/document/images/bg_body.png', { root: __dirname }));
+    hyenas.get('/document/images/bg_wrapper.png', (req, res) =>
+        res.sendFile('./data/document/images/bg_wrapper.png', { root: __dirname }));
+    hyenas.get('/document/images/logo_PS.png', (req, res) =>
+        res.sendFile('./data/document/images/logo_PS.png', { root: __dirname }));
+
+
+    //HTML - English -> Products
+    hyenas.get('/document/en/products.html', (req, res) =>
+        res.sendFile('./data/document/en/products.html', { root: __dirname }));
 }; 

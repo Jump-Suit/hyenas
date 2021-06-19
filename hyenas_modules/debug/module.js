@@ -5,4 +5,7 @@ module.exports = (hyenas) => {
         res.sendFile('./data/login.html', { root: __dirname }));
     hyenas.get('/debug/forms/profile', (req, res) => 
         res.sendFile('./data/profile.html', { root: __dirname }));
+
+    hyenas.get('/articles/71', (req, res) =>
+        res.sendFile('./data/articles/71.json', { root: __dirname }));
 };

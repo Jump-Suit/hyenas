@@ -1,0 +1,102 @@
+/* ===================================================================
+	SCE CONFIDENTIAL
+ ©2013 Sony Computer Entertainment Inc.
+ All Rights Reserved.
+	
+	1. 大枠レイアウト
+	2. コンテンツ
+=================================================================== */
+@charset "utf-8";
+
+/* ===================================================================
+ 1. 大枠レイアウト
+=================================================================== */
+#wrapper:after { content:""; clear:both; display:block; }
+#wrapper		{
+	max-width: 800px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+#contentWrapper	{
+	padding: 0 10px;
+	background: url(../images/bg_wrapper.png) 210px top no-repeat;
+}
+
+#content	{
+	width: 100%;
+	background: #fff;
+	border-radius: 0px 0px 5px 5px;
+}
+
+#contentBody:after { content:""; clear:both; display:block; }
+#contentBody	{
+	padding: 20px;
+	word-wrap: break-word;
+}
+
+
+/* ===================================================================
+ 2. コンテンツ
+=================================================================== */
+/* 見出し
+--------------------------*/
+#contentBody h2	{
+	clear: both;
+	font-size: 120%;
+	font-weight: normal;
+	color: #003488;
+	border-bottom: 1px solid #c0d5e4;
+}
+
+#contentBody h3	{ clear: both; text-decoration: underline; }
+
+/* 前のページへ戻るボタン
+--------------------------*/
+.btnBack	{
+	display: block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 20px;
+	padding-left: 45px;
+	background: url(../images/btn_back.png) left center no-repeat;
+}
+.btnBack:hover{	background: url(../images/btn_back_over.png) left center no-repeat; }
+
+/* 言語選択
+--------------------------*/
+ul.lang	{
+	float: left;
+	width: 240px;
+	margin-bottom: 0;
+}
+ul.lang li	{
+	
+}
+ul.lang li a	{
+	display: block;
+	width: 220px;
+	height: 30px;
+}
+ul.lang li a:hover	{	background-color: #b9dffd; }
+
+/* プロダクト選択
+--------------------------*/
+ul.productList	{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+ul.productList li	{ width: 250px; font-size: 110%; }
+ul.productList li a	{
+	display: block;
+	padding: 2px 5px;
+	color: #000;
+}
+ul.productList li a:hover	{ text-decoration: none;	background-color: #b9dffd; color: #000; }
+
+/* このサイトについて
+--------------------------*/
+ol	{ margin-bottom: 1em; padding-left: 25px; }
+ol li	{ list-style: decimal; }

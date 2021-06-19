@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<select>
+	<messages>
+		<message lang="en">Information Board will bring you the latest information on games, and system updates. To start receiving the news, go to [network] > [Information Board] and then press the X button.</message>
+		<message lang="es">Information Board contiene la ultima infomacion de juegos y actualizaciones de sistema. Para empezara recibir las noticias, vaya a [network] > [Information Board] y luego precione el X button.</message>
+		<message lang="fr">Information Board vous amenera les toutes dernieres nouvelles a propos de jeux et mises a jour de systeme.  Pour recevoir ces nouvelles, veuillez choisir [Reseau] > [Information Board] et appuyez sur le bouton X.</message>
+		<message lang="da">Latest PLAYSTATION(R)Network News</message>
+		<message lang="de">Latest PLAYSTATION(R)Network News</message>
+		<message lang="fi">Latest PLAYSTATION(R)Network News</message>
+		<message lang="it">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ja">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ko">Latest PLAYSTATION(R)Network News</message>
+		<message lang="nl">Latest PLAYSTATION(R)Network News</message>
+		<message lang="no">Latest PLAYSTATION(R)Network News</message>
+		<message lang="pt">Latest PLAYSTATION(R)Network News</message>
+		<message lang="ru">Latest PLAYSTATION(R)Network News</message>
+		<message lang="sv">Latest PLAYSTATION(R)Network News</message>
+		<message lang="zh-cn">Latest PLAYSTATION(R)Network News</message>
+		<message lang="zh-tw">Latest PLAYSTATION(R)Network News</message>
+	</messages>
+	<countries>
+		<country news_url="us/en/news.xml" skin_url="us/en/skin.xml">UNITED STATES</country>
+		<country news_url="ca/en/news.xml" skin_url="ca/en/skin.xml">CANADA - English</country>
+		<country news_url="ca/fr/news.xml" skin_url="ca/fr/skin.xml">CANADA - Français</country>
+		<country news_url="us/en/news.xml" skin_url="us/en/skin.xml">MEXICO - English</country>	
+	</countries>
+</select>

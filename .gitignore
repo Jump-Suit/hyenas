@@ -96,3 +96,6 @@ hyenas_modules/ps3blob/module.js
 *.PUP
 *.crt
 *.key
+.vs/hyenas/v16/TestStore/0/000.testlog
+.vs/hyenas/v16/TestStore/0/testlog.manifest
+hyenas_modules/debug/data/articles/71.json

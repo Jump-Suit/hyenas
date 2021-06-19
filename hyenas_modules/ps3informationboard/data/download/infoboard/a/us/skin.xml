@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<skins>
+	<skin img="skins/NewStore_skin.jpg" alpha="80" tickerHighlight="70" tickerText="ffffff" titleText="e3e3e3" titleText2="bf0505" dateText="cccccc" dateText2="ffffff" selectText="ff6a6a" focusColor="000000">default</skin>
+</skins>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<skins>
+<skin img="skins/basic.jpg" alpha="80" tickerHighlight="20" tickerText="FFFFFF" titleText="FFFFFF" titleText2="FFFFFF" dateText="99CCFF" dateText2="99CCFF" selectText="FFFFFF" focusColor="6666CC">default</skin>
+</skins>

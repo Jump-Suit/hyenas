@@ -55,6 +55,7 @@ module.exports = (hyenas) => {
     hyenas.get('/np/resource/trophy/trophy-status.xml', (req, res) =>
         res.sendFile('./data/np/resource/trophy/trophy-status.xml', { root: __dirname }));
     */
+    /*
 	hyenas.get('/np/resource/trophy/trophy-status.xml', function(req, res, next) {
       var host = req.header("host");
       if (host.match(/\static-resource.np.community.playstation.net\b/i)) {
@@ -63,7 +64,7 @@ module.exports = (hyenas) => {
         res.redirect(301, "static-resource.np.community.playstation.net"  + req.url);
       }
     });
-	
+	*/
     hyenas.get('/np/resource/basic/ttl.xml', (req, res) => 
         res.sendFile('./data/np/resource/basic/ttl.xml', { root: __dirname }));
 
@@ -101,7 +102,8 @@ module.exports = (hyenas) => {
         res.sendFile('./data/psn-rsc/avatar/UP9000/CUSA02299_00-SPIDERMANAVATAR1_7BFBCC8CD9157D0D21F8_l.png', { root: __dirname }));
 
 
-
+    hyenas.get('/np/resource/title/NPWR01138_00/clans/NPWR01138_00-clans.xml', (req, res) =>
+        res.sendFile('./data/np/resource/title/NPWR01138_00/clans/NPWR01138_00-clans.xml', { root: __dirname }));
 
 
     //PS Vita

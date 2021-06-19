@@ -36,3 +36,7 @@ Redirect your PC Local IP as your Primary DNS in PS3, and congrats! **Hyenas can
 ## Licensing
 
 General Public License v3.0. All trademarks and copyright-written content found belong to their respective owners.
+
+## Media
+
+![Discord Banner 4](https://discordapp.com/api/guilds/518884249479413771/widget.png?style=banner4)

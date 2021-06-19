@@ -1,4 +1,6 @@
 module.exports = (hyenas) => {
+	//nsx.np domain
+	
     //Catalog
     hyenas.get('/nsx/material/8/8542c657fc54707d69f0863b970249b8e89553bc-1207262.jpg', (req, res) => 
         res.sendFile('./data/nsx/material/8/8542c657fc54707d69f0863b970249b8e89553bc-1207262.jpg', { root: __dirname }));

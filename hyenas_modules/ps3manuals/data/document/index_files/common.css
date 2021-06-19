@@ -1,0 +1,117 @@
+/* ===================================================================
+	SCE CONFIDENTIAL
+ ©2013 Sony Computer Entertainment Inc.
+ All Rights Reserved.
+	
+	汎用スタイル
+=================================================================== */
+@charset "utf-8";
+
+/* clerfix
+----------------------------------------------------*/
+.clearfix:after { content:""; clear:both; display:block; }
+.clear	{ clear:both; }
+
+/* レイアウト調整
+----------------------------------------------------*/
+/* マージン無し */
+.margin0	{ margin: 0; }
+/* 横マージン0 */
+.marginLeftRight0	{ margin-left: 0; margin-right: 0; }
+/* 左右マージンauto */
+.marginLeftRightAuto	{ margin-left: auto; margin-right: auto; }
+/* 右マージン5px */
+.marginRight5	{ margin-right: 5px; }
+/* 下マージン0 */
+.marginBottom0	{ margin-bottom: 0; }
+/* 下マージン1em */
+.marginBottom1	{ margin-bottom: 1em; }
+/* 下マージン0.2em */
+.marginBottom02	{ margin-bottom: 0.2em; }
+/* 下マージン10px */
+.marginBottom10	{ margin-bottom: 10px; }
+/* 下マージン20px */
+.marginBottom20	{ margin-bottom: 20px; }
+/* 下マージン30px */
+.marginBottom30	{ margin-bottom: 30px; }
+/* 上マージン20px */
+.marginTop20	{ margin-top: 20px; }
+/* 上マージン30px */
+.marginTop30	{ margin-top: 30px; }
+/* 上マージン0.5em */
+.marginTop05	{ margin-top: 0.5em; }
+/* 上padding10px */
+.paddingTop10	{ padding-top: 10px; }
+/* 上padding20px */
+.paddingTop20	{ padding-top: 20px; }
+/* 左padding20px */
+.paddingLeft20	{ padding-left: 20px; }
+
+/* 左回り込み */
+.floatL	{ float: left; margin: 0 1em 1em 0; }
+/* 右回り込み */
+.floatR	{ float: right; margin: 0 0 1em 1em; }
+/* センター合わせ */
+.alignCenter	{ text-align: center; }
+/* 右寄せ */
+.alignRight	{ text-align: right; }
+
+/* テキスト
+----------------------------------------------------*/
+/* 基本 */
+p	{	margin-bottom: 1em; }
+
+/* アスタリスク用 */
+.asterisk { font-size: 85%; }
+/* 赤文字 */
+.red { color: #cc0000; }
+/* 赤太文字 */
+.redbold { color: #cc0000; font-weight: bold; }
+/* 注意文 */
+.notice { font-size: 90%; line-height: 1.4em; }
+/*上付き文字*/
+sup{
+	height: 0;
+	line-height: 1;
+  vertical-align: super;
+  position: relative;
+  top: 0.25em;
+		font-size: 70%;
+		margin-right: 3px;
+}
+
+/* 画像
+----------------------------------------------------*/
+/* 基本 */
+img { vertical-align: middle; }
+
+/* 見出し
+----------------------------------------------------*/
+/* 基本 */
+h2 { font-size: 110%; margin-bottom: 1em; }
+h3 { font-size: 105%; margin-bottom: 1em; }
+h4 { font-size: 100%; margin-bottom: 1em; }
+
+
+/* リスト
+----------------------------------------------------*/
+/* 基本 */
+ul { margin-bottom: 1em; }
+ul ul { margin-bottom: 0; }  /* リストの入れ子になっていた場合はmargin0に */
+ul.default li	{
+	list-style: disc outside;
+	margin-left: 1.2em;
+}
+/* 番号リスト */
+ul.num li	{
+	list-style: decimal outside;
+	margin-left: 1.5em;
+}
+
+/* 区切り線
+----------------------------------------------------*/
+hr	{
+	height: 2px;
+	margin: 20px 0;
+	border-top: 1px solid #eee;
+}

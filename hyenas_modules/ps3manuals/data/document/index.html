@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>User's Guide / Select your language</title>
+<meta name="description" content="User's Guide / Select your language">
+<meta name="keywords" content="PlayStation,manual,guide">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="index_files/default.css">
+<link rel="stylesheet" href="index_files/module.css">
+<link rel="stylesheet" href="index_files/common.css">
+<link rel="stylesheet" href="index_files/style.css">
+<script src="index_files/jquery-1.js"></script>
+<script>
+// UserAgent判定
+if(navigator.userAgent.indexOf('PSP') != -1) {
+	document.write('<link rel="stylesheet" href="css/style_PSP.css">');
+}else	{
+	document.write('<link rel="stylesheet" href="css/style_responsive.css">');
+	$(function(){
+		var $img = $('ul.lang li img');
+		$img.hide();
+		var imgsrc;
+		for(var i = 0; i < $img.length; ++i)	{
+			imgsrc = $img.eq(i).attr('src');
+			imgsrc = imgsrc.replace(/p.png/, '.png');
+			$img.eq(i).attr('src', imgsrc);
+			$img.eq(i).bind('load', function() {
+				$(this).show();
+			})
+		}
+	});
+}
+</script><link rel="stylesheet" href="index_files/style_responsive.css">
+<script type="text/javascript" src="index_files/s_code.js"></script>
+<script>
+    var s_code = s.t();
+    if (s_code)document.write(s_code)
+</script>
+</head>
+
+<body>
+<!-- #wrapper -->
+<div id="wrapper"> 
+  <!-- #contentWrapper -->
+  <div id="contentWrapper"> 
+    <!-- #globalHeader -->
+    <div id="globalHeader">
+      <div id="headerBox">
+        <h1>User's Guide</h1>
+      </div>
+    </div>
+    <!-- / #globalHeader --> 
+    
+    <!-- #content -->
+    <div id="content"> 
+      <!-- #contentBody -->
+      <div id="contentBody">
+        <h2>Select your language</h2>
+        <ul class="lang">
+          <li><a href="https://manuals.playstation.net/document/cz/products.html"><img src="index_files/L22.png" alt="Czech" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/dk/products.html"><img src="index_files/L1.png" alt="Dansk" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/de/products.html"><img src="index_files/L2.png" alt="Deutsch" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/en/products.html"><img src="index_files/L3.png" alt="English" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/es/products.html"><img src="index_files/L4.png" alt="Español" style="display: inline;"> </a></li>
+          <li><a href="https://manuals.playstation.net/document/al/products.html"><img src="index_files/L5.png" alt="Español (América Latina)" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/fr/products.html"><img src="index_files/L6.png" alt="Français" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/ca/products.html"><img src="index_files/L21.png" alt="Français (Canada)" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/id/products.html"><img src="index_files/L23.png" alt="Indonesian" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/it/products.html"><img src="index_files/L7.png" alt="Italiano" style="display: inline;"></a></li>
+        </ul>
+        <ul class="lang">
+          <li><a href="https://manuals.playstation.net/document/hu/products.html"><img src="index_files/L24.png" alt="Hungarian" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/nl/products.html"><img src="index_files/L8.png" alt="Nederlands" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/no/products.html"><img src="index_files/L9.png" alt="Norsk" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/pl/products.html"><img src="index_files/L10.png" alt="Polish" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/pt/products.html"><img src="index_files/L11.png" alt="Português" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/pb/products.html"><img src="index_files/L12.png" alt="Português (Brasil)" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/ru/products.html"><img src="index_files/L13.png" alt="Russian" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/ro/products.html"><img src="index_files/L25.png" alt="Romanian" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/fi/products.html"><img src="index_files/L14.png" alt="Suomi" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/sw/products.html"><img src="index_files/L15.png" alt="Svenska" style="display: inline;"></a></li>
+        </ul>
+        <ul class="lang">
+          <li><a href="https://manuals.playstation.net/document/vn/products.html"><img src="index_files/L26.png" alt="Vietnamese" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/tr/products.html"><img src="index_files/L16.png" alt="Türkçe" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/ar/products.html"><img src="index_files/sL1.png" alt="Arabic" style="display: inline;"></a></li>
+					<li><a href="https://manuals.playstation.net/document/gr/products.html"><img src="index_files/L27.png" alt="Greek" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/jp/products.html"><img src="index_files/L17.png" alt="Japanese" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/kr/products.html"><img src="index_files/L18.png" alt="Korean" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/th/products.html"><img src="index_files/L28.png" alt="Thai" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/cs/products.html"><img src="index_files/L19.png" alt="Simplified Chinese" style="display: inline;"></a></li>
+          <li><a href="https://manuals.playstation.net/document/ct/products.html"><img src="index_files/L20.png" alt="Traditional Chinese" style="display: inline;"></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!-- / #contentBody --> 
+    </div>
+    <!-- / #content --> 
+  </div>
+  <!-- / #contentWrapper --> 
+  
+  <!-- #globalFooter -->
+  <div id="globalFooter">
+    <p class="copyright"><small>© 2021 Sony Interactive Entertainment Inc.</small></p>
+  </div>
+  <!-- / #globalFooter --> 
+</div>
+<!-- / #wrapper -->
+
+</body></html>

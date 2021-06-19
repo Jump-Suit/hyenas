@@ -1,0 +1,80 @@
+/* ===================================================================
+	SCE CONFIDENTIAL
+ ©2013 Sony Computer Entertainment Inc.
+ All Rights Reserved.
+	
+	1. 全体共通
+	2. グローバルヘッダー
+	3. グローバルフッター
+=================================================================== */
+@charset "utf-8";
+
+/* ===================================================================
+ 1. 全体
+=================================================================== */
+
+/* スクロールバーの有無によるズレ対策 */
+html {	overflow-y: scroll; height: 100%;}
+body {
+	font-family: Arial, Verdana, sans-serif;
+	background: #eeeeee url(../images/bg_body.png) repeat-x;
+	height: 100%;
+}
+input, textarea {	font-family: Arial, Verdana, sans-serif; }
+
+/* テキストリンクカラー
+----------------------------------------------------*/
+#contentBody { color: #333; }
+a { color: #2081d2; text-decoration: none; }
+a:link { color: #2081d2; }
+a:visited { color: #9F6AE3; }
+a:hover { text-decoration: underline; }
+
+/* フォントサイズ指定
+----------------------------------------------------*/
+
+
+/* ===================================================================
+ 2. グローバルヘッダー
+=================================================================== */
+#globalHeader {
+	padding-top: 72px;
+	background: url(../images/logo_PS.png) 20px 17px no-repeat;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+	#globalHeader {
+		background-image: url(../images/logo_PS.svg);
+		background-size: 200px 40px;
+	}
+}
+
+#headerBox	{
+	padding: 8px 20px;
+	background: url(../images/bg_headerBox.png) repeat;
+	border-radius: 5px 5px 0px 0px;
+}
+
+#globalHeader h1 {
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+	line-height: 1em;
+}
+#globalHeader a,
+#globalHeader a:link,
+#globalHeader a:hover	{ color: #fff; text-decoration: none; }
+
+/* ===================================================================
+ 3. グローバルフッター
+=================================================================== */
+#globalFooter {
+	padding: 10px 20px;
+	color: #142e51;
+	text-align: center;
+}
+
+/* Copyright */
+#globalFooter .copyright {
+	font-size: 80%;
+	line-height: 1em;
+}

@@ -2,7 +2,7 @@ module.exports = (hyenas) => {
 	//fus01.ps3.update domain
 	
     hyenas.get('/update/ps3/list/us/ps3-updatelist.txt', (req, res) => 
-        res.sendFile('./data/list/us/ps3-updatelist.txt', { root: __dirname }));
+		res.sendFile('./data/update/ps3/list/us/ps3-updatelist.txt', { root: __dirname }));
 		
 	hyenas.get('/update/ps3/list/ru/ps3-updatelist.txt', (req, res) => 
         res.sendFile('./data/list/ru/ps3-updatelist.txt', { root: __dirname }));

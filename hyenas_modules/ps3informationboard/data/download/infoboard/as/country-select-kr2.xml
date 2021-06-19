@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<select>
+<messages> 
+<message lang="ko">대한민국 인포메이션 보드입니다.</message> 
+</messages>
+<countries>  
+<country news_url="kr/ko/news.xml" skin_url="kr/ko/skin.xml">대한민국</country>
+</countries>
+</select>

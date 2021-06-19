@@ -6,6 +6,8 @@
 
   "port1": 80,
   "port2": 53,
+  "port3": 443,
+  "port4": 10010,
 
   "system": "./hyenas",
   "static": "./static",
